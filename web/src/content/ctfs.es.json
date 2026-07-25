@@ -1,0 +1,36 @@
+{
+  "title": "CTFs & Labs",
+  "summary": "Writeups y labs. El objetivo es documentar el razonamiento, no solo el flag.",
+  "items": [
+    {
+      "id": "fluid-attacks-ctf",
+      "title": "Fluid Attacks CTF",
+      "blurb": "Participación en el CTF de Fluid Attacks: retos de seguridad ofensiva y defensa aplicada.",
+      "meta": "CTF · Fluid Attacks",
+      "featureSubtitle": "Evento · security challenges",
+      "featureArt": 0,
+      "body": [
+        "Registro del Fluid Attacks CTF: práctica en escenarios de security testing y resolución de retos bajo presión de tiempo.",
+        "Enfoque en documentar el razonamiento detrás de cada hallazgo, no solo el flag."
+      ]
+    },
+    {
+      "id": "advent-of-cyber",
+      "title": "Advent of Cyber",
+      "blurb": "Serie diaria de labs en TryHackMe: Advent of Cyber — práctica guiada de ciberseguridad.",
+      "meta": "Labs · TryHackMe",
+      "featureSubtitle": "TryHackMe · daily labs",
+      "featureArt": 1,
+      "body": [
+        "Participación en Advent of Cyber de TryHackMe: retos diarios que cubren fundamentos y técnicas de ciberseguridad.",
+        "Bitácora de labs para reforzar método, herramientas y notas reutilizables."
+      ],
+      "links": [
+        {
+          "label": "TryHackMe",
+          "href": "https://tryhackme.com/"
+        }
+      ]
+    }
+  ]
+}

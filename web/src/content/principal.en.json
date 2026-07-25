@@ -1,0 +1,113 @@
+{
+  "brand": "Luis De León",
+  "focus": "AI × Cybersecurity × Research",
+  "tagline": "Building fast,\nShipping faster",
+  "nav": {
+    "experience": "Experience",
+    "work": "Experiments",
+    "awards": "Awards",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "aboutLabel": "01",
+  "aboutTitle": "About the work",
+  "aboutBody": "A technical record of early practice at the intersection of artificial intelligence, product, and applied security. Come review what I build in hackathons, internships, and experiments — not a sales funnel.",
+  "aboutSkills": [
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "Tailwind",
+    "Supabase",
+    "PostgreSQL",
+    "MongoDB",
+    "C#",
+    ".NET",
+    "LangChain",
+    "Spring Boot",
+    "Git"
+  ],
+  "experienceTitle": "Experience",
+  "experienceIntro": "Professional practice and builds under pressure. Verifiable milestones only.",
+  "workTitle": "Experiments",
+  "workIntro": "A sparse hang by category. Pick a panel for the overview; “See more” opens the dense archive. Each piece opens its detail page.",
+  "tabs": {
+    "projects": "Projects",
+    "ctfs": "CTFs & Labs",
+    "research": "Research",
+    "certs": "Certs"
+  },
+  "seeMore": "See more",
+  "archiveClose": "Close archive",
+  "archiveTitle": "Archive",
+  "placeholder": "[placeholder]",
+  "backHome": "Back to portfolio",
+  "openItem": "Open detail",
+  "detailLinks": "Links",
+  "prevItem": "Previous",
+  "nextItem": "Next",
+  "moreExperiments": "More experiments",
+  "openCategories": "Open experiment categories",
+  "categoryCount": "{n} pieces",
+  "featuredTitle": "Featured",
+  "featuredLabel": "On view",
+  "learnMore": "Learn more",
+  "featuredNav": "Category featured work",
+  "seeAllInCategory": "See more {category}",
+  "allInCategory": "All in {category}",
+  "allCertifications": "All certifications",
+  "exploreResearch": "Explore research",
+  "comingSoon": "Coming soon",
+  "notFoundTitle": "Not found",
+  "notFoundBody": "That detail page does not exist or the link is wrong. Head back to the portfolio.",
+  "educationTitle": "Education",
+  "educationIntro": "Training and study paths.",
+  "footerTitle": "Stay in touch",
+  "footerBody": "If you want to look at something together or leave a note, email me or find me on socials.",
+  "emailCta": "Send email",
+  "socialCta": "Socials",
+  "experience": [
+    {
+      "role": "Software Developer Intern",
+      "place": "Neonet Guatemala",
+      "period": "2025",
+      "note": "Supported client integration into payment gateway systems; C#, .NET, and SQL Server on high-throughput financial platforms."
+    },
+    {
+      "role": "Hackathon builder",
+      "place": "NASA Space Apps · Atom Dev Day · UFM CS · others",
+      "period": "2025 — 2026",
+      "note": "Fast prototypes in applied AI, scientific data, and technical product under time pressure."
+    }
+  ],
+  "education": [
+    {
+      "title": "B.S. Computer Science",
+      "meta": "Universidad de San Carlos de Guatemala · 2026 — present",
+      "note": "Focus on systems, networking, and fullstack development, with active hackathon and real-world project work."
+    },
+    {
+      "title": "Computer Science–oriented high school diploma",
+      "meta": "Fundación Kinal · 2023 — 2025",
+      "note": "Fullstack development, networking, and infrastructure; hands-on web and applied AI projects."
+    }
+  ],
+  "contactEmail": "hola@luisdeleon.dev",
+  "socialLinks": [
+    {
+      "id": "github",
+      "label": "GitHub",
+      "href": "https://github.com/LuisDeLeon24"
+    },
+    {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "href": "https://linkedin.com/"
+    },
+    {
+      "id": "x",
+      "label": "X",
+      "href": "https://x.com/"
+    }
+  ]
+}

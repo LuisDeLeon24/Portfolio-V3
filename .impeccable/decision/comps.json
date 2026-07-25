@@ -1,0 +1,30 @@
+{
+  "title": "Composición del portfolio",
+  "question": "Mismo mundo (Galería · hang disperso). Elige la composición que llevamos a código, combina ideas, pide revisión, o rechaza.",
+  "options": [
+    {
+      "id": "comp-a",
+      "label": "A · Hero con un solo montaje",
+      "kicker": "FOCO",
+      "body": "Nombre monumental + foco en una línea; un único trapecio como ancla; máximo aire de sala. Ideal si el primer viewport debe sentirse quieto y autorial.",
+      "hero": "C:\\Users\\Luis De León\\Desktop\\Luis\\Proyectos\\Portfolio V3\\.impeccable\\decision\\comps\\comp-a.png"
+    },
+    {
+      "id": "comp-b",
+      "label": "B · Hub disperso con tabs",
+      "kicker": "CAMINO",
+      "body": "Prueba el corazón del sitio: tabs + overviews en romboide/trapecio + Ver más. Mejor si quieres validar el ritmo del hang en la sección de obra.",
+      "hero": "C:\\Users\\Luis De León\\Desktop\\Luis\\Proyectos\\Portfolio V3\\.impeccable\\decision\\comps\\comp-b.png"
+    },
+    {
+      "id": "comp-c",
+      "label": "C · Hang + archivo abierto",
+      "kicker": "STAGING",
+      "body": "Hace visible el anexo de storage: hang escaso + racks densos al tirar. Encaja con Ver más como archivo, no como otra landing.",
+      "hero": "C:\\Users\\Luis De León\\Desktop\\Luis\\Proyectos\\Portfolio V3\\.impeccable\\decision\\comps\\comp-c.png"
+    }
+  ],
+  "reroll": false,
+  "canon": false,
+  "steer": true
+}

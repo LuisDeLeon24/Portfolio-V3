@@ -1,0 +1,142 @@
+{
+  "title": "Premios y reconocimientos",
+  "intro": "Solo logros verificables. Sin trofeos inventados.",
+  "archiveTitle": "Todos los logros",
+  "seeAll": "Ver más logros",
+  "featuredNav": "Premios destacados",
+  "items": [
+    {
+      "id": "cursor-tec-guatemala",
+      "title": "Ganador (2.º lugar) — Cursor × Tec Guatemala",
+      "org": "Cursor AI",
+      "year": "Jul 2026",
+      "blurb": "Top 2 de ~10 equipos en un sprint de 4 horas con El Telescopio Digital, un telescopio AR en el navegador.",
+      "meta": "Cursor AI · Jul 2026",
+      "featureSubtitle": "Telescopio AR, shipped",
+      "featured": true,
+      "featureArt": 0,
+      "images": [0, 1],
+      "body": [
+        "Quedamos en el top 2 de unos 10 equipos en Cursor Hackathon Guatemala, un sprint de 4 horas, con El Telescopio Digital: una experiencia AR en el navegador que convierte el teléfono en un telescopio del cielo en vivo.",
+        "En una sola tarde, enviamos un demo web en producción que rastrea la ISS y Hubble en tiempo real con propagación orbital SGP4 y datos TLE de NASA/NORAD, impulsado por cámara, giroscopio y GPS, todo client-side, sin backend.",
+        "Prueba de qué tan rápido una idea clara puede pasar de concepto a producto interactivo bajo presión extrema de tiempo."
+      ]
+    },
+    {
+      "id": "cursor-buildathon-travel",
+      "title": "Travel Grant — Cursor Buildathon San Salvador",
+      "org": "The 502 Project",
+      "year": "Jul 2026",
+      "blurb": "Beca de viaje para asistir al Cursor Buildathon en San Salvador y representar a la comunidad local de developers.",
+      "meta": "The 502 Project · Jul 2026",
+      "featureSubtitle": "Buildathon, San Salvador",
+      "featured": true,
+      "featureArt": 1,
+      "images": [1, 2],
+      "body": [
+        "Beca de viaje otorgada por the502project para asistir al Cursor Buildathon en San Salvador, un hackathon intensivo AI-first.",
+        "Seleccionado para representar a la comunidad local de developers y ganar experiencia práctica construyendo con herramientas de desarrollo asistido por IA bajo presión de tiempo."
+      ]
+    },
+    {
+      "id": "innovatech-2026",
+      "title": "Semifinalista — INNOVATECH 2026",
+      "org": "Asociación Bancaria de Guatemala",
+      "year": "Jun 2026",
+      "blurb": "Co-desarrollo de Q-pay (con Qubity): lending P2P y gestión financiera; waitlist de 100+ en menos de una semana.",
+      "meta": "Asociación Bancaria de Guatemala · Jun 2026",
+      "featureSubtitle": "Q-pay · Sprint fintech",
+      "featured": true,
+      "featureArt": 2,
+      "images": [2, 3],
+      "body": [
+        "Co-desarrollo de Q-pay con Qubity: plataforma de lending P2P y gestión financiera.",
+        "Construida en un sprint de alta presión, integra evaluación de riesgo transparente y herramientas de gestión de deuda. Para validar el concepto, lanzamos una campaña y reunimos una waitlist de 100+ usuarios en menos de una semana, demostrando viabilidad técnica y demanda de mercado para soluciones Fintech descentralizadas."
+      ]
+    },
+    {
+      "id": "ufm-cs-hackathon",
+      "title": "Ganador (1er lugar) — UFM Computer Science Hackathon",
+      "org": "Universidad Francisco Marroquín",
+      "year": "Abr 2026",
+      "blurb": "1er lugar con Aprendi (Qubity): plataforma de aprendizaje adaptativo con flujos inteligentes.",
+      "meta": "Universidad Francisco Marroquín · Abr 2026",
+      "featureSubtitle": "Adaptive learning, shipped",
+      "featureArt": 0,
+      "images": [0, 1, 2],
+      "body": [
+        "Diseño y construcción de Aprendi con Qubity: plataforma de aprendizaje adaptativo con flujos de usuario inteligentes, obteniendo el 1er lugar.",
+        "Desarrollada en un sprint intensivo, entrega rutas educativas personalizadas ajustando el contenido según el desempeño en tiempo real. El reconocimiento valida la ejecución técnica, la arquitectura y la escalabilidad de soluciones con IA en EdTech."
+      ],
+      "links": [
+        {
+          "label": "Aprendi (demo)",
+          "href": "https://aprendii.lovable.app/"
+        },
+        {
+          "label": "GitHub",
+          "href": "https://github.com/LuisDeLeon24/aprendii.git"
+        }
+      ]
+    },
+    {
+      "id": "atom-dev-day",
+      "title": "Finalista (Top 5) — Atom Dev Day Hackathon",
+      "org": "Atom",
+      "year": "Mar 2026",
+      "blurb": "Finalista Top 5 en Atom Dev Day Hackathon.",
+      "meta": "Atom · Mar 2026",
+      "featureSubtitle": "Top 5 finalista",
+      "featureArt": 2,
+      "images": [2, 3],
+      "body": [
+        "Finalista (Top 5) en el Atom Dev Day Hackathon (marzo 2026)."
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/JohanMiguel/AI-Agent-Builder.git"
+        }
+      ]
+    },
+    {
+      "id": "nasa-space-apps",
+      "title": "Mención honorífica Guatemala — Global Connection Award",
+      "org": "NASA Space Apps Challenge",
+      "year": "Oct 2025",
+      "blurb": "Mención honorífica para Guatemala en el Global Connection Award, NASA Space Apps Challenge.",
+      "meta": "NASA Space Apps Challenge · Oct 2025",
+      "featureSubtitle": "Global Connection",
+      "featureArt": 1,
+      "images": [1, 0],
+      "body": [
+        "Mención honorífica Guatemala — Global Connection Award en el NASA Space Apps Challenge (octubre 2025)."
+      ],
+      "links": [
+        {
+          "label": "Demo",
+          "href": "https://meteor-madnes-frontend.vercel.app/"
+        },
+        {
+          "label": "GitHub",
+          "href": "https://github.com/LuisDeLeon24/MeteorMadnes-frontend.git"
+        }
+      ]
+    },
+    {
+      "id": "leadership-kinal",
+      "title": "Leadership Award",
+      "org": "Fundación Kinal",
+      "year": "Oct 2023",
+      "blurb": "Beca completa a un programa intensivo de liderazgo por excelencia académica e influencia entre pares.",
+      "meta": "Fundación Kinal · Oct 2023",
+      "featureSubtitle": "Excelencia académica",
+      "featureArt": 3,
+      "images": [3, 1],
+      "body": [
+        "Beca completa a un programa intensivo de liderazgo en reconocimiento al desempeño académico sobresaliente y a mantener un GPA de primer nivel.",
+        "Seleccionado por demostrar influencia entre pares, iniciativa y dedicación tanto a la excelencia técnica como al desarrollo comunitario durante el bachillerato técnico."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "title": "Proyectos",
+  "summary": "Builds de hackathon y proyectos propios.",
+  "items": [
+    {
+      "id": "sextant",
+      "title": "Sextant",
+      "blurb": "Descripción pendiente.",
+      "meta": "Proyecto",
+      "featureSubtitle": "Awarded",
+      "featured": true,
+      "awarded": true,
+      "featureArt": 3,
+      "body": [
+        "Descripción pendiente."
+      ]
+    },
+    {
+      "id": "q-pay",
+      "title": "Q-Pay",
+      "blurb": "Descripción pendiente.",
+      "meta": "Proyecto",
+      "featureSubtitle": "Awarded",
+      "featured": true,
+      "awarded": true,
+      "featureArt": 3,
+      "body": [
+        "Descripción pendiente."
+      ]
+    },
+    {
+      "id": "shoot-ai",
+      "title": "Shoot AI",
+      "blurb": "Descripción pendiente.",
+      "meta": "Proyecto",
+      "featureSubtitle": "Shoot AI",
+      "featureArt": 1,
+      "body": [
+        "Descripción pendiente."
+      ]
+    },
+    {
+      "id": "q-threats",
+      "title": "Q-Threats",
+      "blurb": "Descripción pendiente.",
+      "meta": "Proyecto",
+      "featureSubtitle": "Q-Threats",
+      "featureArt": 0,
+      "body": [
+        "Descripción pendiente."
+      ]
+    },
+    {
+      "id": "aprendi",
+      "title": "Aprendi",
+      "blurb": "Plataforma educativa con IA: patrones de aprendizaje, insights personalizados y labs Linux interactivos.",
+      "meta": "Hackathon · UFM · 2026",
+      "featureSubtitle": "1st place · adaptive learning",
+      "featured": true,
+      "awarded": true,
+      "featureArt": 0,
+      "body": [
+        "Ganador (1er lugar) del UFM Computer Science Hackathon 2026.",
+        "Next.js, TypeScript, Tailwind y Supabase. Equipo de 3; producto en evolución."
+      ],
+      "links": [
+        {
+          "label": "Demo",
+          "href": "https://aprendii.lovable.app/"
+        },
+        {
+          "label": "GitHub",
+          "href": "https://github.com/LuisDeLeon24/aprendii.git"
+        }
+      ]
+    },
+    {
+      "id": "agent-builder",
+      "title": "Agent Builder",
+      "blurb": "Plataforma para construir y desplegar agentes de IA con LLMs, RAG e integración de datos en tiempo real.",
+      "meta": "Hackathon · Atom Dev Day · 2026",
+      "featureSubtitle": "Awarded · 8h sprint",
+      "featured": true,
+      "awarded": true,
+      "featureArt": 1,
+      "body": [
+        "Premiado / finalista en Atom Dev Day 2026. Sprint de ~8 horas, equipo de 3.",
+        "Supabase, Next.js, LangChain, RAG."
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/JohanMiguel/AI-Agent-Builder.git"
+        }
+      ]
+    },
+    {
+      "id": "astro-tracker",
+      "title": "Astro Tracker",
+      "blurb": "Simulación interactiva de impactos de asteroides con APIs de NASA, datos FITS y estimación de daño físico/económico.",
+      "meta": "Hackathon · NASA Space Apps · 2025",
+      "featureSubtitle": "NASA APIs · 48h MVP",
+      "featureArt": 2,
+      "body": [
+        "MVP en 48 horas (equipo de 6) para NASA Space Apps Challenge.",
+        "Node.js, React, Chakra UI, MongoDB, NASA API, visualización FITS y datos del Banco Mundial."
+      ],
+      "links": [
+        {
+          "label": "Demo",
+          "href": "https://meteor-madnes-frontend.vercel.app/"
+        },
+        {
+          "label": "GitHub",
+          "href": "https://github.com/LuisDeLeon24/MeteorMadnes-frontend.git"
+        }
+      ]
+    },
+    {
+      "id": "videntia",
+      "title": "Videntia",
+      "blurb": "Plataforma de análisis visual con IA: descripciones humanas a partir de imágenes para accesibilidad e investigación.",
+      "meta": "Proyecto escolar · Expokinal · 2025",
+      "featureSubtitle": "Featured at Expokinal 2025",
+      "featureArt": 3,
+      "body": [
+        "Proyecto escolar destacado en Expokinal 2025. Equipo de 6; build en ~1 semana.",
+        "Node.js, React, Chakra UI, Google Cloud Vision, OpenRouter / LLMs y computer vision."
+      ]
+    },
+    {
+      "id": "unmask-ai",
+      "title": "Unmask AI",
+      "blurb": "Herramienta de IA con OCR y LLMs para extraer y analizar datos visuales, con búsqueda profunda automatizada.",
+      "meta": "Hackathon · 2025",
+      "featureSubtitle": "OCR × LLM deep search",
+      "featureArt": 0,
+      "body": [
+        "MVP en ~3 días (solo). Node.js, React, Tailwind, OCR, LLMs, Google Deep Search / Baidu."
+      ],
+      "links": [
+        {
+          "label": "Demo",
+          "href": "https://unmask-ai-frontend.vercel.app/"
+        },
+        {
+          "label": "GitHub",
+          "href": "https://github.com/LuisDeLeon24/UnmaskAI---Frontend.git"
+        }
+      ]
+    }
+  ]
+}

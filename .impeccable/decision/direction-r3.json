@@ -1,0 +1,32 @@
+{
+  "title": "Mundo visual (steer: artístico · geométrico · relajado)",
+  "question": "Con tu steer, el sorteo asignó Galería con hang disperso. Quédate, toma una alternativa, re-lanza, o ajusta.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Galería · hang disperso",
+      "kicker": "EL SORTEO",
+      "lineage": "Solo show en galería — obra con aire, montajes angulares, archivo denso a un tirón",
+      "body": "STEER: artístico, geométrico, relajado.\n\nMUNDO: muro de galería claro (luz suave, no corporativo), tipografía con POV de sala de exposición, mucho aire entre bloques. Las imágenes viven en marcos romboides/trapecios como montajes de sala. Paleta calmada: yeso, sombra suave, un acento matte (no neon). Los tabs del hub son “salas” o etiquetas de muro discretas.\n\nPRIMER VIEWPORT: nombre a escala de título de exposición + foco IA × ciber × research en una línea; sin pitch. Un solo montaje geométrico como ancla visual.\n\nSTAGING (open storage): el camino principal es un hang disperso (experiencia, un overview por pestaña, premios, educación); “Ver más” tira del rack/archivo denso de esa categoría.\n\nCAMINO: Hero → Experiencia → Hub (Proyectos / CTFs+Máquinas / Papers / Certs) → Premios → Educación → Footer (correo + redes).\n\nRIESGO: si se vuelve demasiado museo blanco vacío, pierde personalidad técnica — el acento geométrico y el contenido real deben llevar el carácter."
+    },
+    {
+      "id": "challenger-cyclorama",
+      "label": "Ciclórama · amanecer",
+      "lineage": "Pared curva de teatro — luz sola crea horizonte infinito",
+      "body": "Fusión: atmósfera relajada por fases de luz (noche → cobalto → rosa → día); el contenido flota como actores frente al cyc; los overviews del hub son “cues” de iluminación; montajes trapecio/rombo como figuras en escena. Primer viewport: nombre + foco sobre horizonte bajo, sin venta. Muy artístico y calmado. Riesgo: menos “geométrico duro” que una galería de montajes; hay que forzar los crops angulares como ley.",
+      "hero": "https://impeccable.style/worlds/cards/stagecraft-theater-lighting-cyclorama-dawn-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/stagecraft-theater-lighting-cyclorama-dawn.webp"
+    },
+    {
+      "id": "challenger-raku",
+      "label": "Raku · humo y craquelado",
+      "lineage": "Cerámica raku — choque térmico, carbón, piel imprevisible",
+      "body": "Fusión: superficie artística y táctil (hollín, craquelado plata, un ember solo en lo activo); geometría en la composición asimétrica y en los crops de obra; ritmo lento de revelado al cambiar pestañas. Relajado, anti-comercial, memorable. Riesgo: lo orgánico puede pelear con tu pedido de geometría clara — anclar tipografía y marcos angulares con firmeza.",
+      "hero": "https://impeccable.style/worlds/cards/clay-ceramics-fracture-raku-smoke-flash-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/clay-ceramics-fracture-raku-smoke-flash.webp"
+    }
+  ],
+  "reroll": true,
+  "canon": true,
+  "steer": true
+}

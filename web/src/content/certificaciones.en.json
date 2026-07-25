@@ -1,0 +1,68 @@
+{
+  "title": "Certifications",
+  "summary": "Credentials and courses with weight: networking, data, regulation, and research.",
+  "items": [
+    {
+      "id": "fiusac-research-paper-writing",
+      "title": "Research Paper Writing for Computer Science",
+      "blurb": "Writing computer science research papers: structure, rigor, and publication practice.",
+      "meta": "FIUSAC · Research writing",
+      "featureSubtitle": "CS research writing",
+      "featured": true,
+      "featureArt": 0,
+      "body": [
+        "FIUSAC workshop/course on writing research papers in computer science: structure, clarity, and academic standards.",
+        "Direct bridge toward the portfolio’s research track."
+      ]
+    },
+    {
+      "id": "itu-regulatory-innovation",
+      "title": "Regulatory Innovation Mechanisms",
+      "blurb": "Regulatory innovation mechanisms in the digital ecosystem — ITU.",
+      "meta": "ITU · Regulatory innovation",
+      "featureSubtitle": "ITU · policy & innovation",
+      "featureArt": 3,
+      "body": [
+        "International Telecommunication Union training on regulatory innovation mechanisms in digital and technology environments.",
+        "Policy and regulation context to complement technical work in security and infrastructure."
+      ]
+    },
+    {
+      "id": "mongodb-ai-vector-search",
+      "title": "Building AI-Powered Search with MongoDB Vector Search",
+      "blurb": "Semantic search and embeddings with MongoDB Vector Search for AI-powered products.",
+      "meta": "MongoDB · AI / Vector Search",
+      "featureSubtitle": "Vector Search · AI",
+      "featured": true,
+      "featureArt": 2,
+      "body": [
+        "Course on building AI-powered search with MongoDB Vector Search: embeddings, vector indexes, and semantic retrieval.",
+        "Useful for RAG, meaning-based search, and products with unstructured data."
+      ]
+    },
+    {
+      "id": "cisco-ccna-intro",
+      "title": "CCNA: Introduction to Networks",
+      "blurb": "Networking intro: OSI/TCP-IP models, addressing, and basic device configuration.",
+      "meta": "Cisco · CCNA",
+      "featureSubtitle": "Introduction to Networks",
+      "featureArt": 1,
+      "body": [
+        "First CCNA module: networking principles, protocols, IP addressing, and introductory device configuration.",
+        "Formal networking start after IT Essentials."
+      ]
+    },
+    {
+      "id": "cisco-it-essentials",
+      "title": "IT Essentials: PC Hardware and Software",
+      "blurb": "Foundations of hardware, software, and system support — Cisco Networking Academy.",
+      "meta": "Cisco · Networking Academy",
+      "featureSubtitle": "PC Hardware and Software",
+      "featureArt": 0,
+      "body": [
+        "Cisco Networking Academy course on PC assembly, configuration, OS support, and troubleshooting.",
+        "Hands-on base for technical support and a path into networking tracks."
+      ]
+    }
+  ]
+}

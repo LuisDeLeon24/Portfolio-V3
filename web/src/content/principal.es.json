@@ -1,0 +1,98 @@
+{
+  "brand": "Luis De León",
+  "focus": "IA × Ciberseguridad × Research",
+  "tagline": "Building fast,\nShipping faster",
+  "nav": {
+    "experience": "Experiencia",
+    "work": "Experimentos",
+    "awards": "Premios",
+    "education": "Educación",
+    "contact": "Contacto"
+  },
+  "aboutLabel": "01",
+  "aboutTitle": "Sobre el mi",
+  "aboutBody": "Soy un desarrollador de software y entusiasta de la investigación. Me dedico a construir aplicaciones web completas y arquitecturas impulsadas por inteligencia artificial, combinando el desarrollo Full-Stack con la exploración de agentes autónomos y seguridad en sistemas. Mi enfoque principal está en resolver problemas técnicos complejos a través de software rápido, funcional y bien estructurado, convirtiendo ideas abstractas en proyectos prácticos y escalables.",
+  "aboutSkills": [
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "Tailwind",
+    "Supabase",
+    "PostgreSQL",
+    "MongoDB",
+    "SQL",
+    "C#",
+    "Spring Boot",
+    "Git"
+  ],
+  "experienceTitle": "Experiencia",
+  "workTitle": "Experimentos",
+  "tabs": {
+    "projects": "Proyectos",
+    "ctfs": "CTFs & Labs",
+    "research": "Research",
+    "certs": "Certs"
+  },
+  "seeMore": "Ver más",
+  "archiveClose": "Cerrar archivo",
+  "archiveTitle": "Archivo",
+  "placeholder": "[placeholder]",
+  "backHome": "Volver al portfolio",
+  "openItem": "Ver ficha",
+  "detailLinks": "Enlaces",
+  "prevItem": "Anterior",
+  "nextItem": "Siguiente",
+  "moreExperiments": "Otros experimentos",
+  "openCategories": "Abrir categorías de experimentos",
+  "categoryCount": "{n} piezas",
+  "featuredTitle": "Destacados",
+  "featuredLabel": "En sala",
+  "learnMore": "Ver más",
+  "featuredNav": "Destacados de la categoría",
+  "seeAllInCategory": "Ver más {category}",
+  "allInCategory": "Todos en {category}",
+  "allCertifications": "Todas las certificaciones",
+  "exploreResearch": "Explorar research",
+  "comingSoon": "Coming soon",
+  "notFoundTitle": "No encontrado",
+  "notFoundBody": "Esa ficha aún no existe o el enlace está mal. Vuelve al portfolio.",
+  "educationTitle": "Educación",
+  "footerTitle": "Seguimos en contacto",
+  "footerBody": "Si quieres revisar algo juntos o dejar una nota, escríbeme o sígueme en redes.",
+  "emailCta": "Enviar correo",
+  "socialCta": "Redes",
+  "experience": [
+    {
+      "role": "Software Developer Intern",
+      "place": "Neonet Guatemala",
+      "period": "2025",
+      "note": "Apoyo en integración de clientes a pasarelas de pago; C#, .NET y SQL Server en plataformas financieras de alto volumen."
+    }
+  ],
+  "education": [
+    {
+      "title": "Ingenieria en Ciencias y Sistemas",
+      "meta": "Universidad de San Carlos de Guatemala · 2026 — presente",
+      "note": "Programa de ingenieria enofcado en 3 ramas Logica y diseño de sistemas, Ciencias de la compucación y desarrollo de software. Enfocando mis proyectos a impacto y competitividad."
+    },
+    {
+      "title": "Perito en Computación",
+      "meta": "Fundación Kinal · 2023 — 2025",
+      "note": "Desarrollo fullstack, redes e infraestructura; experiencia práctica en web e IA aplicada."
+    }
+  ],
+  "contactEmail": "ldeleonb06@gmail.com",
+  "socialLinks": [
+    {
+      "id": "github",
+      "label": "GitHub",
+      "href": "https://github.com/LuisDeLeon24"
+    },
+    {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "href": "https://linkedin.com/"
+    }
+  ]
+}

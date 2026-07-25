@@ -1,0 +1,32 @@
+{
+  "title": "Mundo visual del portfolio (re-roll)",
+  "question": "Nueva mano. El sorteo asignó Muro de preprints. Quédate con él, toma una alternativa, re-lanza otra vez, o pide un ajuste.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Muro de preprints",
+      "kicker": "EL SORTEO",
+      "lineage": "Pared de investigación — hojas arXiv/preprint fijadas, overlays geométricos, anotaciones al margen",
+      "body": "MUNDO: blanco/off-white de papel de paper, tipografía técnica + un display angular con POV (nada de Inter/Playfair), clips y pins, figuras y screenshots montados en romboides/trapecios sobre las hojas. Acento de tinta de revisión (un solo color de highlighter/ink). Los tabs del hub son “series” o categorías de papers en el muro.\n\nPRIMER VIEWPORT: nombre monumental + foco IA × ciber × research como encabezado de paper; una frase; sin pitch. Un trapecio con imagen o diagrama asoma como figura 1.\n\nCAMINO: Hero → Experiencia → Hub (Proyectos / CTFs+Máquinas / Papers / Certs + Ver más) → Premios → Educación → Footer (correo + redes).\n\nSTAGING: el scroll principal es el recto (obra limpia); “Ver más” es el verso (proceso, fechas, notas) — no un segundo tour forzado.\n\nRIESGO: puede sentirse demasiado académico/seco si no se mantiene la geometría experimental de los montajes."
+    },
+    {
+      "id": "challenger-paper-menagerie",
+      "label": "Menagerie de papel cinético",
+      "lineage": "Autómata de papel — tabs, fuelles, juntas; movimiento humilde y sorprendente",
+      "body": "Fusión: el portfolio es una procesión de figuras de papel recortadas (proyectos, CTFs, papers, certs); al “crank”/cambiar pestaña, una figura se despliega en rojo/carmesí mientras las otras reposan. Recortes nativos en ángulos raros. Primer viewport: nombre cortado en letterpress + foco; una figura en reposo sugiere el mecanismo. Anti-comercial y experimental. Riesgo: demasiado juguetón si no se ancla en tipografía y captions de bitácora técnica.",
+      "hero": "https://impeccable.style/worlds/cards/kinetic-sculpture-automata-crank-paper-menagerie-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/kinetic-sculpture-automata-crank-paper-menagerie.webp"
+    },
+    {
+      "id": "challenger-particle",
+      "label": "Display de evento (detector)",
+      "lineage": "Collider event display — tracks, anillos, wedges de calorímetro",
+      "body": "Fusión: cada pilar de evidencia es un track/canal que sale del centro (tu nombre/foco); el hub aísla un track y atenúa el resto. Geometría angular en wedges = montajes trapecio/rombo. Primer viewport: nombre + foco en el beamline; una floración de tracks sugiere research/AI sin copy de venta. Riesgo: estética sci-fi oscura si se abusa del glow — mantener un display científico sobrio.",
+      "hero": "https://impeccable.style/worlds/cards/scientific-notation-particle-detector-event-display-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/scientific-notation-particle-detector-event-display.webp"
+    }
+  ],
+  "reroll": true,
+  "canon": true,
+  "steer": true
+}

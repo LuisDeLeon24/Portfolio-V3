@@ -1,0 +1,68 @@
+{
+  "title": "Certificaciones",
+  "summary": "Credenciales y cursos con peso: redes, datos, regulación e investigación.",
+  "items": [
+    {
+      "id": "fiusac-research-paper-writing",
+      "title": "Research Paper Writing for Computer Science",
+      "blurb": "Escritura de papers de ciencias de la computación: estructura, rigor y publicación.",
+      "meta": "FIUSAC · Research writing",
+      "featureSubtitle": "CS research writing",
+      "featured": true,
+      "featureArt": 1,
+      "body": [
+        "Taller / curso de FIUSAC sobre escritura de research papers en computer science: estructura, claridad y estándares académicos.",
+        "Puente directo hacia la línea de research del portfolio."
+      ]
+    },
+    {
+      "id": "itu-regulatory-innovation",
+      "title": "Regulatory Innovation Mechanisms",
+      "blurb": "Mecanismos de innovación regulatoria en el ecosistema digital — ITU.",
+      "meta": "ITU · Regulatory innovation",
+      "featureSubtitle": "ITU · policy & innovation",
+      "featured": true,
+      "featureArt": 3,
+      "body": [
+        "Formación de la International Telecommunication Union sobre mecanismos de innovación regulatoria en entornos digitales y tecnológicos.",
+        "Contexto de política y regulación para acompañar el trabajo técnico en ciberseguridad e infraestructura."
+      ]
+    },
+    {
+      "id": "mongodb-ai-vector-search",
+      "title": "Building AI-Powered Search with MongoDB Vector Search",
+      "blurb": "Búsqueda semántica e embeddings con MongoDB Vector Search para productos con IA.",
+      "meta": "MongoDB · AI / Vector Search",
+      "featureSubtitle": "Vector Search · AI",
+      "featureArt": 0,
+      "body": [
+        "Curso enfocado en construir búsqueda impulsada por IA con MongoDB Vector Search: embeddings, índices vectoriales y recuperación semántica.",
+        "Aplicable a RAG, búsqueda por significado y productos con datos no estructurados."
+      ]
+    },
+    {
+      "id": "cisco-ccna-intro",
+      "title": "CCNA: Introduction to Networks",
+      "blurb": "Introducción a redes: modelos OSI/TCP-IP, direccionamiento y configuración básica.",
+      "meta": "Cisco · CCNA",
+      "featureSubtitle": "Introduction to Networks",
+      "featureArt": 1,
+      "body": [
+        "Módulo inicial de la ruta CCNA: principios de redes, protocolos, direccionamiento IP y configuración introductoria de dispositivos.",
+        "Punto de partida formal en networking después de IT Essentials."
+      ]
+    },
+    {
+      "id": "cisco-it-essentials",
+      "title": "IT Essentials: PC Hardware and Software",
+      "blurb": "Fundamentos de hardware, software y soporte de sistemas — Cisco Networking Academy.",
+      "meta": "Cisco · Networking Academy",
+      "featureSubtitle": "PC Hardware and Software",
+      "featureArt": 0,
+      "body": [
+        "Curso base de Cisco Networking Academy sobre ensamblaje, configuración y mantenimiento de PCs, sistemas operativos y diagnóstico.",
+        "Base práctica para soporte técnico y para seguir hacia rutas de redes."
+      ]
+    }
+  ]
+}

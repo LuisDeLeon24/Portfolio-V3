@@ -1,0 +1,32 @@
+{
+  "title": "Mundo visual del portfolio",
+  "question": "El sorteo asignó Cuaderno de laboratorio. Puedes quedarte con él, tomar una alternativa fusionada, re-lanzar, o pedirle un ajuste.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Cuaderno de laboratorio",
+      "kicker": "EL SORTEO",
+      "lineage": "Field notes / lab journal — fotos inclinadas, anotaciones, cinta, spreads de investigación",
+      "body": "MUNDO: papel cálido de cuaderno de campo, tinta y graphite, cinta washi, fotos recortadas en romboides y trapecios pegadas en ángulo; tipografía de anotación + un display con carácter de título de bitácora (no Inter/Playfair). Los tabs del hub son pestañas/marcadores de página; el overview cambia como un spread que se reformatea antes de montar el contenido.\n\nPRIMER VIEWPORT: nombre a escala hero + foco IA × ciberseguridad × research; una sola frase; sin CTA de venta. Un clip de foto en trapecio o un margen de anotación sugieren el cuaderno. Toggle ES/EN discreto.\n\nCAMINO: Hero → Experiencia (entradas fechadas) → Hub Proyectos (botones Proyectos / CTFs+Máquinas / Papers / Certs + Ver más) → Premios → Educación → Footer (correo + redes).\n\nINTERACCIÓN FIRMA: al cambiar de pestaña, el “recipiente” (spread) cambia de proporción antes de revelar el overview — staging room-before-work.\n\nRIESGO: si se vuelve demasiado scrapbook/craft, pierde rigor técnico; hay que mantener densidad y tipografía de investigación, no scrapbook infantil."
+    },
+    {
+      "id": "challenger-ikebana",
+      "label": "Tocoma / Ikebana (ma)",
+      "lineage": "Alcoba tokonoma + arreglo ikebana — línea, asimetría, vacío activo",
+      "body": "Fusión: la quietud y el vacío activo del ikebana cargan el tono anti-comercial; los recortes de obra siguen en romboide/trapecio como “tallos” visuales; el hub de pestañas es un triángulo asimétrico de líneas (primaria/secundaria/apoyo) en vez de scrapbook. Primer viewport: nombre off-center, mucho ma, foco en una línea corta. Riesgo: demasiado sparse para premios/certs densos.",
+      "hero": "https://impeccable.style/worlds/cards/growth-metamorphosis-branching-ikebana-ma-arrangement-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/growth-metamorphosis-branching-ikebana-ma-arrangement.webp"
+    },
+    {
+      "id": "challenger-oscilloscope",
+      "label": "Banco de osciloscopio",
+      "lineage": "CRT + graticule + knobs — notación científica de señal",
+      "body": "Fusión: el portfolio se lee como un banco de señales — cada pestaña es un canal; el overview es un “trace” de evidencia (proyectos, CTFs, papers, certs). Primer viewport: nombre + foco como readout; una traza viva (canvas) sugiere research/AI sin copy de venta. Formas angulares en bezels/crops. Riesgo: caer en glow cyber genérico — hay que quedarse en instrumentación (graticule, knobs, phosphor contenido), no neon marketing.",
+      "hero": "https://impeccable.style/worlds/cards/scientific-notation-oscilloscope-signal-bench-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/scientific-notation-oscilloscope-signal-bench.webp"
+    }
+  ],
+  "reroll": true,
+  "canon": true,
+  "steer": true
+}
