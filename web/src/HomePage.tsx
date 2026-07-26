@@ -40,12 +40,9 @@ export default function HomePage() {
 
         <section className="hero" aria-label="Hero">
           <h1 className="visually-hidden">{t.brand}</h1>
-          <div className="hero-stage" aria-hidden="true">
-            <HeroCollage />
-            <div className="hero-name">
-              <span className="hero-name-line hero-name-line-top">Luis De</span>
-              <span className="hero-name-line hero-name-line-bottom">León</span>
-            </div>
+          <div className="hero-name" aria-hidden="true">
+            <span className="hero-name-line hero-name-line-top">Luis De</span>
+            <span className="hero-name-line hero-name-line-bottom">León</span>
           </div>
           <div className="hero-copy">
             <p className="hero-focus">{t.focus}</p>
@@ -57,6 +54,9 @@ export default function HomePage() {
                 </span>
               ))}
             </p>
+          </div>
+          <div className="hero-stage" aria-hidden="true">
+            <HeroCollage />
           </div>
         </section>
 

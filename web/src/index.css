@@ -1606,12 +1606,17 @@ button {
 .hero {
   --hero-header: 5.5rem;
   --hero-gutter: max(1.25rem, calc((100vw - min(1180px, 100vw - 2.5rem)) / 2));
-  --hero-name-size: clamp(3.5rem, 13vw, 5.75rem);
+  --hero-name-size: clamp(2.85rem, 12.5vw, 3.6rem);
+  --hero-pad-x: 1.25rem;
+  --hero-pad-top: 1.1rem;
   position: relative;
   isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
   min-height: calc(100svh - var(--hero-header));
   overflow: hidden;
-  padding: 0;
+  padding: var(--hero-pad-top) var(--hero-pad-x) 1.35rem;
   background:
     radial-gradient(85% 70% at 100% 0%, rgb(214 224 236 / 0.65), transparent 58%),
     radial-gradient(60% 50% at 0% 100%, rgb(122 46 59 / 0.08), transparent 55%),
@@ -1620,20 +1625,28 @@ button {
 }
 
 .hero-stage {
-  position: absolute;
-  inset: 0;
+  position: relative;
   z-index: 0;
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
   pointer-events: none;
   user-select: none;
 }
 
 .hero-collage {
-  position: absolute;
+  position: relative;
   z-index: 0;
-  top: clamp(2.5rem, 6.5vh, 4rem);
-  left: 44%;
-  width: min(52vw, 26rem);
-  height: min(68vh, 34rem);
+  width: min(100%, 20.5rem);
+  height: 100%;
+  min-height: 15rem;
+  max-height: min(46vh, 22rem);
+  margin-inline: auto;
+  /* rotations stick out of the box — pad so they stay on-screen */
+  padding: 0.65rem 0.85rem;
+  box-sizing: border-box;
   animation: hero-collage-in 1.05s var(--ease-out) both;
 }
 
@@ -1642,8 +1655,8 @@ button {
   margin: 0;
   overflow: hidden;
   background: var(--ink);
-  border: 6px solid var(--ink);
-  box-shadow: 8px 12px 22px rgb(20 22 26 / 0.24);
+  border: 4px solid var(--ink);
+  box-shadow: 5px 8px 16px rgb(20 22 26 / 0.2);
   aspect-ratio: 3 / 4;
 }
 
@@ -1654,13 +1667,13 @@ button {
   object-fit: cover;
 }
 
-/* Compact 2×2 stack after size tweak */
+/* Compact 2×2 — inset so tilted frames don’t clip the viewport */
 .hero-shot-coding {
-  top: 10%;
-  left: 6%;
-  width: 48%;
+  top: 12%;
+  left: 10%;
+  width: 42%;
   z-index: 1;
-  transform: rotate(4deg);
+  transform: rotate(2.8deg);
 }
 
 .hero-shot-coding img {
@@ -1668,11 +1681,11 @@ button {
 }
 
 .hero-shot-me2 {
-  top: 4%;
-  right: 6%;
-  width: 50%;
+  top: 6%;
+  right: 10%;
+  width: 44%;
   z-index: 2;
-  transform: rotate(-5deg);
+  transform: rotate(-3.5deg);
 }
 
 .hero-shot-me2 img {
@@ -1680,11 +1693,11 @@ button {
 }
 
 .hero-shot-me {
-  left: 12%;
+  left: 14%;
   bottom: 8%;
-  width: 40%;
+  width: 36%;
   z-index: 3;
-  transform: rotate(-3deg);
+  transform: rotate(-2deg);
 }
 
 .hero-shot-me img {
@@ -1692,27 +1705,29 @@ button {
 }
 
 .hero-shot-winner {
-  right: 8%;
+  right: 12%;
   bottom: 6%;
-  width: 44%;
+  width: 40%;
   z-index: 4;
-  transform: rotate(-4deg);
+  transform: rotate(-2.8deg);
 }
 
 .hero-name {
-  position: absolute;
-  inset: 0;
+  position: relative;
   z-index: 1;
+  display: grid;
+  gap: 0.12em;
 }
 
 .hero-name-line {
   display: block;
-  position: absolute;
-  left: 1.25rem;
+  position: relative;
+  left: auto;
+  top: auto;
   font-family: var(--font-display);
   font-weight: 800;
   font-size: var(--hero-name-size);
-  line-height: 0.8;
+  line-height: 0.82;
   letter-spacing: -0.035em;
   text-transform: uppercase;
   color: var(--wine-deep);
@@ -1720,37 +1735,26 @@ button {
 }
 
 .hero-name-line-top {
-  top: clamp(2.5rem, 8vh, 4rem);
   animation: hero-rise 0.95s var(--ease-out) both;
 }
 
 .hero-name-line-bottom {
-  top: calc(
-    clamp(2.5rem, 8vh, 4rem) + 0.8 * var(--hero-name-size) + clamp(0.2rem, 1vh, 0.55rem)
-  );
   animation: hero-rise 0.95s var(--ease-out) 0.08s both;
 }
 
 .hero-copy {
-  position: absolute;
+  position: relative;
   z-index: 2;
-  left: 1.25rem;
-  top: calc(
-    clamp(2.5rem, 8vh, 4rem) +
-    1.6 * var(--hero-name-size) +
-    clamp(0.2rem, 1vh, 0.55rem) +
-    clamp(1.25rem, 3.5vh, 2rem)
-  );
   display: grid;
-  gap: 0.75rem;
-  max-width: min(18rem, calc(100% - 2.5rem));
+  gap: 0.65rem;
+  max-width: 20rem;
   animation: hero-fade 0.9s var(--ease-out) 0.16s both;
 }
 
 .hero-focus {
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(0.92rem, 1.5vw, 1rem);
+  font-size: clamp(0.88rem, 3.4vw, 1rem);
   font-weight: 500;
   letter-spacing: -0.01em;
   color: var(--wine-deep);
@@ -1768,7 +1772,7 @@ button {
   display: grid;
   gap: 0;
   font-family: var(--font-display);
-  font-size: clamp(1.65rem, 3.6vw, 2.65rem);
+  font-size: clamp(1.45rem, 6.2vw, 1.9rem);
   font-weight: 700;
   line-height: 1.05;
   letter-spacing: -0.035em;
@@ -1818,47 +1822,78 @@ button {
   }
 }
 
+/* Desktop: crossed cartel — name/copy left, collage right */
 @media (min-width: 960px) {
   .hero {
     --hero-name-size: clamp(5.75rem, 9.5vw, 8.5rem);
+    display: block;
+    padding: 0;
+  }
+
+  .hero-stage {
+    position: absolute;
+    inset: 0;
+    display: block;
+    flex: none;
+    min-height: 0;
+    align-items: initial;
+    justify-content: initial;
   }
 
   .hero-collage {
+    position: absolute;
     top: clamp(2.75rem, 6vh, 4.25rem);
     left: 48%;
     width: min(44vw, 32rem);
     height: min(72vh, 40rem);
+    max-height: none;
+    min-height: 0;
+    margin-inline: 0;
+    padding: 0;
   }
 
   .hero-shot {
     border-width: 7px;
+    box-shadow: 8px 12px 22px rgb(20 22 26 / 0.24);
   }
 
   .hero-shot-coding {
     top: 12%;
     left: 8%;
     width: 46%;
+    transform: rotate(4deg);
   }
 
   .hero-shot-me2 {
     top: 6%;
     right: 8%;
     width: 48%;
+    transform: rotate(-5deg);
   }
 
   .hero-shot-me {
     left: 14%;
     bottom: 10%;
     width: 38%;
+    transform: rotate(-3deg);
   }
 
   .hero-shot-winner {
     right: 10%;
     bottom: 8%;
     width: 42%;
+    transform: rotate(-4deg);
+  }
+
+  .hero-name {
+    position: absolute;
+    inset: 0;
+    display: block;
+    gap: 0;
   }
 
   .hero-name-line {
+    position: absolute;
     left: var(--hero-gutter);
   }
 
@@ -1873,6 +1908,7 @@ button {
   }
 
   .hero-copy {
+    position: absolute;
     left: var(--hero-gutter);
     top: calc(
       clamp(3.25rem, 10vh, 5rem) +
@@ -1881,8 +1917,12 @@ button {
       clamp(1.5rem, 4vh, 2.5rem)
     );
     max-width: 18rem;
+    gap: 0.75rem;
   }
 
+  .hero-tag {
+    font-size: clamp(1.65rem, 3.6vw, 2.65rem);
+  }
 }
 
 /* ——— Sections ——— */
