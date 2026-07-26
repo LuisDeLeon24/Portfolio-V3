@@ -58,7 +58,7 @@ Preferir un archivo con `Landing` / `Main` (o `Videntia 1`) en el nombre para la
 
 ## Imágenes de CTFs & Labs
 
-Archivos en `web/src/assets/CTF & Labs/` (mapeo en `ctfMedia.ts`):
+Archivos en `web/src/assets/ctf-labs/` (mapeo en `ctfMedia.ts`):
 
 | `id` en JSON | Archivo |
 | --- | --- |

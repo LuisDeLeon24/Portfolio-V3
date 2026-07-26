@@ -1,4 +1,4 @@
-import photoCoding from './assets/principal/Coding.JPG'
+import photoCoding from './assets/principal/Coding.jpg'
 import photoMe from './assets/principal/Me.jpeg'
 import photoMe2 from './assets/principal/me2.jpeg'
 import photoWinner from './assets/principal/Winner.jpeg'

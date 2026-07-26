@@ -196,7 +196,7 @@ export default function HomePage() {
               <span className="num">04</span>
               <h2 id="awards-title">{t.awardsTitle}</h2>
             </div>
-            <p className="lede">{t.awardsIntro}</p>
+            {t.awardsIntro ? <p className="lede">{t.awardsIntro}</p> : null}
           </div>
           <div className="rail">
             {t.awards.slice(0, 3).map((item) => (

@@ -1,8 +1,6 @@
 {
   "title": "Awards & recognition",
-  "intro": "Verifiable wins only. No invented trophies.",
   "archiveTitle": "All achievements",
-  "archiveLead": "Verifiable wins from hackathons, competitions, and community — no invented trophies.",
   "seeAll": "See more achievements",
   "featuredNav": "Featured awards",
   "items": [
@@ -11,16 +9,15 @@
       "title": "Hackathon Winner (2nd place) — Cursor × Tec Guatemala",
       "org": "Cursor AI",
       "year": "Jul 2026",
-      "blurb": "Top 2 of ~10 teams in a 4-hour sprint with El Telescopio Digital, a browser-based AR sky telescope.",
+      "blurb": "Top 2 of ~10 teams in 4 hours: browser-based AR sky telescope.",
       "meta": "Cursor AI · Jul 2026",
       "featureSubtitle": "AR sky telescope, shipped",
       "featured": true,
       "featureArt": 0,
       "images": [0, 1],
       "body": [
-        "Ranked in the top 2 of roughly 10 teams at Cursor Hackathon Guatemala, a 4-hour build sprint, for El Telescopio Digital — a browser-based AR experience that turns a phone into a live sky telescope.",
-        "In a single afternoon, shipped a production web demo that tracks the ISS and Hubble in real time using SGP4 orbital propagation and NASA/NORAD TLE data, driven by camera, gyroscope, and GPS, entirely client-side, no backend.",
-        "Proof of how fast a sharp idea can go from concept to interactive product under extreme time constraints."
+        "Second place at Cursor Hackathon Guatemala (4-hour sprint) with El Telescopio Digital / Sextant: a phone as a live sky telescope.",
+        "In one afternoon, a production web demo tracking the ISS and Hubble in real time (orbits + NASA/NORAD data), driven by camera, gyroscope, and GPS — fully client-side, no backend."
       ]
     },
     {
@@ -28,15 +25,15 @@
       "title": "Travel Grant — Cursor Buildathon San Salvador",
       "org": "The 502 Project",
       "year": "Jul 2026",
-      "blurb": "Travel grant to attend the Cursor Buildathon in San Salvador and represent the local developer community.",
+      "blurb": "Travel grant to represent Guatemala at a 24 h AI-first buildathon.",
       "meta": "The 502 Project · Jul 2026",
       "featureSubtitle": "Buildathon, San Salvador",
       "featured": true,
       "featureArt": 1,
       "images": [1, 2],
       "body": [
-        "Awarded a travel grant by the502project to attend the Cursor Buildathon in San Salvador, an intensive AI-first hackathon.",
-        "Selected to represent the local developer community and gained hands-on experience building with AI-assisted development tools under time pressure."
+        "Travel grant from the502project for the Cursor Buildathon in San Salvador.",
+        "Selected to represent the local community and build with AI-assisted tools under time pressure (Shoot AI)."
       ]
     },
     {
@@ -44,15 +41,15 @@
       "title": "Hackathon SemiFinalist — INNOVATECH 2026",
       "org": "Asociación Bancaria de Guatemala",
       "year": "Jun 2026",
-      "blurb": "Co-developed Q-pay (with Qubity): P2P lending and financial management; 100+ waitlist in under a week.",
+      "blurb": "Q-Pay (Qubity): P2P lending; 100+ waitlist in under a week.",
       "meta": "Asociación Bancaria de Guatemala · Jun 2026",
-      "featureSubtitle": "Q-pay · Fintech sprint",
+      "featureSubtitle": "Q-Pay · fintech sprint",
       "featured": true,
       "featureArt": 2,
       "images": [2, 3],
       "body": [
-        "Co-developed Q-pay with Qubity — a P2P lending and financial management platform.",
-        "Built during a high-pressure sprint, the solution integrates transparent risk assessment and debt management tools. To validate the concept, we launched a campaign and gathered a waitlist of 100+ users in less than a week, proving both technical viability and strong market demand for decentralized Fintech solutions."
+        "Semifinalists with Q-Pay: a P2P lending app aimed at cutting friction around promissory notes (with Qubity).",
+        "Fast demand signal: 100+ waitlist in under a week, also competing against local startups."
       ]
     },
     {
@@ -60,14 +57,14 @@
       "title": "Hackathon Winner (1st Place) — UFM Computer Science Hackathon",
       "org": "Universidad Francisco Marroquín",
       "year": "Apr 2026",
-      "blurb": "1st place with Aprendi (Qubity): adaptive learning platform with intelligent user workflows.",
+      "blurb": "1st place with Aprendi: adaptive learning and Linux labs.",
       "meta": "Universidad Francisco Marroquín · Apr 2026",
       "featureSubtitle": "Adaptive learning, shipped",
       "featureArt": 0,
       "images": [0, 1, 2],
       "body": [
-        "Designed and built Aprendi with Qubity — an adaptive learning platform utilizing intelligent user workflows — securing 1st place in the competition.",
-        "Developed during an intensive sprint, the platform delivers personalized educational paths by dynamically adjusting content based on real-time user performance. This recognition validates technical execution, system architecture, and the scalability of AI-driven solutions in EdTech."
+        "1st place with Aprendi (Qubity): a platform that personalizes learning paths from live performance.",
+        "Intensive sprint: from idea to usable product with interactive Linux labs."
       ],
       "links": [
         {
@@ -85,13 +82,14 @@
       "title": "Hackathon Finalist (Top 5) — Atom Dev Day",
       "org": "Atom",
       "year": "Mar 2026",
-      "blurb": "Top 5 finalist at Atom Dev Day Hackathon.",
+      "blurb": "Top 5 in ~8–12 h with Agent Builder: sales agents with LLM + RAG.",
       "meta": "Atom · Mar 2026",
-      "featureSubtitle": "Top 5 finalist",
+      "featureSubtitle": "Top 5 · Agent Builder",
       "featureArt": 2,
       "images": [2, 3],
       "body": [
-        "Hackathon Finalist (Top 5) at the Atom Dev Day Hackathon (March 2026)."
+        "Top 5 at Atom Dev Day (~8–12 h) with Agent Builder: a platform to assemble sales agents with LLM + RAG.",
+        "Proof of execution under pressure: idea to usable demo in a single sprint."
       ],
       "links": [
         {
@@ -105,13 +103,14 @@
       "title": "Guatemala Honorific Mention — Global Connection Award",
       "org": "NASA Space Apps Challenge",
       "year": "Oct 2025",
-      "blurb": "Honorific mention for Guatemala at the Global Connection Award, NASA Space Apps Challenge.",
+      "blurb": "Global Connection mention for Guatemala; deliverable: Astro Tracker (48 h MVP).",
       "meta": "NASA Space Apps Challenge · Oct 2025",
       "featureSubtitle": "Global Connection",
       "featureArt": 1,
       "images": [1, 0],
       "body": [
-        "Guatemala Honorific Mention — Global Connection Award at the NASA Space Apps Challenge (October 2025)."
+        "Honorific mention (Global Connection) for Guatemala at the NASA Space Apps Challenge.",
+        "Deliverable: Astro Tracker — asteroid-impact simulation with NASA data, built as a 48-hour MVP."
       ],
       "links": [
         {
@@ -129,14 +128,14 @@
       "title": "Leadership Award",
       "org": "Fundación Kinal",
       "year": "Oct 2023",
-      "blurb": "Full scholarship to an intensive leadership program for academic excellence and peer leadership.",
+      "blurb": "Full scholarship to an intensive leadership program for academic excellence.",
       "meta": "Fundación Kinal · Oct 2023",
       "featureSubtitle": "Academic excellence",
       "featureArt": 3,
       "images": [3, 1],
       "body": [
-        "Awarded a full scholarship to an intensive leadership program in recognition of outstanding academic performance and maintaining a top-tier GPA.",
-        "Selected for demonstrating strong peer influence, initiative, and dedication to both technical excellence and community development during a technical high school degree."
+        "Full scholarship to an intensive leadership program for outstanding academics and a top-tier GPA.",
+        "Selected for initiative, peer influence, and commitment to technical work and community during technical high school."
       ]
     }
   ]

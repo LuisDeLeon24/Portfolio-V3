@@ -52,7 +52,7 @@ export default function AwardsPage() {
         <section className="site awards-archive" id="archivo" aria-label={t.awardsArchiveTitle}>
           <header className="awards-archive-head">
             <h2>{t.awardsArchiveTitle}</h2>
-            <p className="lede">{t.awardsArchiveLead}</p>
+            {t.awardsArchiveLead ? <p className="lede">{t.awardsArchiveLead}</p> : null}
           </header>
 
           <div className="awards-blocks">

@@ -5,63 +5,67 @@
     {
       "id": "sextant",
       "title": "Sextant",
-      "blurb": "Descripción pendiente.",
-      "meta": "Proyecto",
-      "featureSubtitle": "Awarded",
+      "blurb": "Mirás al cielo y ves datos de las estrellas en tu campo de visión — exploración AR/VR del cielo.",
+      "meta": "Hackathon · Cursor × Tec · 2026",
+      "featureSubtitle": "2.º lugar · AR sky",
       "featured": true,
       "awarded": true,
       "featureArt": 3,
       "body": [
-        "Descripción pendiente."
+        "Sistema de realidad aumentada/virtual para explorar el cielo: apuntás el dispositivo y obtenés información de las estrellas que tenés delante.",
+        "Demo web en el navegador, construida bajo presión de tiempo. Segundo lugar en el Cursor × Tec Hackathon."
       ]
     },
     {
       "id": "q-pay",
       "title": "Q-Pay",
-      "blurb": "Descripción pendiente.",
-      "meta": "Proyecto",
-      "featureSubtitle": "Awarded",
+      "blurb": "Créditos P2P que bajan la fricción al firmar pagarés.",
+      "meta": "Hackathon · INNOVATECH · 2026",
+      "featureSubtitle": "Semifinalista · waitlist 100",
       "featured": true,
       "awarded": true,
       "featureArt": 3,
       "body": [
-        "Descripción pendiente."
+        "App de créditos entre personas (P2P) pensada para reducir la fricción en la firma de pagarés.",
+        "Conseguimos una waitlist de 100 personas y llegamos a semifinales en INNOVATECH, enfrentándonos accidentalmente con startups locales."
       ]
     },
     {
       "id": "shoot-ai",
       "title": "Shoot AI",
-      "blurb": "Descripción pendiente.",
-      "meta": "Proyecto",
-      "featureSubtitle": "Shoot AI",
+      "blurb": "Asesoría de imagen con IA para photoshoots: prep, outfits y guía Live Shoot en cámara.",
+      "meta": "Hackathon · Cursor Buildathon San Salvador · 2026",
+      "featureSubtitle": "AI image advisory",
       "featureArt": 1,
       "body": [
-        "Descripción pendiente."
+        "Proyecto del Cursor Buildathon San Salvador (24 h), representando a Guatemala.",
+        "Agencia de asesoría de imagen con IA para optimizar shoots en redes: proporciones, outfits y Live Shoot — una guía en cámara con aprendizaje por refuerzo y scrapeo de catálogos."
       ]
     },
     {
       "id": "q-threats",
       "title": "Q-Threats",
-      "blurb": "Descripción pendiente.",
-      "meta": "Proyecto",
-      "featureSubtitle": "Q-Threats",
+      "blurb": "Revisa decretos e iniciativas de ley y mapea relaciones entre entidades del Estado.",
+      "meta": "Hackathon · Hack@Latam · 2026",
+      "featureSubtitle": "Transparencia y corrupción",
       "featureArt": 0,
       "body": [
-        "Descripción pendiente."
+        "Seleccionado entre más de 1200 aplicantes de Latinoamérica para Hack@Latam.",
+        "Plataforma de validación de decretos e iniciativas del Congreso de Guatemala, más mapeo de relaciones y convenios entre entidades gubernamentales — track de transparencia y corrupción."
       ]
     },
     {
       "id": "aprendi",
       "title": "Aprendi",
-      "blurb": "Plataforma educativa con IA: patrones de aprendizaje, insights personalizados y labs Linux interactivos.",
+      "blurb": "Aprendizaje adaptativo: rutas personalizadas y labs Linux según el desempeño en tiempo real.",
       "meta": "Hackathon · UFM · 2026",
-      "featureSubtitle": "1st place · adaptive learning",
+      "featureSubtitle": "1er lugar · adaptive learning",
       "featured": true,
       "awarded": true,
       "featureArt": 0,
       "body": [
-        "Ganador (1er lugar) del UFM Computer Science Hackathon 2026.",
-        "Next.js, TypeScript, Tailwind y Supabase. Equipo de 3; producto en evolución."
+        "1er lugar en el UFM Computer Science Hackathon 2026 (equipo de 3, con Qubity).",
+        "Plataforma educativa que ajusta el contenido al progreso del usuario e incluye labs Linux interactivos. Producto en evolución."
       ],
       "links": [
         {
@@ -77,15 +81,15 @@
     {
       "id": "agent-builder",
       "title": "Agent Builder",
-      "blurb": "Plataforma para construir y desplegar agentes de IA con LLMs, RAG e integración de datos en tiempo real.",
+      "blurb": "Armá y desplegá agentes de IA con LLMs, RAG y datos en tiempo real.",
       "meta": "Hackathon · Atom Dev Day · 2026",
-      "featureSubtitle": "Awarded · 8h sprint",
+      "featureSubtitle": "Top 5 · sprint ~8 h",
       "featured": true,
       "awarded": true,
       "featureArt": 1,
       "body": [
-        "Premiado / finalista en Atom Dev Day 2026. Sprint de ~8 horas, equipo de 3.",
-        "Supabase, Next.js, LangChain, RAG."
+        "Finalista Top 5 en Atom Dev Day 2026: sprint de ~8 horas, equipo de 3.",
+        "Plataforma para construir agentes (p. ej. ventas) con LLM + RAG e integración de datos en vivo."
       ],
       "links": [
         {
@@ -97,13 +101,15 @@
     {
       "id": "astro-tracker",
       "title": "Astro Tracker",
-      "blurb": "Simulación interactiva de impactos de asteroides con APIs de NASA, datos FITS y estimación de daño físico/económico.",
+      "blurb": "Simulá impactos de asteroides con datos NASA y estimá daño físico y económico.",
       "meta": "Hackathon · NASA Space Apps · 2025",
-      "featureSubtitle": "NASA APIs · 48h MVP",
+      "featureSubtitle": "NASA · MVP 48 h",
+      "featured": true,
+      "awarded": true,
       "featureArt": 2,
       "body": [
         "MVP en 48 horas (equipo de 6) para NASA Space Apps Challenge.",
-        "Node.js, React, Chakra UI, MongoDB, NASA API, visualización FITS y datos del Banco Mundial."
+        "Simulación interactiva con APIs de NASA, datos FITS y estimaciones de impacto — base del trabajo que recibió mención honorífica Global Connection."
       ],
       "links": [
         {
@@ -119,24 +125,24 @@
     {
       "id": "videntia",
       "title": "Videntia",
-      "blurb": "Plataforma de análisis visual con IA: descripciones humanas a partir de imágenes para accesibilidad e investigación.",
+      "blurb": "Análisis visual con IA: descripciones humanas de imágenes para accesibilidad e investigación.",
       "meta": "Proyecto escolar · Expokinal · 2025",
-      "featureSubtitle": "Featured at Expokinal 2025",
+      "featureSubtitle": "Destacado en Expokinal 2025",
       "featureArt": 3,
       "body": [
         "Proyecto escolar destacado en Expokinal 2025. Equipo de 6; build en ~1 semana.",
-        "Node.js, React, Chakra UI, Google Cloud Vision, OpenRouter / LLMs y computer vision."
+        "Convierte imágenes en descripciones legibles usando visión por computadora y LLMs."
       ]
     },
     {
       "id": "unmask-ai",
       "title": "Unmask AI",
-      "blurb": "Herramienta de IA con OCR y LLMs para extraer y analizar datos visuales, con búsqueda profunda automatizada.",
+      "blurb": "Extraé y analizá datos visuales con OCR, LLMs y búsqueda profunda automatizada.",
       "meta": "Hackathon · 2025",
-      "featureSubtitle": "OCR × LLM deep search",
+      "featureSubtitle": "OCR × LLM",
       "featureArt": 0,
       "body": [
-        "MVP en ~3 días (solo). Node.js, React, Tailwind, OCR, LLMs, Google Deep Search / Baidu."
+        "MVP en ~3 días (solo): OCR + LLMs para leer lo visual y lanzar búsqueda profunda automatizada sobre lo extraído."
       ],
       "links": [
         {

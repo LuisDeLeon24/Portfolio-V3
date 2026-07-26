@@ -45,9 +45,9 @@ type WorkCategory = {
 
 type PremiosFile = {
   title: string
-  intro: string
+  intro?: string
   archiveTitle: string
-  archiveLead: string
+  archiveLead?: string
   seeAll: string
   featuredNav: string
   items: AwardItem[]
@@ -104,9 +104,9 @@ type PrincipalFile = {
 
 export type Copy = Omit<PrincipalFile, 'contactEmail' | 'socialLinks'> & {
   awardsTitle: string
-  awardsIntro: string
+  awardsIntro?: string
   awardsArchiveTitle: string
-  awardsArchiveLead: string
+  awardsArchiveLead?: string
   seeAllAwards: string
   featuredAwardsNav: string
   awards: AwardItem[]

@@ -1,6 +1,5 @@
 {
   "title": "Premios y reconocimientos",
-  "intro": "Solo logros verificables. Sin trofeos inventados.",
   "archiveTitle": "Todos los logros",
   "seeAll": "Ver más logros",
   "featuredNav": "Premios destacados",
@@ -10,16 +9,15 @@
       "title": "Ganador (2.º lugar) — Cursor × Tec Guatemala",
       "org": "Cursor AI",
       "year": "Jul 2026",
-      "blurb": "Top 2 de ~10 equipos en un sprint de 4 horas con El Telescopio Digital, un telescopio AR en el navegador.",
+      "blurb": "Top 2 de ~10 equipos en 4 horas: telescopio AR en el navegador.",
       "meta": "Cursor AI · Jul 2026",
       "featureSubtitle": "Telescopio AR, shipped",
       "featured": true,
       "featureArt": 0,
       "images": [0, 1],
       "body": [
-        "Quedamos en el top 2 de unos 10 equipos en Cursor Hackathon Guatemala, un sprint de 4 horas, con El Telescopio Digital: una experiencia AR en el navegador que convierte el teléfono en un telescopio del cielo en vivo.",
-        "En una sola tarde, enviamos un demo web en producción que rastrea la ISS y Hubble en tiempo real con propagación orbital SGP4 y datos TLE de NASA/NORAD, impulsado por cámara, giroscopio y GPS, todo client-side, sin backend.",
-        "Prueba de qué tan rápido una idea clara puede pasar de concepto a producto interactivo bajo presión extrema de tiempo."
+        "Segundo lugar en Cursor Hackathon Guatemala (sprint de 4 horas) con El Telescopio Digital / Sextant: el teléfono como telescopio del cielo en vivo.",
+        "En una tarde, demo en producción que rastrea ISS y Hubble en tiempo real (órbitas + datos NASA/NORAD), con cámara, giroscopio y GPS — todo en el cliente, sin backend."
       ]
     },
     {
@@ -27,15 +25,15 @@
       "title": "Travel Grant — Cursor Buildathon San Salvador",
       "org": "The 502 Project",
       "year": "Jul 2026",
-      "blurb": "Beca de viaje para asistir al Cursor Buildathon en San Salvador y representar a la comunidad local de developers.",
+      "blurb": "Beca de viaje para representar a Guatemala en un buildathon AI-first de 24 h.",
       "meta": "The 502 Project · Jul 2026",
       "featureSubtitle": "Buildathon, San Salvador",
       "featured": true,
       "featureArt": 1,
       "images": [1, 2],
       "body": [
-        "Beca de viaje otorgada por the502project para asistir al Cursor Buildathon en San Salvador, un hackathon intensivo AI-first.",
-        "Seleccionado para representar a la comunidad local de developers y ganar experiencia práctica construyendo con herramientas de desarrollo asistido por IA bajo presión de tiempo."
+        "Beca de viaje de the502project para el Cursor Buildathon en San Salvador.",
+        "Seleccionado para representar a la comunidad local y construir con herramientas AI-assisted bajo presión de tiempo (Shoot AI)."
       ]
     },
     {
@@ -43,15 +41,15 @@
       "title": "Semifinalista — INNOVATECH 2026",
       "org": "Asociación Bancaria de Guatemala",
       "year": "Jun 2026",
-      "blurb": "Co-desarrollo de Q-pay (con Qubity): lending P2P y gestión financiera; waitlist de 100+ en menos de una semana.",
+      "blurb": "Q-Pay (Qubity): créditos P2P; waitlist de 100+ en menos de una semana.",
       "meta": "Asociación Bancaria de Guatemala · Jun 2026",
-      "featureSubtitle": "Q-pay · Sprint fintech",
+      "featureSubtitle": "Q-Pay · sprint fintech",
       "featured": true,
       "featureArt": 2,
       "images": [2, 3],
       "body": [
-        "Co-desarrollo de Q-pay con Qubity: plataforma de lending P2P y gestión financiera.",
-        "Construida en un sprint de alta presión, integra evaluación de riesgo transparente y herramientas de gestión de deuda. Para validar el concepto, lanzamos una campaña y reunimos una waitlist de 100+ usuarios en menos de una semana, demostrando viabilidad técnica y demanda de mercado para soluciones Fintech descentralizadas."
+        "Semifinalistas con Q-Pay: app de créditos P2P orientada a bajar la fricción al firmar pagarés (con Qubity).",
+        "Validación rápida de demanda: waitlist de 100+ usuarios en menos de una semana, compitiendo también contra startups locales."
       ]
     },
     {
@@ -59,14 +57,14 @@
       "title": "Ganador (1er lugar) — UFM Computer Science Hackathon",
       "org": "Universidad Francisco Marroquín",
       "year": "Abr 2026",
-      "blurb": "1er lugar con Aprendi (Qubity): plataforma de aprendizaje adaptativo con flujos inteligentes.",
+      "blurb": "1er lugar con Aprendi: aprendizaje adaptativo y labs Linux.",
       "meta": "Universidad Francisco Marroquín · Abr 2026",
       "featureSubtitle": "Adaptive learning, shipped",
       "featureArt": 0,
       "images": [0, 1, 2],
       "body": [
-        "Diseño y construcción de Aprendi con Qubity: plataforma de aprendizaje adaptativo con flujos de usuario inteligentes, obteniendo el 1er lugar.",
-        "Desarrollada en un sprint intensivo, entrega rutas educativas personalizadas ajustando el contenido según el desempeño en tiempo real. El reconocimiento valida la ejecución técnica, la arquitectura y la escalabilidad de soluciones con IA en EdTech."
+        "1er lugar con Aprendi (Qubity): plataforma que personaliza rutas de aprendizaje según el desempeño en tiempo real.",
+        "Sprint intensivo: de idea a producto usable con labs Linux interactivos."
       ],
       "links": [
         {
@@ -84,13 +82,14 @@
       "title": "Finalista (Top 5) — Atom Dev Day Hackathon",
       "org": "Atom",
       "year": "Mar 2026",
-      "blurb": "Finalista Top 5 en Atom Dev Day Hackathon.",
+      "blurb": "Top 5 en ~8–12 h con Agent Builder: agentes de ventas con LLM + RAG.",
       "meta": "Atom · Mar 2026",
-      "featureSubtitle": "Top 5 finalista",
+      "featureSubtitle": "Top 5 · Agent Builder",
       "featureArt": 2,
       "images": [2, 3],
       "body": [
-        "Finalista (Top 5) en el Atom Dev Day Hackathon (marzo 2026)."
+        "Top 5 en Atom Dev Day (~8–12 h) con Agent Builder: plataforma para armar agentes de ventas con LLM + RAG.",
+        "Evidencia de ejecución bajo presión: de idea a demo usable en un solo sprint."
       ],
       "links": [
         {
@@ -104,13 +103,14 @@
       "title": "Mención honorífica Guatemala — Global Connection Award",
       "org": "NASA Space Apps Challenge",
       "year": "Oct 2025",
-      "blurb": "Mención honorífica para Guatemala en el Global Connection Award, NASA Space Apps Challenge.",
+      "blurb": "Mención Global Connection por Guatemala; entregable: Astro Tracker (MVP 48 h).",
       "meta": "NASA Space Apps Challenge · Oct 2025",
       "featureSubtitle": "Global Connection",
       "featureArt": 1,
       "images": [1, 0],
       "body": [
-        "Mención honorífica Guatemala — Global Connection Award en el NASA Space Apps Challenge (octubre 2025)."
+        "Mención honorífica (Global Connection) por Guatemala en NASA Space Apps Challenge.",
+        "Entregable: Astro Tracker — simulación de impactos de asteroides con datos NASA, en un MVP de 48 horas."
       ],
       "links": [
         {
@@ -128,14 +128,14 @@
       "title": "Leadership Award",
       "org": "Fundación Kinal",
       "year": "Oct 2023",
-      "blurb": "Beca completa a un programa intensivo de liderazgo por excelencia académica e influencia entre pares.",
+      "blurb": "Beca completa a un programa intensivo de liderazgo por excelencia académica.",
       "meta": "Fundación Kinal · Oct 2023",
       "featureSubtitle": "Excelencia académica",
       "featureArt": 3,
       "images": [3, 1],
       "body": [
-        "Beca completa a un programa intensivo de liderazgo en reconocimiento al desempeño académico sobresaliente y a mantener un GPA de primer nivel.",
-        "Seleccionado por demostrar influencia entre pares, iniciativa y dedicación tanto a la excelencia técnica como al desarrollo comunitario durante el bachillerato técnico."
+        "Beca completa a un programa intensivo de liderazgo por desempeño académico sobresaliente y GPA de primer nivel.",
+        "Seleccionado por iniciativa, influencia entre pares y compromiso técnico y comunitario en el bachillerato técnico."
       ]
     }
   ]

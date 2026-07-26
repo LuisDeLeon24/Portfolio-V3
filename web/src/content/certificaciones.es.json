@@ -5,63 +5,63 @@
     {
       "id": "fiusac-research-paper-writing",
       "title": "Research Paper Writing for Computer Science",
-      "blurb": "Escritura de papers de ciencias de la computación: estructura, rigor y publicación.",
+      "blurb": "Cómo estructurar y escribir papers de CS con rigor académico.",
       "meta": "FIUSAC · Research writing",
       "featureSubtitle": "CS research writing",
       "featured": true,
       "featureArt": 1,
       "body": [
-        "Taller / curso de FIUSAC sobre escritura de research papers en computer science: estructura, claridad y estándares académicos.",
-        "Puente directo hacia la línea de research del portfolio."
+        "Curso FIUSAC sobre escritura de research papers en computer science: estructura, claridad y estándares académicos.",
+        "Base directa para la línea de research del portfolio."
       ]
     },
     {
       "id": "itu-regulatory-innovation",
       "title": "Regulatory Innovation Mechanisms",
-      "blurb": "Mecanismos de innovación regulatoria en el ecosistema digital — ITU.",
+      "blurb": "Innovación regulatoria en el ecosistema digital (ITU) — contexto de política junto al trabajo técnico.",
       "meta": "ITU · Regulatory innovation",
       "featureSubtitle": "ITU · policy & innovation",
       "featured": true,
       "featureArt": 3,
       "body": [
-        "Formación de la International Telecommunication Union sobre mecanismos de innovación regulatoria en entornos digitales y tecnológicos.",
-        "Contexto de política y regulación para acompañar el trabajo técnico en ciberseguridad e infraestructura."
+        "Formación de la ITU sobre mecanismos de innovación regulatoria en entornos digitales.",
+        "Sirve de marco de política y regulación junto a ciberseguridad e infraestructura."
       ]
     },
     {
       "id": "mongodb-ai-vector-search",
       "title": "Building AI-Powered Search with MongoDB Vector Search",
-      "blurb": "Búsqueda semántica e embeddings con MongoDB Vector Search para productos con IA.",
+      "blurb": "Búsqueda semántica con embeddings — base para RAG y productos con IA.",
       "meta": "MongoDB · AI / Vector Search",
       "featureSubtitle": "Vector Search · AI",
       "featureArt": 0,
       "body": [
-        "Curso enfocado en construir búsqueda impulsada por IA con MongoDB Vector Search: embeddings, índices vectoriales y recuperación semántica.",
-        "Aplicable a RAG, búsqueda por significado y productos con datos no estructurados."
+        "Curso sobre MongoDB Vector Search: embeddings, índices vectoriales y recuperación semántica.",
+        "Aplicable a RAG, búsqueda por significado y datos no estructurados."
       ]
     },
     {
       "id": "cisco-ccna-intro",
       "title": "CCNA: Introduction to Networks",
-      "blurb": "Introducción a redes: modelos OSI/TCP-IP, direccionamiento y configuración básica.",
+      "blurb": "Redes desde cero: OSI/TCP-IP, IP y configuración básica de dispositivos.",
       "meta": "Cisco · CCNA",
       "featureSubtitle": "Introduction to Networks",
       "featureArt": 1,
       "body": [
-        "Módulo inicial de la ruta CCNA: principios de redes, protocolos, direccionamiento IP y configuración introductoria de dispositivos.",
+        "Módulo inicial CCNA: protocolos, direccionamiento IP y configuración introductoria.",
         "Punto de partida formal en networking después de IT Essentials."
       ]
     },
     {
       "id": "cisco-it-essentials",
       "title": "IT Essentials: PC Hardware and Software",
-      "blurb": "Fundamentos de hardware, software y soporte de sistemas — Cisco Networking Academy.",
+      "blurb": "Hardware, software y soporte de sistemas — base práctica de infra.",
       "meta": "Cisco · Networking Academy",
       "featureSubtitle": "PC Hardware and Software",
       "featureArt": 0,
       "body": [
-        "Curso base de Cisco Networking Academy sobre ensamblaje, configuración y mantenimiento de PCs, sistemas operativos y diagnóstico.",
-        "Base práctica para soporte técnico y para seguir hacia rutas de redes."
+        "Curso Cisco Networking Academy sobre ensamblaje, SO, configuración y diagnóstico de PCs.",
+        "Base práctica para soporte técnico y para seguir hacia redes."
       ]
     }
   ]
