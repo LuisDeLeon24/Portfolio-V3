@@ -1,5 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <rect width="64" height="64" fill="#EEF0F2"/>
-  <path d="M10 48 L28 12 L38 12 L20 48 Z" fill="#14161A"/>
-  <path d="M34 48 L46 24 L54 24 L42 48 Z" fill="#3D5A80"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" fill="#120A0F"/>
+  <polygon points="8,20 15,15 18,28 11,33" fill="#FF5A1F"/>
+  <text
+    x="16"
+    y="44"
+    fill="#66023C"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-style="italic"
+    font-weight="700"
+    font-size="26"
+  >LDL</text>
 </svg>

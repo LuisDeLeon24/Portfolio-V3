@@ -1,5 +1,6 @@
 import { useEffect, useId, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { Monogram } from './BrandMark'
 import { CONTACT_EMAIL, SOCIAL_LINKS, tabOrder } from './i18n'
 import { useLang } from './LangContext'
 
@@ -13,8 +14,8 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="site-header-inner">
-        <Link className="logo" to="/">
-          LDL
+        <Link className="logo" to="/" aria-label={t.brand}>
+          <Monogram />
         </Link>
         <div className="nav-cluster">
           <nav aria-label="Primary">
@@ -87,7 +88,7 @@ function ExperimentsMenu() {
 
   return (
     <div className={`experiments-combo${open ? ' is-open' : ''}`} ref={rootRef}>
-      <Link className="experiments-label" to={sectionTo('experimentos')} onClick={() => setOpen(false)}>
+      <Link className="experiments-label" to={sectionTo('trabajo')} onClick={() => setOpen(false)}>
         {t.nav.work}
       </Link>
       <button
@@ -129,9 +130,6 @@ export function SiteFooter() {
             <a className="btn btn-primary" href={`mailto:${CONTACT_EMAIL}`}>
               {t.emailCta}
             </a>
-            <span className="btn btn-ghost" aria-hidden="true">
-              {t.socialCta}
-            </span>
           </div>
           <ul className="social-list">
             {SOCIAL_LINKS.map((link) => (
@@ -146,7 +144,7 @@ export function SiteFooter() {
       </div>
       <p className="colophon">
         <span className="footer-panel-inner colophon-inner">
-          {t.brand} · {t.focus}
+          {t.brand} · {t.handle} · {t.domain}
         </span>
       </p>
     </footer>

@@ -1,20 +1,26 @@
 :root {
-  --plaster: #eef0f2;
-  --plaster-deep: #e2e5ea;
-  --ink: #14161a;
-  --ink-soft: #3a3f47;
-  --wall-shadow: #c8cdd6;
-  --accent: #3d5a80;
-  --accent-deep: #2a4060;
-  --accent-soft: #d6e0ec;
-  --wine: #7a2e3b;
-  --wine-deep: #5c0e2f;
-  --wine-soft: #edd8dc;
-  --hero-ground: var(--plaster);
-  --highlight: #f7f8fa;
+  --cream: #f3ebdd;
+  --cream-deep: #e7dccb;
+  --plaster: var(--cream);
+  --plaster-deep: var(--cream-deep);
+  --ink: #120a0f;
+  --ink-soft: #4a3a40;
+  --wall-shadow: #d9cbb8;
+  --burgundy: #66023c;
+  --gold: #8c6a2f;
+  --spark: #ff5a1f;
+  --accent: var(--burgundy);
+  --accent-deep: #4a012c;
+  --accent-soft: #f0e0e6;
+  --wine: var(--burgundy);
+  --wine-deep: #4a012c;
+  --wine-soft: #f3e4ea;
+  --hero-ground: var(--cream);
+  --highlight: #f7f1e8;
 
-  --font-display: 'Bricolage Grotesque', 'Gill Sans', 'Trebuchet MS', sans-serif;
-  --font-body: 'Source Serif 4', Georgia, serif;
+  --font-display: 'Playfair Display', 'Iowan Old Style', Palatino, 'Palatino Linotype', serif;
+  --font-body: 'IBM Plex Sans', 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
 
   --space-xs: 0.5rem;
   --space-sm: 1rem;
@@ -66,11 +72,18 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background:
-    radial-gradient(90% 60% at 0% 100%, rgb(122 46 59 / 0.06), transparent 50%),
-    radial-gradient(120% 80% at 100% 0%, rgb(214 224 236 / 0.45), transparent 55%),
-    linear-gradient(180deg, var(--highlight) 0%, var(--plaster) 28%, var(--plaster-deep) 100%);
-  background-attachment: fixed;
+  background: var(--cream);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.55;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.07 0 0 0 0 0.04 0 0 0 0 0.05 0 0 0 0.4 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
 }
 
 #root {
@@ -1220,8 +1233,8 @@ button {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgb(20 22 26 / 0.25), rgb(20 22 26 / 0.55)),
-    rgb(20 22 26 / 0.2);
+    linear-gradient(180deg, rgb(18 10 15 / 0.42), rgb(18 10 15 / 0.68)),
+    rgb(18 10 15 / 0.28);
   z-index: 1;
 }
 
@@ -1251,11 +1264,12 @@ button {
 .featured-title {
   margin: 0;
   font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
   font-size: clamp(2.2rem, 6vw, 4.2rem);
-  font-weight: 600;
   letter-spacing: -0.03em;
   line-height: 0.95;
-  text-transform: uppercase;
+  text-transform: none;
   max-width: 16ch;
 }
 
@@ -1385,8 +1399,8 @@ button {
 }
 
 .featured-split-panel.tone-0 {
-  background: #d4a017;
-  color: var(--ink);
+  background: var(--ink);
+  color: var(--highlight);
 }
 
 .featured-split-panel.tone-1 {
@@ -1427,31 +1441,30 @@ button {
 /* Placeholder exhibition art */
 .art-0 {
   background:
-    radial-gradient(circle at 20% 30%, #ff6b4a 0%, transparent 42%),
-    radial-gradient(circle at 80% 70%, #3d5a80 0%, transparent 45%),
-    radial-gradient(circle at 50% 50%, #f2d6a2 0%, transparent 55%),
-    linear-gradient(135deg, #1a1c20, #3a2a28);
+    radial-gradient(circle at 20% 30%, #8c6a2f 0%, transparent 42%),
+    radial-gradient(circle at 80% 70%, #66023c 0%, transparent 46%),
+    linear-gradient(135deg, #120a0f, #4a012c);
 }
 
 .art-1 {
   background:
-    linear-gradient(160deg, rgb(20 22 26 / 0.35), transparent 50%),
-    radial-gradient(ellipse at 70% 40%, #8fa8c4 0%, transparent 50%),
-    linear-gradient(45deg, #142033, #2a4060 45%, #0e1218);
+    linear-gradient(160deg, rgb(18 10 15 / 0.35), transparent 50%),
+    radial-gradient(ellipse at 70% 40%, #f3ebdd 0%, transparent 50%),
+    linear-gradient(45deg, #120a0f, #66023c 55%, #1a0c12);
 }
 
 .art-2 {
   background:
-    radial-gradient(circle at 30% 70%, #4a5d4e 0%, transparent 40%),
-    radial-gradient(circle at 75% 25%, #d6e0ec 0%, transparent 35%),
-    linear-gradient(210deg, #1c2420, #3d5a80 60%, #14161a);
+    radial-gradient(circle at 30% 70%, #8c6a2f 0%, transparent 40%),
+    radial-gradient(circle at 75% 25%, #f3ebdd 0%, transparent 35%),
+    linear-gradient(210deg, #1a0c12, #66023c 60%, #120a0f);
 }
 
 .art-3 {
   background:
-    radial-gradient(circle at 60% 20%, #e8e2d6 0 12%, transparent 13%),
-    radial-gradient(circle at 30% 80%, #c8cdd6 0 8%, transparent 9%),
-    linear-gradient(120deg, #2a4060, #14161a 55%, #5a6f7d);
+    radial-gradient(circle at 60% 20%, #f3ebdd 0 12%, transparent 13%),
+    radial-gradient(circle at 30% 80%, #d9cbb8 0 8%, transparent 9%),
+    linear-gradient(120deg, #4a012c, #120a0f 55%, #8c6a2f);
 }
 
 .featured-chrome {
@@ -1606,22 +1619,19 @@ button {
 .hero {
   --hero-header: 5.5rem;
   --hero-gutter: max(1.25rem, calc((100vw - min(1180px, 100vw - 2.5rem)) / 2));
-  --hero-name-size: clamp(2.85rem, 12.5vw, 3.6rem);
+  --hero-name-size: clamp(2.7rem, 11vw, 3.6rem);
   --hero-pad-x: 1.25rem;
-  --hero-pad-top: 1.1rem;
+  --hero-pad-top: 0.4rem;
   position: relative;
   isolation: isolate;
   display: flex;
   flex-direction: column;
-  gap: 0.85rem;
+  gap: 1.15rem;
   min-height: calc(100svh - var(--hero-header));
   overflow: hidden;
-  padding: var(--hero-pad-top) var(--hero-pad-x) 1.35rem;
-  background:
-    radial-gradient(85% 70% at 100% 0%, rgb(214 224 236 / 0.65), transparent 58%),
-    radial-gradient(60% 50% at 0% 100%, rgb(122 46 59 / 0.08), transparent 55%),
-    linear-gradient(165deg, var(--highlight) 0%, var(--plaster) 42%, var(--plaster-deep) 100%);
-  color: var(--wine-deep);
+  padding: var(--hero-pad-top) var(--hero-pad-x) 1.5rem;
+  background: transparent;
+  color: var(--ink);
 }
 
 .hero-stage {
@@ -1655,8 +1665,8 @@ button {
   margin: 0;
   overflow: hidden;
   background: var(--ink);
-  border: 4px solid var(--ink);
-  box-shadow: 5px 8px 16px rgb(20 22 26 / 0.2);
+  border: 1px solid var(--gold);
+  box-shadow: 8px 12px 22px rgb(18 10 15 / 0.16);
   aspect-ratio: 3 / 4;
 }
 
@@ -1746,25 +1756,37 @@ button {
   position: relative;
   z-index: 2;
   display: grid;
-  gap: 0.65rem;
-  max-width: 20rem;
-  animation: hero-fade 0.9s var(--ease-out) 0.16s both;
+  gap: 0.75rem;
+  max-width: 34rem;
 }
 
 .hero-focus {
   margin: 0;
-  font-family: var(--font-display);
-  font-size: clamp(0.88rem, 3.4vw, 1rem);
-  font-weight: 500;
-  letter-spacing: -0.01em;
-  color: var(--wine-deep);
+  max-width: 36ch;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+.hero-role {
+  margin: 0;
+  max-width: 42ch;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--ink-soft);
 }
 
 .hero-rule {
   display: block;
-  width: 2.5rem;
-  height: 1.5px;
-  background: var(--wine-deep);
+  width: 2.75rem;
+  height: 2px;
+  background: var(--gold);
 }
 
 .hero-tag {
@@ -1772,11 +1794,12 @@ button {
   display: grid;
   gap: 0;
   font-family: var(--font-display);
-  font-size: clamp(1.45rem, 6.2vw, 1.9rem);
-  font-weight: 700;
-  line-height: 1.05;
-  letter-spacing: -0.035em;
-  color: var(--wine-deep);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.85rem, 6vw, 2.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: var(--ink);
 }
 
 .hero-tag-line {
@@ -1822,10 +1845,10 @@ button {
   }
 }
 
-/* Desktop: crossed cartel — name/copy left, collage right */
+/* Desktop: signature left, photographs right */
 @media (min-width: 960px) {
   .hero {
-    --hero-name-size: clamp(5.75rem, 9.5vw, 8.5rem);
+    --hero-name-size: clamp(3.4rem, 5.4vw, 5rem);
     display: block;
     padding: 0;
   }
@@ -1843,8 +1866,8 @@ button {
   .hero-collage {
     position: absolute;
     top: clamp(2.75rem, 6vh, 4.25rem);
-    left: 48%;
-    width: min(44vw, 32rem);
+    left: 50%;
+    width: min(42vw, 32rem);
     height: min(72vh, 40rem);
     max-height: none;
     min-height: 0;
@@ -1853,8 +1876,8 @@ button {
   }
 
   .hero-shot {
-    border-width: 7px;
-    box-shadow: 8px 12px 22px rgb(20 22 26 / 0.24);
+    border-width: 1px;
+    box-shadow: 10px 14px 24px rgb(18 10 15 / 0.18);
   }
 
   .hero-shot-coding {
@@ -1885,43 +1908,25 @@ button {
     transform: rotate(-4deg);
   }
 
-  .hero-name {
+  .signature {
     position: absolute;
-    inset: 0;
-    display: block;
-    gap: 0;
-  }
-
-  .hero-name-line {
-    position: absolute;
+    z-index: 2;
     left: var(--hero-gutter);
-  }
-
-  .hero-name-line-top {
-    top: clamp(3.25rem, 10vh, 5rem);
-  }
-
-  .hero-name-line-bottom {
-    top: calc(
-      clamp(3.25rem, 10vh, 5rem) + 0.8 * var(--hero-name-size) + clamp(0.3rem, 1.2vh, 0.7rem)
-    );
+    top: clamp(2.4rem, 8vh, 4.2rem);
+    font-size: var(--hero-name-size);
   }
 
   .hero-copy {
     position: absolute;
+    z-index: 2;
     left: var(--hero-gutter);
-    top: calc(
-      clamp(3.25rem, 10vh, 5rem) +
-      1.6 * var(--hero-name-size) +
-      clamp(0.3rem, 1.2vh, 0.7rem) +
-      clamp(1.5rem, 4vh, 2.5rem)
-    );
-    max-width: 18rem;
+    top: calc(clamp(2.4rem, 8vh, 4.2rem) + var(--hero-name-size) + 2.4rem);
+    max-width: min(26rem, 38vw);
     gap: 0.75rem;
   }
 
   .hero-tag {
-    font-size: clamp(1.65rem, 3.6vw, 2.65rem);
+    font-size: clamp(2rem, 3.2vw, 2.85rem);
   }
 }
 
@@ -2535,9 +2540,10 @@ button {
 }
 
 .rail-item .meta {
-  font-family: var(--font-display);
+  font-family: var(--font-mono);
+  font-style: normal;
   font-size: 0.78rem;
-  color: var(--wine);
+  color: var(--burgundy);
 }
 
 .rail-item p {
@@ -2778,5 +2784,156 @@ button {
   .section-head.split {
     grid-template-columns: 1fr 1.2fr;
     align-items: end;
+  }
+}
+
+/* ——— Firma ——— */
+.signature {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: var(--hero-name-size);
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+  color: var(--burgundy);
+  white-space: nowrap;
+}
+
+.signature-family {
+  position: relative;
+  display: inline-block;
+}
+
+.signature-filete {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.06em;
+  height: 0.045em;
+  min-height: 2px;
+  background: var(--gold);
+}
+
+.signature-o {
+  position: relative;
+  display: inline-block;
+}
+
+.signature-tilde {
+  position: absolute;
+  top: 0.06em;
+  left: 0.32em;
+  color: var(--spark);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 0.42em;
+  line-height: 1;
+}
+
+.monogram {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  color: var(--burgundy);
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.monogram-spark {
+  display: block;
+  width: 0.38rem;
+  height: 0.95rem;
+  background: var(--spark);
+  transform: skewX(-22deg) rotate(18deg);
+}
+
+.monogram-letters {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.55rem;
+  letter-spacing: -0.03em;
+}
+
+.logo {
+  letter-spacing: 0;
+  color: var(--burgundy);
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  left: max(1.25rem, var(--hero-gutter));
+  bottom: 1.6rem;
+  width: 6.5rem;
+  height: 2px;
+  background: var(--burgundy);
+  box-shadow: 11px -6px 0 var(--ink);
+  pointer-events: none;
+}
+
+.hero-collage {
+  z-index: 1;
+}
+
+h2,
+h3,
+.footer-panel h2,
+.award-block-title,
+.category-archive-head h2,
+.awards-archive-head h2,
+.archive-head h2,
+.piece h3,
+.project-card-title,
+.timeline-item h3,
+.wall-label h2,
+.rail-item h3 {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.footer-panel h2 {
+  white-space: pre-line;
+  color: var(--highlight);
+  max-width: 8ch;
+}
+
+.nav-links a,
+.experiments-label,
+.experiments-menu a,
+.tab,
+.meta,
+.wall-label .num,
+.timeline-meta,
+.about-skills li,
+.lang-toggle,
+.colophon,
+.btn,
+.award-block-org,
+.award-block-link,
+.social-list a,
+.project-card-label,
+.project-card-date,
+.hero-role,
+.featured-kicker {
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-transform: none;
+}
+
+@media (min-width: 960px) {
+  .signature {
+    position: absolute;
+    left: var(--hero-gutter);
+    top: clamp(2.4rem, 8vh, 4.2rem);
+    font-size: var(--hero-name-size);
   }
 }

@@ -3,11 +3,12 @@ import { Link, useLocation } from 'react-router-dom'
 import { tabOrder, type WorkTab } from './i18n'
 import { useLang } from './LangContext'
 import { getWorkCover, isLogoMedia } from './workMedia'
+import { Signature } from './BrandMark'
 import { HeroCollage } from './HeroCollage'
 import { SiteFooter, SiteHeader } from './SiteChrome'
 
 const pieceShapes = ['trap', 'rhomb', 'skew'] as const
-const pieceBgs = ['#3d5a80', '#2a4060', '#5a6f7d', '#4a5d4e'] as const
+const pieceBgs = ['#66023C', '#120A0F', '#8C6A2F', '#4A012C'] as const
 
 export default function HomePage() {
   const { t } = useLang()
@@ -40,13 +41,8 @@ export default function HomePage() {
 
         <section className="hero" aria-label="Hero">
           <h1 className="visually-hidden">{t.brand}</h1>
-          <div className="hero-name" aria-hidden="true">
-            <span className="hero-name-line hero-name-line-top">Luis De</span>
-            <span className="hero-name-line hero-name-line-bottom">León</span>
-          </div>
+          <Signature />
           <div className="hero-copy">
-            <p className="hero-focus">{t.focus}</p>
-            <span className="hero-rule" aria-hidden="true" />
             <p className="hero-tag">
               {t.tagline.split('\n').map((line) => (
                 <span key={line} className="hero-tag-line">
@@ -54,6 +50,9 @@ export default function HomePage() {
                 </span>
               ))}
             </p>
+            <span className="hero-rule" aria-hidden="true" />
+            <p className="hero-focus">{t.focus}</p>
+            <p className="hero-role">{t.role}</p>
           </div>
           <div className="hero-stage" aria-hidden="true">
             <HeroCollage />
@@ -101,7 +100,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="site section" id="experimentos" aria-labelledby="work-title">
+        <section className="site section" id="trabajo" aria-labelledby="work-title">
           <div className="section-head split">
             <div className="wall-label">
               <span className="num">03</span>
@@ -135,9 +134,7 @@ export default function HomePage() {
           >
             <p className="work-summary">{overview.summary}</p>
             {overview.items.length === 0 ? (
-              <div className="coming-soon" role="status">
-                <p className="coming-soon-label">{t.comingSoon}</p>
-              </div>
+              <p className="lede">{overview.summary}</p>
             ) : (
               <>
                 <div className="hang">
