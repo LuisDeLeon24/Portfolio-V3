@@ -1,19 +1,15 @@
 import certificacionesEn from './content/certificaciones.en.json'
 import certificacionesEs from './content/certificaciones.es.json'
-import ctfsEn from './content/ctfs.en.json'
-import ctfsEs from './content/ctfs.es.json'
 import premiosEn from './content/premios.en.json'
 import premiosEs from './content/premios.es.json'
 import principalEn from './content/principal.en.json'
 import principalEs from './content/principal.es.json'
 import proyectosEn from './content/proyectos.en.json'
 import proyectosEs from './content/proyectos.es.json'
-import researchEn from './content/research.en.json'
-import researchEs from './content/research.es.json'
 
 export type Lang = 'es' | 'en'
 
-export type WorkTab = 'projects' | 'ctfs' | 'research' | 'certs'
+export type WorkTab = 'projects' | 'certs'
 
 export type WorkItem = {
   id: string
@@ -57,6 +53,9 @@ type PrincipalFile = {
   brand: string
   focus: string
   tagline: string
+  role: string
+  handle: string
+  domain: string
   nav: { experience: string; work: string; awards: string; education: string; contact: string }
   aboutLabel: string
   aboutTitle: string
@@ -86,8 +85,6 @@ type PrincipalFile = {
   seeAllInCategory: string
   allInCategory: string
   allCertifications: string
-  exploreResearch: string
-  comingSoon: string
   notFoundTitle: string
   notFoundBody: string
   educationTitle: string
@@ -116,8 +113,6 @@ export type Copy = Omit<PrincipalFile, 'contactEmail' | 'socialLinks'> & {
 function buildCopy(
   principal: PrincipalFile,
   proyectos: WorkCategory,
-  ctfs: WorkCategory,
-  research: WorkCategory,
   certs: WorkCategory,
   premios: PremiosFile,
 ): Copy {
@@ -133,8 +128,6 @@ function buildCopy(
     awards: premios.items as AwardItem[],
     work: {
       projects: proyectos as WorkCategory,
-      ctfs: ctfs as WorkCategory,
-      research: research as WorkCategory,
       certs: certs as WorkCategory,
     },
   }
@@ -143,8 +136,6 @@ function buildCopy(
 const es = buildCopy(
   principalEs as PrincipalFile,
   proyectosEs as WorkCategory,
-  ctfsEs as WorkCategory,
-  researchEs as WorkCategory,
   certificacionesEs as WorkCategory,
   premiosEs as PremiosFile,
 )
@@ -152,15 +143,13 @@ const es = buildCopy(
 const en = buildCopy(
   principalEn as PrincipalFile,
   proyectosEn as WorkCategory,
-  ctfsEn as WorkCategory,
-  researchEn as WorkCategory,
   certificacionesEn as WorkCategory,
   premiosEn as PremiosFile,
 )
 
 export const dictionaries: Record<Lang, Copy> = { es, en }
 
-export const tabOrder: WorkTab[] = ['projects', 'ctfs', 'research', 'certs']
+export const tabOrder: WorkTab[] = ['projects', 'certs']
 
 export function findWorkItem(
   lang: Lang,

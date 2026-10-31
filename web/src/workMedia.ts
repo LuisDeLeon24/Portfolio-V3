@@ -1,23 +1,34 @@
 import type { WorkTab } from './i18n'
 import { getCertCover, getCertImages } from './certMedia'
-import { getCtfCover, getCtfImages } from './ctfMedia'
 import { getProjectCover, getProjectImages } from './projectMedia'
 
 export function getWorkCover(tab: WorkTab, id: string): string | undefined {
-  if (tab === 'projects') return getProjectCover(id)
-  if (tab === 'ctfs') return getCtfCover(id)
-  if (tab === 'certs') return getCertCover(id)
-  return undefined
+  switch (tab) {
+    case 'projects':
+      return getProjectCover(id)
+    case 'certs':
+      return getCertCover(id)
+    default: {
+      const exhaustive: never = tab
+      return exhaustive
+    }
+  }
 }
 
 export function getWorkImages(tab: WorkTab, id: string): string[] {
-  if (tab === 'projects') return getProjectImages(id)
-  if (tab === 'ctfs') return getCtfImages(id)
-  if (tab === 'certs') return getCertImages(id)
-  return []
+  switch (tab) {
+    case 'projects':
+      return getProjectImages(id)
+    case 'certs':
+      return getCertImages(id)
+    default: {
+      const exhaustive: never = tab
+      return exhaustive
+    }
+  }
 }
 
-/** FIUSAC: contain on white so the full logo is visible. */
-export function isLogoMedia(tab: WorkTab, id?: string): boolean {
-  return tab === 'certs' && id === 'fiusac-research-paper-writing'
+/** Certification art is a logo, not a photograph. */
+export function isLogoMedia(tab: WorkTab, _id?: string): boolean {
+  return tab === 'certs'
 }

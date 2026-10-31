@@ -1,4 +1,4 @@
-import { useEffect, useRef, type CSSProperties } from 'react'
+import { useEffect, type CSSProperties } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import FeaturedShowcase from './FeaturedShowcase'
 import { dictionaries, isWorkTab, type WorkItem, type WorkTab } from './i18n'
@@ -7,7 +7,7 @@ import { SiteFooter, SiteHeader } from './SiteChrome'
 import { getWorkCover, isLogoMedia } from './workMedia'
 
 const pieceShapes = ['trap', 'rhomb', 'skew'] as const
-const pieceBgs = ['#3d5a80', '#2a4060', '#5a6f7d', '#4a5d4e'] as const
+const pieceBgs = ['#66023C', '#120A0F', '#8C6A2F', '#4A012C'] as const
 
 export default function CategoryPage() {
   const { tab = '' } = useParams()
@@ -28,8 +28,6 @@ function CategoryView({ tab, lang }: { tab: WorkTab; lang: 'es' | 'en' }) {
       ? t.allCertifications
       : t.allInCategory.replace('{category}', category.title)
   const isProjects = tab === 'projects'
-  const isLabs = tab === 'ctfs'
-  const isResearch = tab === 'research'
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -42,51 +40,7 @@ function CategoryView({ tab, lang }: { tab: WorkTab; lang: 'es' | 'en' }) {
         <h1 className="visually-hidden">{category.title}</h1>
         <FeaturedShowcase tab={tab} />
 
-        {isLabs ? (
-          <section className="labs-archive" id="archivo" aria-label={archiveTitle}>
-            <header className="site labs-archive-head">
-              <h2>{archiveTitle}</h2>
-            </header>
-            <LabsStrip
-              tab={tab}
-              items={category.items}
-              learnMore={t.learnMore}
-              openLabel={t.openItem}
-              placeholder={t.placeholder}
-            />
-            <div className="site labs-archive-foot">
-              <Link className="btn btn-ghost" to={{ pathname: '/', hash: 'experimentos' }}>
-                {t.backHome}
-              </Link>
-            </div>
-          </section>
-        ) : isResearch ? (
-          <section className="research-archive" id="archivo" aria-label={archiveTitle}>
-            {category.items.length === 0 ? (
-              <div className="site coming-soon coming-soon-page" role="status">
-                <h2>{category.title}</h2>
-                <p className="coming-soon-label">{t.comingSoon}</p>
-                <p className="coming-soon-note">{category.summary}</p>
-              </div>
-            ) : (
-              <ResearchRail
-                tab={tab}
-                items={category.items}
-                title={category.title}
-                exploreLabel={t.exploreResearch}
-                learnMore={t.learnMore}
-                openLabel={t.openItem}
-                placeholder={t.placeholder}
-              />
-            )}
-            <div className="site research-archive-foot">
-              <Link className="btn btn-ghost" to={{ pathname: '/', hash: 'experimentos' }}>
-                {t.backHome}
-              </Link>
-            </div>
-          </section>
-        ) : (
-          <div className={`site category-archive${isProjects ? ' is-projects' : ''}`} id="archivo">
+        <div className={`site category-archive${isProjects ? ' is-projects' : ''}`} id="archivo">
             <header className="category-archive-head">
               <h2>{archiveTitle}</h2>
             </header>
@@ -141,197 +95,14 @@ function CategoryView({ tab, lang }: { tab: WorkTab; lang: 'es' | 'en' }) {
             )}
 
             <p className="detail-back">
-              <Link className="btn btn-ghost" to={{ pathname: '/', hash: 'experimentos' }}>
+              <Link className="btn btn-ghost" to={{ pathname: '/', hash: 'trabajo' }}>
                 {t.backHome}
               </Link>
             </p>
           </div>
-        )}
       </main>
       <SiteFooter />
     </>
-  )
-}
-
-/** Horizontal frames with slight geometric clip variants. */
-const LABS_MEDIA_SHAPES = ['trap-a', 'rhomb-a', 'trap-b', 'rhomb-b', 'trap-c', 'rhomb-a'] as const
-const RESEARCH_MEDIA_SHAPES = [
-  'trap-a',
-  'rhomb-a',
-  'para-a',
-  'trap-b',
-  'rhomb-b',
-  'trap-c',
-  'para-b',
-  'kite-a',
-  'trap-d',
-  'slash-a',
-  'rhomb-c',
-] as const
-
-function ResearchRail({
-  tab,
-  items,
-  title,
-  exploreLabel,
-  learnMore,
-  openLabel,
-  placeholder,
-}: {
-  tab: WorkTab
-  items: WorkItem[]
-  title: string
-  exploreLabel: string
-  learnMore: string
-  openLabel: string
-  placeholder: string
-}) {
-  const pinRef = useRef<HTMLDivElement>(null)
-  const trackRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const pin = pinRef.current
-    const track = trackRef.current
-    if (!pin || !track) return
-
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
-    let overflow = 0
-
-    const measure = () => {
-      overflow = Math.max(0, track.scrollWidth - window.innerWidth)
-      if (reduceMotion.matches) {
-        pin.style.height = ''
-        track.style.transform = ''
-        return
-      }
-      pin.style.height = `${window.innerHeight + overflow}px`
-    }
-
-    const sync = () => {
-      if (reduceMotion.matches || overflow <= 0) {
-        track.style.transform = 'translate3d(0,0,0)'
-        return
-      }
-      const scrollable = pin.offsetHeight - window.innerHeight
-      if (scrollable <= 0) {
-        track.style.transform = 'translate3d(0,0,0)'
-        return
-      }
-      const progress = Math.min(1, Math.max(0, -pin.getBoundingClientRect().top / scrollable))
-      track.style.transform = `translate3d(${-overflow * progress}px, 0, 0)`
-    }
-
-    const onResize = () => {
-      measure()
-      sync()
-    }
-
-    measure()
-    sync()
-
-    window.addEventListener('scroll', sync, { passive: true })
-    window.addEventListener('resize', onResize)
-    const ro = new ResizeObserver(onResize)
-    ro.observe(track)
-
-    const onMotionChange = () => onResize()
-    reduceMotion.addEventListener('change', onMotionChange)
-
-    return () => {
-      window.removeEventListener('scroll', sync)
-      window.removeEventListener('resize', onResize)
-      ro.disconnect()
-      reduceMotion.removeEventListener('change', onMotionChange)
-    }
-  }, [items])
-
-  return (
-    <div className="research-pin" ref={pinRef}>
-      <div className="research-sticky">
-        <header className="site research-archive-head">
-          <h2>{title}</h2>
-          <span className="research-explore">{exploreLabel}</span>
-        </header>
-        <div className="research-rail" aria-label={title}>
-          <div className="research-rail-track" ref={trackRef}>
-            {items.map((item, i) => {
-              const shape = RESEARCH_MEDIA_SHAPES[i % RESEARCH_MEDIA_SHAPES.length]
-              return (
-                <article key={item.id} className={`research-card media-${shape}`}>
-                  <div
-                    className={`research-card-media art-${item.featureArt ?? i % 4}`}
-                    aria-hidden="true"
-                  >
-                    <span>{placeholder}</span>
-                  </div>
-                  <h3>{item.title}</h3>
-                  <p className="research-card-meta">{item.blurb}</p>
-                  <p className="research-card-date">{item.meta}</p>
-                  <Link
-                    className="research-card-link"
-                    to={`/e/${tab}/${item.id}`}
-                    aria-label={`${openLabel}: ${item.title}`}
-                  >
-                    {learnMore}
-                  </Link>
-                </article>
-              )
-            })}
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-function LabsStrip({
-  tab,
-  items,
-  learnMore,
-  openLabel,
-  placeholder,
-}: {
-  tab: WorkTab
-  items: WorkItem[]
-  learnMore: string
-  openLabel: string
-  placeholder: string
-}) {
-  return (
-    <div className="labs-strip">
-      {items.map((item, i) => {
-        const shape = LABS_MEDIA_SHAPES[i % LABS_MEDIA_SHAPES.length]
-        const flip = i % 2 === 1
-        const cover = getWorkCover(tab, item.id)
-        return (
-          <article
-            key={item.id}
-            className={`labs-row media-${shape}${flip ? ' is-flip' : ''}`}
-          >
-            <div
-              className={`labs-media${cover ? ' has-photo' : ` art-${item.featureArt ?? i % 4}`}`}
-              aria-hidden="true"
-            >
-              {cover ? <img className="media-photo" src={cover} alt="" /> : null}
-              <span>{placeholder}</span>
-            </div>
-            <div className="labs-copy">
-              <h3>{item.title}</h3>
-              {item.featureSubtitle ? <p className="labs-subtitle">{item.featureSubtitle}</p> : null}
-              <p className="labs-meta">{item.meta}</p>
-              <p className="labs-blurb">{item.blurb}</p>
-              <Link
-                className="labs-link"
-                to={`/e/${tab}/${item.id}`}
-                aria-label={`${openLabel}: ${item.title}`}
-              >
-                {learnMore} <span aria-hidden="true">→</span>
-              </Link>
-            </div>
-          </article>
-        )
-      })}
-    </div>
   )
 }
 

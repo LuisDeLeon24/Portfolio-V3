@@ -1,9 +1,9 @@
 /**
- * THESIS: Portfolio as a quiet gallery hang — work leads; refuse recruiter/SaaS pitch scaffolding.
- * OWN-WORLD: Cool plaster light, Bricolage + Source Serif, matte steel accent, rhomboid/trapezoid mounts.
- * STORY: Visitor reads name + AI×cyber×research focus, then explores experience and sparse experiments; contact stays optional.
- * FIRST VIEWPORT: LDL + ES/EN; staggered giant wine name; focus + tagline left.
- * FORM: Galería · hang disperso + open-storage “Ver más”; detail routes /e/:tab/:id; seed key 7d8b313a; approved comp-a.
+ * THESIS: The signature leads. Show built work; claim only what can be pointed to.
+ * OWN-WORLD: Cream, burgundy, ink. Playfair italic speaks; Plex explains; mono labels.
+ * STORY: Del miedo al prototipo. Projects and awards with evidence. Contact stays optional.
+ * FIRST VIEWPORT: Firma — tilde naranja, filete dorado bajo «De León» — tagline apart from the name.
+ * FORM: Cream ground, grain, one glitch cut in the background, never on the mark.
  */
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import AwardsPage, { AwardItemPage } from './AwardsPage'

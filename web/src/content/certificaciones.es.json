@@ -1,20 +1,7 @@
 {
   "title": "Certificaciones",
-  "summary": "Credenciales y cursos con peso: redes, datos, regulación e investigación.",
+  "summary": "Cursos con credencial: redes, datos y regulación.",
   "items": [
-    {
-      "id": "fiusac-research-paper-writing",
-      "title": "Research Paper Writing for Computer Science",
-      "blurb": "Cómo estructurar y escribir papers de CS con rigor académico.",
-      "meta": "FIUSAC · Research writing",
-      "featureSubtitle": "CS research writing",
-      "featured": true,
-      "featureArt": 1,
-      "body": [
-        "Curso FIUSAC sobre escritura de research papers en computer science: estructura, claridad y estándares académicos.",
-        "Base directa para la línea de research del portfolio."
-      ]
-    },
     {
       "id": "itu-regulatory-innovation",
       "title": "Regulatory Innovation Mechanisms",
@@ -24,8 +11,7 @@
       "featured": true,
       "featureArt": 3,
       "body": [
-        "Formación de la ITU sobre mecanismos de innovación regulatoria en entornos digitales.",
-        "Sirve de marco de política y regulación junto a ciberseguridad e infraestructura."
+        "Formación de la ITU sobre mecanismos de innovación regulatoria en entornos digitales."
       ]
     },
     {

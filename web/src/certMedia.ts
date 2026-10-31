@@ -4,7 +4,6 @@ const FILE_BY_ID: Record<string, string> = {
   'cisco-ccna-intro': 'Cisco Logo.png',
   'mongodb-ai-vector-search': 'MongoDB logo.png',
   'itu-regulatory-innovation': 'ITU logo.png',
-  'fiusac-research-paper-writing': 'FIusac logo.png',
 }
 
 const modules = import.meta.glob('./assets/certs/**/*.{png,jpg,jpeg,webp,PNG,JPG,JPEG,WEBP}', {

@@ -12,7 +12,7 @@ import { SiteFooter, SiteHeader } from './SiteChrome'
 import { getWorkCover, getWorkImages, isLogoMedia } from './workMedia'
 
 const pieceShapes = ['trap', 'rhomb', 'skew'] as const
-const pieceBgs = ['#3d5a80', '#2a4060', '#5a6f7d', '#4a5d4e'] as const
+const pieceBgs = ['#66023C', '#120A0F', '#8C6A2F', '#4A012C'] as const
 
 export default function ItemPage() {
   const { tab = '', id = '' } = useParams()
@@ -59,7 +59,7 @@ function ItemDetail({ tab, id, lang }: { tab: WorkTab; id: string; lang: 'es' | 
       <SiteHeader />
       <main className="site detail" id="top">
         <p className="detail-kicker">
-          <Link to={{ pathname: '/', hash: 'experimentos' }}>{t.workTitle}</Link>
+          <Link to={{ pathname: '/', hash: 'trabajo' }}>{t.workTitle}</Link>
           <span aria-hidden="true"> · </span>
           <span>{category}</span>
           {total > 0 ? (
@@ -211,7 +211,7 @@ function ItemDetail({ tab, id, lang }: { tab: WorkTab; id: string; lang: 'es' | 
         ) : null}
 
         <p className="detail-back">
-          <Link className="btn btn-ghost" to={{ pathname: '/', hash: 'experimentos' }}>
+          <Link className="btn btn-ghost" to={{ pathname: '/', hash: 'trabajo' }}>
             {t.backHome}
           </Link>
         </p>

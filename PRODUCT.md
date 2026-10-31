@@ -8,21 +8,19 @@ web (`web/` — Vite + React + TypeScript + React Router)
 
 ## Users
 
-Primary visitors are peers, recruiters, and technical readers who want to explore Luis De León’s early-career work at the intersection of AI, cybersecurity, and research. They come to understand what he builds and studies — not to complete a sales funnel. Contact is available as a secondary option when someone wants to reach out.
+Primary visitors are peers and technical readers who want to see what Luis De León has actually built. They come for the work, not a funnel.
 
 ## Product Purpose
 
-A personal technical portfolio that documents Luis’s work and learning over time: projects, hackathon outcomes, awards, future CTF writeups, research/papers ambitions, and meaningful certifications. Success means a visitor can quickly grasp his focus areas and review concrete evidence of what he does.
+A personal site for verifiable work: shipped projects, awards with a record, credentialed courses, and the roles he can name. Success means a visitor can read the signature, understand the craft, and open evidence.
 
 ## Positioning
 
-Software developer and AI research enthusiast — building fast, shipping faster. Distinctive through the combination of AI + cybersecurity + research documentation (projects, writeups, papers path), rather than a generic “full-stack portfolio” pitch.
+He takes artificial intelligence from the idea to the build, and teaches others to build. Tagline: “Del miedo al prototipo.” Motto, always separate from the name: “Learn, Build, Repeat.” Head of Builders at Open2. Speaker. Student of Ingeniería en Ciencias y Sistemas at USAC.
 
 ## Operating Context
 
-Content comes from hackathons, prizes/awards, shipped projects, planned CTF writeups, papers, and certifications. Source of truth for copy and items is **editable JSON** under `web/src/content/` (not hard-coded pages). The site is bilingual: Spanish as the default language, with a toggle for English. Visitors explore expertise; they are not pushed through a conversion sequence.
-
-Migration reference: prior portfolio at `../portfolio-v2` (real projects, awards, experience, education already partially migrated).
+Content comes from shipped projects, prizes, named roles, and credentialed courses. Source of truth for copy and items is **editable JSON** under `web/src/content/`. Spanish is the default language, with an English toggle.
 
 ## Content architecture (keep this shape)
 
@@ -30,16 +28,14 @@ All visitor-facing content is split by section and language. Edit JSON → reloa
 
 | File pair | Owns |
 | --- | --- |
-| `principal.es.json` / `principal.en.json` | Hero (brand, focus, tagline), about (+ `aboutSkills` tags), experience, education, nav/UI chrome, footer, `contactEmail`, `socialLinks` |
-| `proyectos.es.json` / `proyectos.en.json` | Projects category (`title`, `summary`, `items`) |
-| `ctfs.es.json` / `ctfs.en.json` | CTFs & Labs |
-| `research.es.json` / `research.en.json` | Research |
-| `certificaciones.es.json` / `certificaciones.en.json` | Certifications |
-| `premios.es.json` / `premios.en.json` | Awards section chrome + `items` |
+| `principal.es.json` / `principal.en.json` | Firma, tagline, rol, about, experiencia, educación, nav, footer, email y redes |
+| `proyectos.es.json` / `proyectos.en.json` | Proyectos |
+| `certificaciones.es.json` / `certificaciones.en.json` | Certificaciones |
+| `premios.es.json` / `premios.en.json` | Premios |
 
 Short how-to also lives in `web/src/content/README.md`.
 
-### Work item shape (projects / CTFs / research / certs)
+### Work item shape (projects / certs)
 
 ```json
 {
@@ -83,18 +79,16 @@ Minimum useful award fields: **title**, **org**, **year**, **why** (`blurb` / `b
 1. Hero (name + focus + tagline + portrait mount)  
 2. About (+ skill tags)  
 3. Experience  
-4. Experiments hub (tabs: projects / CTFs & Labs / research / certs) — overview hang + **Ver más**  
+4. Experiments hub (tabs: projects / certs) — overview + **Ver más**  
 5. Awards — list teaser + **Ver más**  
 6. Education  
 7. Footer (email + social)  
 
 **Category archives**
 
-- `/e/projects` — Destacados carousel + projects archive layout  
-- `/e/ctfs` — Destacados + alternating full-viewport lab rows (irregular media)  
-- `/e/research` — Destacados + scroll-driven horizontal research rail  
-- `/e/certs` — Destacados + hang archive  
-- `/e/:tab/:id` — item detail (prev/next in category)  
+- `/e/projects` — Destacados + projects archive
+- `/e/certs` — Destacados + certifications
+- `/e/:tab/:id` — item detail  
 
 **Awards**
 
@@ -104,33 +98,35 @@ Minimum useful award fields: **title**, **org**, **year**, **why** (`blurb` / `b
 ## Capabilities and Constraints
 
 - Personal brand name: **Luis De León**
-- Content pillars: projects (often hackathon-origin), awards, CTF writeups, papers/research, weighty certifications
+- Content pillars: projects with a demo, repo, or prize; awards; credentialed courses
 - Contact options present but not primary
-- Content edits go through the JSON section files; keep ES and EN pairs in sync when changing facts
-- Hero portrait asset: `web/src/assets/principal/me.webp`
-- Open: hosting, LinkedIn/X URLs when ready
+- Hero is the signature in `BrandMark.tsx`: orange accent on León, gold fillet only under «De León»
+- Tagline: “Del miedo al prototipo.”
+- Motto, never locked to the name: “Learn, Build, Repeat”
+- No CTF section, no research section, no unverifiable metrics
 
 ## Brand Commitments
 
-- Name: Luis De León  
-- Tagline: “Building fast,” / “Shipping faster” (two lines)  
-- Focus framing: AI × cybersecurity × research  
-- Language: Spanish-first UI copy with an English toggle  
-- Tone: artistic and slightly experimental; show the work, never sell like a corporate/recruiter site  
-- Image language: irregular crops/frames (rhomboids, trapezoids) over default rectangles  
-- Accent: cool plaster + steel, with **small wine** accents (meta, section numbers, hovers)  
-- No invented clients, benchmarks, employers, or awards — only real or clearly labeled placeholder content  
+- Name: Luis De León
+- Tagline: “Del miedo al prototipo.”
+- Motto: “Learn, Build, Repeat” (isolated)
+- Phrase: “Llevo la inteligencia artificial de la idea a la ejecución.”
+- Language: Spanish-first UI copy with an English toggle
+- Tone: show the work; claim only what can be checked
+- Color: cream `#F3EBDD`, burgundy `#66023C`, ink `#120A0F`, gold fillet `#8C6A2F`, orange spark `#FF5A1F` at a minimum dose
+- Type: Playfair Display italic for the mark and titles; IBM Plex Sans for prose; IBM Plex Mono for labels  
 
 ## Evidence on Hand
 
-- Migrated from portfolio-v2 where real: Aprendi, Agent Builder, Astro Tracker, Videntia, Unmask AI; UFM / Atom Dev Day / NASA Space Apps / Kinal Leadership; Neonet internship; Kinal + USAC education  
-- Still placeholder-heavy: CTFs, research notes, certifications  
-- Absences future work must not fabricate: fake metrics, invented testimonials, unverified certs or prizes  
+- Projects and awards already on the site, with photos, demos, or repositories
+- Roles named in the brand record: Head of Builders at Open2; software developer intern at Neonet (2025)
+- Studies: USAC Ingeniería en Ciencias y Sistemas; Perito en Computación, Fundación Kinal
+- Do not add: CTF writeups, a research track, GPA figures, or an email that is not `ldeleonb06@gmail.com`  
 
 ## Product Principles
 
 1. Expertise over persuasion — let the work and writeups lead; contact stays available, not aggressive.  
-2. Document the technical life — projects, research trajectory, and security practice as an evolving record.  
+2. Show the built record — projects, prizes, and named roles. No empty research shelf and no CTF lab that cannot be checked.  
 3. Bilingual by default — Spanish-first, English reachable without a separate site.  
 4. Truthful evidence — real wins and labeled placeholders; never invent credentials.  
 5. Early-career honesty — show momentum (hackathons, shipping, learning) without pretending senior institutional proof.  

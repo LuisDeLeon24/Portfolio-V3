@@ -8,8 +8,6 @@ Hay una versión `.es.json` y `.en.json` por sección. Edita → recarga.
 | --- | --- |
 | `principal.*.json` | Hero, about (+ `aboutSkills`), experiencia, educación, nav, UI, email y redes |
 | `proyectos.*.json` | Categoría Proyectos (`title`, `summary`, `items`) |
-| `ctfs.*.json` | CTFs & Labs |
-| `research.*.json` | Research |
 | `certificaciones.*.json` | Certificaciones |
 | `premios.*.json` | Premios (chrome de sección + `items`) |
 
@@ -19,7 +17,7 @@ Hay una versión `.es.json` y `.en.json` por sección. Edita → recarga.
 "aboutSkills": ["React", "TypeScript", "Node.js"]
 ```
 
-## Ítem de proyecto / CTF / research / cert
+## Ítem de proyecto / cert
 
 ```json
 {
@@ -56,15 +54,6 @@ Carpetas en `web/src/assets/proyects/` (mapeo en `projectMedia.ts`):
 
 Preferir un archivo con `Landing` / `Main` (o `Videntia 1`) en el nombre para la portada.
 
-## Imágenes de CTFs & Labs
-
-Archivos en `web/src/assets/ctf-labs/` (mapeo en `ctfMedia.ts`):
-
-| `id` en JSON | Archivo |
-| --- | --- |
-| `fluid-attacks-ctf` | `Fluid Atacks CTF.jpg` |
-| `advent-of-cyber` | `tryhackme Advent of Cyber.png` |
-
 ## Imágenes de certificaciones
 
 Logos en `web/src/assets/certs/` (mapeo en `certMedia.ts`):
@@ -75,7 +64,6 @@ Logos en `web/src/assets/certs/` (mapeo en `certMedia.ts`):
 | `cisco-ccna-intro` | `Cisco Logo.png` |
 | `mongodb-ai-vector-search` | `MongoDB logo.png` |
 | `itu-regulatory-innovation` | `ITU logo.png` |
-| `fiusac-research-paper-writing` | `FIusac logo.png` |
 
 ## Premio
 
