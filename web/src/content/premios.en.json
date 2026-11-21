@@ -5,19 +5,34 @@
   "featuredNav": "Featured awards",
   "items": [
     {
+      "id": "ilan-university-innovation-awards-2026",
+      "title": "2nd place - ILAN University Innovation Awards 2026",
+      "org": "ILAN - Israel Innovation Network",
+      "year": "Oct 2026",
+      "blurb": "Sentinel uses computer vision to detect safety risks in industrial environments.",
+      "meta": "ILAN - Israel Innovation Network · Oct 2026",
+      "featureSubtitle": "Sentinel · Industrial safety",
+      "body": [
+        "Sentinel took second place at the ILAN University Innovation Awards. It is a computer vision system designed to improve safety in factories and industrial environments by detecting risks and helping prevent workplace accidents.",
+        "Associated with Universidad de San Carlos de Guatemala."
+      ],
+      "featured": true
+    },
+    {
       "id": "cursor-tec-guatemala",
-      "title": "Hackathon Winner (2nd place) — Cursor × Tec Guatemala",
+      "title": "2nd place - Cursor × Tec Hackathon Guatemala",
       "org": "Cursor AI",
       "year": "Jul 2026",
-      "blurb": "Top 2 of ~10 teams in 4 hours: browser-based AR sky telescope.",
+      "blurb": "In four hours, we turned a phone into an AR telescope that tracks the ISS and Hubble.",
       "meta": "Cursor AI · Jul 2026",
-      "featureSubtitle": "AR sky telescope, shipped",
+      "featureSubtitle": "El Telescopio Digital",
       "featured": true,
       "featureArt": 0,
       "images": [0, 1],
       "body": [
-        "Second place at Cursor Hackathon Guatemala (4-hour sprint) with El Telescopio Digital / Sextant: a phone as a live sky telescope.",
-        "In one afternoon, a production web demo tracking the ISS and Hubble in real time (orbits + NASA/NORAD data), driven by camera, gyroscope, and GPS — fully client-side, no backend."
+        "Ranked in the top 2 of roughly 10 teams at Cursor Hackathon Guatemala, a 4-hour build sprint, for El Telescopio Digital (Sextant), a browser-based AR experience that turns a phone into a live sky telescope.",
+        "In a single afternoon, we shipped a production web demo that tracks the ISS and Hubble in real time using SGP4 orbital propagation and NASA/NORAD TLE data. The demo runs entirely in the browser and uses the phone’s camera, gyroscope, and GPS.",
+        "The challenge was to take an idea from concept to an interactive product that anyone could try before the four hours were up."
       ]
     },
     {
@@ -28,7 +43,6 @@
       "blurb": "Travel grant to represent Guatemala at a 24 h AI-first buildathon.",
       "meta": "The 502 Project · Jul 2026",
       "featureSubtitle": "Buildathon, San Salvador",
-      "featured": true,
       "featureArt": 1,
       "images": [1, 2],
       "body": [
@@ -44,7 +58,6 @@
       "blurb": "Q-Pay (Qubity): P2P lending; 100+ waitlist in under a week.",
       "meta": "Asociación Bancaria de Guatemala · Jun 2026",
       "featureSubtitle": "Q-Pay · fintech sprint",
-      "featured": true,
       "featureArt": 2,
       "images": [2, 3],
       "body": [
@@ -54,17 +67,18 @@
     },
     {
       "id": "ufm-cs-hackathon",
-      "title": "Hackathon Winner (1st Place) — UFM Computer Science Hackathon",
+      "title": "1st Place - UFM Computer Science Hackatón",
       "org": "Universidad Francisco Marroquín",
       "year": "Apr 2026",
-      "blurb": "1st place with Aprendi: adaptive learning and Linux labs.",
+      "blurb": "Aprendi adapts each student’s learning path to their performance in real time.",
       "meta": "Universidad Francisco Marroquín · Apr 2026",
-      "featureSubtitle": "Adaptive learning, shipped",
+      "featureSubtitle": "Aprendi · Adaptive learning",
       "featureArt": 0,
       "images": [0, 1, 2],
       "body": [
-        "1st place with Aprendi (Qubity): a platform that personalizes learning paths from live performance.",
-        "Intensive sprint: from idea to usable product with interactive Linux labs."
+        "Our team at Qubity designed and built Aprendi, an adaptive learning platform with intelligent user workflows, securing 1st place in the competition.",
+        "Developed during an intensive sprint, the platform delivers personalized educational paths by dynamically adjusting content based on real-time student performance. It includes interactive Linux labs.",
+        "This recognition highlighted our technical execution, system architecture, and the potential to scale AI-driven education tools."
       ],
       "links": [
         {
@@ -75,7 +89,8 @@
           "label": "GitHub",
           "href": "https://github.com/LuisDeLeon24/aprendii.git"
         }
-      ]
+      ],
+      "featured": true
     },
     {
       "id": "atom-dev-day",

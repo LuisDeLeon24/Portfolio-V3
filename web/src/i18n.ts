@@ -1,7 +1,5 @@
 import certificacionesEn from './content/certificaciones.en.json'
 import certificacionesEs from './content/certificaciones.es.json'
-import ctfsEn from './content/ctfs.en.json'
-import ctfsEs from './content/ctfs.es.json'
 import premiosEn from './content/premios.en.json'
 import premiosEs from './content/premios.es.json'
 import principalEn from './content/principal.en.json'
@@ -13,7 +11,7 @@ import researchEs from './content/research.es.json'
 
 export type Lang = 'es' | 'en'
 
-export type WorkTab = 'projects' | 'ctfs' | 'research' | 'certs'
+export type WorkTab = 'projects' | 'research' | 'certs'
 
 export type WorkItem = {
   id: string
@@ -60,7 +58,7 @@ type PrincipalFile = {
   nav: { experience: string; work: string; awards: string; education: string; contact: string }
   aboutLabel: string
   aboutTitle: string
-  aboutBody: string
+  aboutBody: string[]
   aboutSkills: string[]
   experienceTitle: string
   experienceIntro?: string
@@ -116,7 +114,6 @@ export type Copy = Omit<PrincipalFile, 'contactEmail' | 'socialLinks'> & {
 function buildCopy(
   principal: PrincipalFile,
   proyectos: WorkCategory,
-  ctfs: WorkCategory,
   research: WorkCategory,
   certs: WorkCategory,
   premios: PremiosFile,
@@ -133,7 +130,6 @@ function buildCopy(
     awards: premios.items as AwardItem[],
     work: {
       projects: proyectos as WorkCategory,
-      ctfs: ctfs as WorkCategory,
       research: research as WorkCategory,
       certs: certs as WorkCategory,
     },
@@ -143,7 +139,6 @@ function buildCopy(
 const es = buildCopy(
   principalEs as PrincipalFile,
   proyectosEs as WorkCategory,
-  ctfsEs as WorkCategory,
   researchEs as WorkCategory,
   certificacionesEs as WorkCategory,
   premiosEs as PremiosFile,
@@ -152,7 +147,6 @@ const es = buildCopy(
 const en = buildCopy(
   principalEn as PrincipalFile,
   proyectosEn as WorkCategory,
-  ctfsEn as WorkCategory,
   researchEn as WorkCategory,
   certificacionesEn as WorkCategory,
   premiosEn as PremiosFile,
@@ -160,7 +154,7 @@ const en = buildCopy(
 
 export const dictionaries: Record<Lang, Copy> = { es, en }
 
-export const tabOrder: WorkTab[] = ['projects', 'ctfs', 'research', 'certs']
+export const tabOrder: WorkTab[] = ['projects', 'research', 'certs']
 
 export function findWorkItem(
   lang: Lang,
@@ -178,103 +172,18 @@ export function findWorkItem(
   }
 }
 
-export function getAdjacentInCategory(
-  lang: Lang,
-  tab: WorkTab,
-  id: string,
-): { prev: WorkItem | null; next: WorkItem | null; position: number; total: number } {
-  const found = findWorkItem(lang, tab, id)
-  if (!found) return { prev: null, next: null, position: 0, total: 0 }
-  const { index, items } = found
-  return {
-    prev: index > 0 ? items[index - 1] : null,
-    next: index < items.length - 1 ? items[index + 1] : null,
-    position: index + 1,
-    total: items.length,
-  }
-}
-
-function hashSeed(input: string): number {
-  let h = 2166136261
-  for (let i = 0; i < input.length; i += 1) {
-    h ^= input.charCodeAt(i)
-    h = Math.imul(h, 16777619)
-  }
-  return h >>> 0
-}
-
-export function getRandomFromOtherCategories(
-  lang: Lang,
-  currentTab: WorkTab,
-  currentId: string,
-  count = 3,
-): WorkRef[] {
-  const pool: WorkRef[] = []
-  for (const tab of tabOrder) {
-    if (tab === currentTab) continue
-    for (const item of dictionaries[lang].work[tab].items) {
-      pool.push({ tab, item })
-    }
-  }
-  if (pool.length === 0) return []
-
-  let seed = hashSeed(`${lang}:${currentTab}:${currentId}`)
-  const next = () => {
-    seed = (seed * 1664525 + 1013904223) >>> 0
-    return seed / 0x100000000
-  }
-
-  const shuffled = [...pool]
-  for (let i = shuffled.length - 1; i > 0; i -= 1) {
-    const j = Math.floor(next() * (i + 1))
-    ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
-  }
-  return shuffled.slice(0, Math.min(count, shuffled.length))
-}
-
 export function isWorkTab(value: string): value is WorkTab {
   return tabOrder.includes(value as WorkTab)
-}
-
-export function getFeaturedItems(lang: Lang, tab: WorkTab): WorkItem[] {
-  const items = dictionaries[lang].work[tab].items
-  const marked = items.filter((item) => item.featured)
-  return marked.length > 0 ? marked : items.slice(0, Math.min(3, items.length))
-}
-
-export function getAwards(lang: Lang): AwardItem[] {
-  return dictionaries[lang].awards
-}
-
-export function getFeaturedAwards(lang: Lang): AwardItem[] {
-  const items = getAwards(lang)
-  const marked = items.filter((item) => item.featured)
-  return marked.length > 0 ? marked : items.slice(0, Math.min(3, items.length))
 }
 
 export function findAwardItem(
   lang: Lang,
   id: string,
 ): { item: AwardItem; index: number; items: AwardItem[] } | null {
-  const items = getAwards(lang)
+  const items = dictionaries[lang].awards
   const index = items.findIndex((entry) => entry.id === id)
   if (index === -1) return null
   return { item: items[index], index, items }
-}
-
-export function getAdjacentAward(
-  lang: Lang,
-  id: string,
-): { prev: AwardItem | null; next: AwardItem | null; position: number; total: number } {
-  const found = findAwardItem(lang, id)
-  if (!found) return { prev: null, next: null, position: 0, total: 0 }
-  const { index, items } = found
-  return {
-    prev: index > 0 ? items[index - 1] : null,
-    next: index < items.length - 1 ? items[index + 1] : null,
-    position: index + 1,
-    total: items.length,
-  }
 }
 
 /** Contact comes from principal.*.json — edit there. */

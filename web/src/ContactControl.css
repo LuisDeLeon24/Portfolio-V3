@@ -1,0 +1,61 @@
+.contact-trigger, .contact-dialog__compose {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .65em;
+  background: var(--accent);
+  color: var(--text);
+  border: 1px solid #a74d53;
+  font-weight: 550;
+}
+.contact-trigger { border-radius: 99px; padding: .58em 1.05em; font-size: 13px; line-height: 1.25; }
+.contact-trigger:hover, .contact-dialog__compose:hover { background: #93303b; }
+.contact-dialog {
+  width: min(490px, calc(100vw - 32px));
+  max-height: calc(100dvh - 32px);
+  margin: auto;
+  padding: 0;
+  border: 1px solid #5d393e;
+  border-radius: 14px;
+  background: #161213;
+  color: var(--text);
+  overscroll-behavior: contain;
+}
+html:has(.contact-dialog[open]) { overflow: hidden; }
+.contact-dialog::backdrop { background: #10090bd6; backdrop-filter: blur(4px); }
+.contact-dialog__inner { padding: clamp(22px, 4vw, 36px); }
+.contact-dialog__heading { display: flex; justify-content: space-between; align-items: start; gap: 1rem; }
+.contact-dialog__heading h2 { font: 450 clamp(44px, 6vw, 62px)/.96 var(--serif); letter-spacing: -.05em; }
+.contact-dialog__heading em { color: #cb757b; }
+.contact-dialog__close { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line); font-size: 23px; line-height: 1; }
+.contact-dialog__links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px 12px;
+  margin: 8px 0 18px;
+}
+.contact-dialog__address { font-size: 13px; }
+.contact-dialog__address:hover { text-decoration: underline; }
+.contact-dialog form, .contact-dialog label { display: grid; }
+.contact-dialog form { gap: 14px; }
+.contact-dialog label { gap: 5px; font-size: 13px; }
+.contact-dialog input, .contact-dialog textarea {
+  width: 100%;
+  color: var(--text);
+  background: #0e0c0d;
+  border: 1px solid #615055;
+  border-radius: 4px;
+  padding: 9px 11px;
+  font: 400 16px/1.4 var(--sans);
+}
+.contact-dialog textarea { resize: vertical; }
+.contact-dialog :is(input, textarea):focus-visible { outline: 2px solid #cb878a; outline-offset: 2px; }
+.contact-dialog form p { font-size: 12px; color: #d2c2c2; }
+.contact-dialog__compose { justify-self: start; padding: 10px 18px; border-radius: 99px; font-size: 14px; }
+@media (max-width: 570px) {
+  .mast .mast-inner { gap: clamp(6px, 2vw, 12px); }
+  .mast .brand span { display: none; }
+  .contact-trigger { padding: .55em .8em; font-size: 12px; }
+}

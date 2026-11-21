@@ -1,14 +1,14 @@
 # Contenido editable (JSON)
 
-Fuente de verdad del copy. Documentación de producto/diseño: `PRODUCT.md` y `DESIGN.md` en la raíz del repo.
+Datos de las fichas, experiencia, educación y contacto. Las publicaciones se editan en `../data/publications.ts`. Cada entrada tiene un ID estable, formato, contenido en español e inglés y una fuente opcional (`to` para una página del portafolio, `href` para un PDF o un enlace externo). Solo las entradas con `status: 'published'` aparecen en el sitio. Hasta dos pueden llevar `featured: true`. Documentación de producto/diseño: `PRODUCT.md` y `DESIGN.md` en la raíz del repo.
 
 Hay una versión `.es.json` y `.en.json` por sección. Edita → recarga.
 
 | Archivo | Qué contiene |
 | --- | --- |
-| `principal.*.json` | Hero, about (+ `aboutSkills`), experiencia, educación, nav, UI, email y redes |
+| `principal.*.json` | Experiencia, educación, etiquetas, correo y redes |
 | `proyectos.*.json` | Categoría Proyectos (`title`, `summary`, `items`) |
-| `ctfs.*.json` | CTFs & Labs |
+| `ctfs.*.json` | Archivo histórico de CTFs y laboratorios, fuera de la navegación pública |
 | `research.*.json` | Research |
 | `certificaciones.*.json` | Certificaciones |
 | `premios.*.json` | Premios (chrome de sección + `items`) |
@@ -36,7 +36,7 @@ Hay una versión `.es.json` y `.en.json` por sección. Edita → recarga.
 }
 ```
 
-`featureArt` es 0–3. `featured: true` → Destacados. `awarded: true` → ícono de trofeo en cards de proyectos.
+`featureArt` es 0–3. `featured: true` incluye la ficha en la selección de portada, siguiendo los [límites por categoría](../../../AGENTS.md). `awarded: true` muestra un ícono de trofeo en las tarjetas de proyectos.
 
 ## Imágenes de proyectos
 
@@ -90,6 +90,8 @@ Igual que arriba, más:
 ```
 
 ## Imágenes de premios
+
+La sección de tarjetas muestra los premios con `featured: true` en el orden del JSON. Para incorporar el logo del emisor, guarda la imagen con el ID del premio en `web/src/assets/awards/logos/`, por ejemplo `cursor-tec-guatemala.svg`. Admite SVG, PNG, JPG, JPEG y WebP con extensión en minúsculas, y usa el mismo archivo en ambos idiomas. Mientras falta el logo se muestra el nombre de la entidad.
 
 Archivos en `web/src/assets/awards/` (mapeo en `awardMedia.ts`):
 

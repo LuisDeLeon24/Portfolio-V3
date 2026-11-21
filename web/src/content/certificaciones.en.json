@@ -47,6 +47,7 @@
       "blurb": "Networking from scratch: OSI/TCP-IP, IP, and basic device setup.",
       "meta": "Cisco · CCNA",
       "featureSubtitle": "Introduction to Networks",
+      "featured": true,
       "featureArt": 1,
       "body": [
         "First CCNA module: protocols, IP addressing, and introductory configuration.",

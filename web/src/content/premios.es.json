@@ -5,19 +5,34 @@
   "featuredNav": "Premios destacados",
   "items": [
     {
+      "id": "ilan-university-innovation-awards-2026",
+      "title": "2.º lugar - ILAN University Innovation Awards 2026",
+      "org": "ILAN - Israel Innovation Network",
+      "year": "Oct 2026",
+      "blurb": "Sentinel usa visión por computadora para detectar riesgos en entornos industriales.",
+      "meta": "ILAN - Israel Innovation Network · Oct 2026",
+      "featureSubtitle": "Sentinel · Seguridad industrial",
+      "body": [
+        "Sentinel obtuvo el segundo lugar en los ILAN University Innovation Awards 2026. El sistema usa visión por computadora para detectar riesgos en fábricas y otros entornos industriales y ayudar a prevenir accidentes laborales.",
+        "Este reconocimiento está asociado con la Universidad de San Carlos de Guatemala."
+      ],
+      "featured": true
+    },
+    {
       "id": "cursor-tec-guatemala",
-      "title": "Ganador (2.º lugar) — Cursor × Tec Guatemala",
+      "title": "2.º lugar - Cursor × Tec Hackathon Guatemala",
       "org": "Cursor AI",
       "year": "Jul 2026",
-      "blurb": "Top 2 de ~10 equipos en 4 horas: telescopio AR en el navegador.",
+      "blurb": "En cuatro horas convertimos un teléfono en un telescopio de realidad aumentada que sigue la EEI y el Hubble.",
       "meta": "Cursor AI · Jul 2026",
-      "featureSubtitle": "Telescopio AR, shipped",
+      "featureSubtitle": "El Telescopio Digital",
       "featured": true,
       "featureArt": 0,
       "images": [0, 1],
       "body": [
-        "Segundo lugar en Cursor Hackathon Guatemala (sprint de 4 horas) con El Telescopio Digital / Sextant: el teléfono como telescopio del cielo en vivo.",
-        "En una tarde, demo en producción que rastrea ISS y Hubble en tiempo real (órbitas + datos NASA/NORAD), con cámara, giroscopio y GPS — todo en el cliente, sin backend."
+        "Quedamos en segundo lugar entre unos diez equipos con El Telescopio Digital (Sextant), una experiencia de realidad aumentada que convierte el teléfono en un telescopio desde el navegador.",
+        "En una tarde publicamos una demo que sigue en tiempo real la Estación Espacial Internacional (EEI) y el telescopio Hubble. Calcula sus órbitas con SGP4 y datos TLE de NASA/NORAD. La cámara, el giroscopio y el GPS del teléfono permiten apuntar al cielo. Todo se ejecuta en el navegador.",
+        "El reto fue llevar la idea a un producto interactivo que cualquiera pudiera probar antes de que acabaran las cuatro horas."
       ]
     },
     {
@@ -28,7 +43,6 @@
       "blurb": "Beca de viaje para representar a Guatemala en un buildathon AI-first de 24 h.",
       "meta": "The 502 Project · Jul 2026",
       "featureSubtitle": "Buildathon, San Salvador",
-      "featured": true,
       "featureArt": 1,
       "images": [1, 2],
       "body": [
@@ -44,7 +58,6 @@
       "blurb": "Q-Pay (Qubity): créditos P2P; waitlist de 100+ en menos de una semana.",
       "meta": "Asociación Bancaria de Guatemala · Jun 2026",
       "featureSubtitle": "Q-Pay · sprint fintech",
-      "featured": true,
       "featureArt": 2,
       "images": [2, 3],
       "body": [
@@ -54,17 +67,18 @@
     },
     {
       "id": "ufm-cs-hackathon",
-      "title": "Ganador (1er lugar) — UFM Computer Science Hackathon",
+      "title": "Primer lugar - UFM Computer Science Hackatón",
       "org": "Universidad Francisco Marroquín",
       "year": "Abr 2026",
-      "blurb": "1er lugar con Aprendi: aprendizaje adaptativo y labs Linux.",
+      "blurb": "Con Aprendi, cada estudiante sigue una ruta que cambia según su desempeño en tiempo real.",
       "meta": "Universidad Francisco Marroquín · Abr 2026",
-      "featureSubtitle": "Adaptive learning, shipped",
+      "featureSubtitle": "Aprendi · Aprendizaje adaptativo",
       "featureArt": 0,
       "images": [0, 1, 2],
       "body": [
-        "1er lugar con Aprendi (Qubity): plataforma que personaliza rutas de aprendizaje según el desempeño en tiempo real.",
-        "Sprint intensivo: de idea a producto usable con labs Linux interactivos."
+        "Con el equipo de Qubity ganamos el primer lugar con Aprendi, una plataforma de aprendizaje adaptativo que diseñamos y construimos durante el hackatón.",
+        "En un sprint intensivo desarrollamos los flujos que personalizan el recorrido de cada estudiante. La plataforma ajusta el contenido según su desempeño en tiempo real e incluye laboratorios interactivos de Linux.",
+        "El reconocimiento destacó la ejecución técnica del equipo, la arquitectura de Aprendi y su potencial para ampliar el uso de la IA en educación."
       ],
       "links": [
         {
@@ -75,7 +89,8 @@
           "label": "GitHub",
           "href": "https://github.com/LuisDeLeon24/aprendii.git"
         }
-      ]
+      ],
+      "featured": true
     },
     {
       "id": "atom-dev-day",

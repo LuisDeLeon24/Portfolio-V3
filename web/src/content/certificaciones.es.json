@@ -34,6 +34,7 @@
       "blurb": "Búsqueda semántica con embeddings — base para RAG y productos con IA.",
       "meta": "MongoDB · AI / Vector Search",
       "featureSubtitle": "Vector Search · AI",
+      "featured": true,
       "featureArt": 0,
       "body": [
         "Curso sobre MongoDB Vector Search: embeddings, índices vectoriales y recuperación semántica.",
@@ -46,6 +47,7 @@
       "blurb": "Redes desde cero: OSI/TCP-IP, IP y configuración básica de dispositivos.",
       "meta": "Cisco · CCNA",
       "featureSubtitle": "Introduction to Networks",
+      "featured": true,
       "featureArt": 1,
       "body": [
         "Módulo inicial CCNA: protocolos, direccionamiento IP y configuración introductoria.",

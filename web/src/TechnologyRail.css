@@ -1,0 +1,54 @@
+.tech-rail {
+  --logo-gap: clamp(28px, 3vw, 64px);
+  grid-column: 2 / -1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-block: 1px solid var(--line);
+  padding-block: clamp(14px, 1.4vw, 25px);
+}
+.tech-rail__window {
+  min-width: 0;
+  flex: 1;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, black 2%, black 97%, transparent);
+}
+.tech-rail__belt, .tech-rail__run { display: flex; width: max-content; }
+.tech-rail__belt { animation: tech-travel 48s linear infinite; }
+@keyframes tech-travel { to { transform: translateX(-50%); } }
+.tech-rail__run {
+  list-style: none;
+  margin: 0;
+  padding: 0 var(--logo-gap) 0 0;
+  align-items: center;
+  gap: var(--logo-gap);
+}
+.tech-rail__run li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  white-space: nowrap;
+  font: 500 clamp(12px, .82vw, 15px)/1.2 var(--sans);
+}
+.tech-rail__run svg { width: clamp(26px, 2.15vw, 40px); aspect-ratio: 1; fill: currentColor; }
+.tech-rail__toggle {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  flex: none;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+}
+.tech-rail__toggle:hover { background: var(--accent); }
+.tech-rail__toggle svg { width: 13px; }
+@media (max-width: 700px) {
+  .tech-rail { grid-column: 1 / -1; margin-top: 6px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tech-rail__belt { animation: none; width: 100%; }
+  .tech-rail__run { width: 100%; flex-wrap: wrap; gap: 16px 24px; padding: 0; }
+  .tech-rail__window { mask-image: none; }
+  .tech-rail__run[aria-hidden], .tech-rail__toggle { display: none; }
+}

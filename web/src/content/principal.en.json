@@ -1,7 +1,7 @@
 {
   "brand": "Luis De León",
   "focus": "AI × Cybersecurity × Research",
-  "tagline": "Building fast,\nShipping faster",
+  "tagline": "Learn, Build, Repeat",
   "nav": {
     "experience": "Experience",
     "work": "Experiments",
@@ -10,8 +10,11 @@
     "contact": "Contact"
   },
   "aboutLabel": "01",
-  "aboutTitle": "About the work",
-  "aboutBody": "A technical record of early practice at the intersection of artificial intelligence, product, and applied security. Come review what I build in hackathons, internships, and experiments — not a sales funnel.",
+  "aboutTitle": "About me",
+  "aboutBody": [
+    "I’m Luis, a software developer in Guatemala. I like figuring out how things work and testing what I learn, even if all I build is a small prototype.",
+    "I’m drawn to artificial intelligence and computer security. I’m also curious about what happens when these technologies become part of public services and who decides how they’re used."
+  ],
   "aboutSkills": [
     "React",
     "Next.js",
@@ -29,11 +32,10 @@
   ],
   "experienceTitle": "Experience",
   "experienceIntro": "Professional practice and builds under pressure. Verifiable milestones only.",
-  "workTitle": "Experiments",
+  "workTitle": "Projects",
   "workIntro": "A sparse hang by category. Pick a panel for the overview; “See more” opens the dense archive. Each piece opens its detail page.",
   "tabs": {
     "projects": "Projects",
-    "ctfs": "CTFs & Labs",
     "research": "Research",
     "certs": "Certs"
   },
@@ -82,17 +84,17 @@
   ],
   "education": [
     {
-      "title": "B.S. Computer Science",
+      "title": "Systems Engineering",
       "meta": "Universidad de San Carlos de Guatemala · 2026 — present",
-      "note": "Focus on systems, networking, and fullstack development, with active hackathon and real-world project work."
+      "note": "Studies in logic, systems design and software development."
     },
     {
-      "title": "Computer Science–oriented high school diploma",
+      "title": "Technical diploma in computing",
       "meta": "Fundación Kinal · 2023 — 2025",
       "note": "Fullstack development, networking, and infrastructure; hands-on web and applied AI projects."
     }
   ],
-  "contactEmail": "hola@luisdeleon.dev",
+  "contactEmail": "ldeleonb06@gmail.com",
   "socialLinks": [
     {
       "id": "github",
@@ -102,7 +104,12 @@
     {
       "id": "linkedin",
       "label": "LinkedIn",
-      "href": "https://linkedin.com/in/ldeleonb"
+      "href": "https://www.linkedin.com/in/ldeleonb/"
+    },
+    {
+      "id": "x",
+      "label": "X",
+      "href": "https://x.com/luisdeleondev"
     }
   ]
 }

@@ -1,0 +1,17 @@
+.slogan-band {
+  overflow: clip;
+  background: var(--canvas);
+}
+
+.slogan-band__face {
+  min-height: clamp(140px, 27svh, 280px);
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: .35em var(--gutter);
+  background: var(--accent);
+  color: var(--text);
+  font: italic 500 clamp(30px, 8.9vw, 168px)/1 var(--serif);
+  letter-spacing: -.045em;
+  text-align: center;
+}

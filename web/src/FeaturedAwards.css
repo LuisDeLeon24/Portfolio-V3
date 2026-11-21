@@ -1,0 +1,145 @@
+.award-track {
+  scroll-margin-top: var(--header);
+  color: var(--text);
+  background: var(--canvas);
+}
+.award-track[data-scrolling]::after {
+  content: '';
+  display: block;
+  height: calc(var(--award-pages) * 100svh);
+}
+.award-track[data-scrolling] .award-frame { position: sticky; top: var(--header); }
+
+.award-frame {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  isolation: isolate;
+  overflow: clip;
+  background: #0d0b0c;
+  border-block: 1px solid var(--line);
+}
+.award-frame:has(.award-fan) { min-height: calc(100svh - var(--header)); }
+.award-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px 24px;
+  padding-block: clamp(12px, 2.6svh, 36px);
+}
+.award-heading h2 { font-size: clamp(33px, 4.1vw, 78px); }
+.award-heading em { color: var(--accent); }
+.award-heading .text-link { margin-inline-start: auto; }
+
+.award-fan {
+  --card-width: 46cqw;
+  --card-height: clamp(355px, 65svh, 714px);
+  display: grid;
+  place-items: center;
+  container-type: inline-size;
+  flex: 1 0 auto;
+  min-height: calc(var(--card-height) + 30px);
+  position: relative;
+  isolation: isolate;
+}
+.award-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--text);
+  background: #171315;
+  border: 1px solid #c1b8a878;
+  border-radius: clamp(13px, 1.65vw, 28px);
+  box-shadow: 0 15px 38px #0006;
+}
+.award-fan .award-card {
+  --distance: max(var(--offset, 0), calc(-1 * var(--offset, 0)));
+  --wing: clamp(-1, var(--offset, 0), 1);
+  --travel: calc((100cqw - var(--card-width)) / 2);
+  --recede: min(var(--distance), 2);
+  grid-area: 1 / 1;
+  width: var(--card-width);
+  min-height: var(--card-height);
+  z-index: calc(40 - 10 * var(--distance));
+  opacity: clamp(0, calc((var(--fan-limit) - var(--distance)) * 3), 1);
+  transform-origin: calc(50% + var(--wing) * 50%) center;
+  transform: translateX(calc(var(--wing) * var(--travel)))
+    perspective(950px) translateY(calc(10px * var(--recede)))
+    rotateY(calc(-20deg * var(--wing))) scale(calc(1 - .11 * var(--recede)));
+}
+.award-fan .award-card[data-active='true'] {
+  border-color: #ede2cdb5;
+  box-shadow: 0 20px 58px #0008, 0 1px 0 #781e24;
+}
+.award-mark {
+  position: relative;
+  flex: 1;
+  min-height: 120px;
+  background: var(--mark-bg, #100f10);
+}
+.award-mark img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 82%;
+  height: 88%;
+  object-fit: contain;
+}
+.award-card[data-award='ilan-university-innovation-awards-2026'] { --mark-bg: #2f2e83; }
+.award-card[data-award='ufm-cs-hackathon'] { --mark-bg: #e3201c; }
+.award-caption { padding: clamp(16px, 1.8vw, 32px); }
+.award-caption h3 {
+  font: 470 clamp(23px, min(2.5vw, 4.2svh), 42px)/1.04 var(--serif);
+  letter-spacing: -.035em;
+  text-wrap: balance;
+}
+.award-caption p {
+  margin-top: 8px;
+  color: #ddd3cd;
+  font: 400 clamp(12px, 1vw, 16px)/1.4 var(--sans);
+}
+.award-fan .award-card[data-side] .award-caption { max-width: 63%; }
+.award-fan .award-card[data-side] h3 { font-size: clamp(19px, 1.8vw, 32px); }
+.award-fan .award-card[data-side='right'] .award-caption { align-self: end; text-align: right; }
+.award-open, .award-choose {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+}
+.award-open:focus-visible, .award-choose:focus-visible { outline: 2px solid var(--text); outline-offset: -5px; }
+.award-counter {
+  padding: 12px 0 clamp(16px, 3svh, 38px);
+  text-align: center;
+  color: var(--text);
+  font: 400 12px/1.4 var(--mono);
+}
+.award-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr));
+  gap: 16px;
+  padding-block: 16px 36px;
+}
+.award-list .award-card { min-height: 380px; }
+
+@media (max-width: 700px) {
+  .award-fan {
+    --card-width: 76cqw;
+    --card-height: clamp(370px, 61svh, 520px);
+  }
+  .award-heading .text-link { font-size: 12px; }
+}
+@media (max-height: 575px) and (min-width: 601px) {
+  .award-fan { --card-width: 51cqw; --card-height: max(185px, 51svh); }
+  .award-heading { padding-block: 8px; }
+  .award-heading h2 { font-size: 32px; }
+  .award-fan .award-mark { min-height: 84px; }
+  .award-fan .award-caption { padding: 10px 14px; }
+  .award-fan .award-caption h3 { font-size: 21px; }
+  .award-fan .award-caption p { margin-top: 4px; }
+  .award-counter { padding-block: 4px 8px; }
+}

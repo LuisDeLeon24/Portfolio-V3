@@ -1,0 +1,256 @@
+.directory-track {
+  --directory-height: clamp(490px, calc(100svh - var(--header) - 6px), 1100px);
+  --intro-viewports: 2.4;
+}
+.portfolio-directory {
+  --divider: color-mix(in srgb, var(--text) 57%, var(--canvas));
+  --expanded-column: 65%;
+  --expanded-row: 65%;
+  --cross-x: 50%;
+  --cross-y: 50%;
+  --grid-motion: 460ms cubic-bezier(.22,.8,.25,1);
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: var(--cross-x) minmax(0, 1fr);
+  grid-template-rows: var(--cross-y) minmax(0, 1fr);
+  height: var(--directory-height);
+  transition: grid-template-columns var(--grid-motion), grid-template-rows var(--grid-motion);
+  background: var(--canvas);
+}
+.portfolio-directory[data-entering]:not(:has(:focus-visible)) .directory-tile {
+  opacity: 0;
+  pointer-events: none;
+  transition-duration: 0s;
+}
+.portfolio-directory:has(:focus-visible) > * {
+  --seal-progress: 1;
+  --line-progress: 1;
+}
+.portfolio-directory:is([data-active='experience'], [data-active='community']) { --cross-x: var(--expanded-column); }
+.portfolio-directory:is([data-active='projects'], [data-active='publications']) { --cross-x: calc(100% - var(--expanded-column)); }
+.portfolio-directory:is([data-active='experience'], [data-active='projects']) { --cross-y: var(--expanded-row); }
+.portfolio-directory:is([data-active='community'], [data-active='publications']) { --cross-y: calc(100% - var(--expanded-row)); }
+@media (prefers-reduced-motion: no-preference) {
+  .directory-track {
+    /* ScrollTrigger starts when the center of the grid reaches the bottom of the viewport. */
+    --intro-end: calc(var(--directory-height) / 2 + (var(--intro-viewports) - 1) * 100vh);
+    --hold-distance: 200svh;
+    scroll-margin-top: calc(0px - var(--intro-end) - 1px);
+  }
+  .lenis .directory-track {
+    /* Motion applies a 78px offset when following fragment links. */
+    scroll-margin-top: calc(0px - var(--intro-end) - 79px);
+  }
+  .directory-track::after {
+    content: '';
+    display: block;
+    height: calc(var(--intro-end) + var(--header) + var(--hold-distance));
+  }
+  .directory-track > .portfolio-directory {
+    position: sticky;
+    top: var(--header);
+  }
+}
+.directory-tile {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: end;
+  padding: clamp(16px, 2.5vw, 54px);
+  background: #080809;
+  transition: opacity 650ms ease-out;
+}
+.directory-tile:focus-within { transition-duration: 0s; }
+.directory-tile:nth-child(even) {
+  justify-content: end;
+  text-align: right;
+}
+.directory-tile:nth-child(even) .directory-links {
+  justify-content: end;
+}
+.directory-entry {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.directory-entry:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: -5px;
+}
+.directory-content {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 56ch);
+  pointer-events: none;
+}
+.directory-drawer {
+  display: grid;
+  grid-template-rows: 0fr;
+  visibility: hidden;
+  opacity: 0;
+  transition: grid-template-rows 340ms ease, opacity 180ms, visibility 0s 340ms;
+}
+.is-open .directory-drawer {
+  grid-template-rows: 1fr;
+  visibility: visible;
+  opacity: 1;
+  transition: grid-template-rows 360ms ease, opacity 260ms 100ms;
+}
+.directory-drawer-inner {
+  overflow: hidden;
+  min-height: 0;
+  padding-inline: 4px;
+  margin-inline: -4px;
+}
+.directory-drawer p {
+  padding-top: clamp(10px, 1.2vw, 23px);
+  color: var(--text);
+  font: 400 clamp(14px, 1.05vw, 19px)/1.48 var(--sans);
+}
+.directory-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding-block: clamp(14px, 1.6vw, 28px) 4px;
+}
+.directory-links a {
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 6px 12px;
+  border: 1px solid #b1a69f;
+  background: rgb(8 8 9 / 75%);
+  color: var(--text);
+  font: 530 clamp(12px, 0.9vw, 16px)/1.2 var(--sans);
+}
+.directory-links a:is(:hover, :focus-visible) {
+  background: var(--accent);
+  border-color: var(--text);
+}
+.directory-label {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.28em;
+  font: 320 clamp(30px, 3.4vw, 74px)/1.04 var(--sans);
+  letter-spacing: -0.055em;
+}
+.directory-label > span {
+  color: var(--muted);
+  font-size: 0.36em;
+  transition: transform 200ms, color 200ms;
+}
+.is-open .directory-label > span {
+  opacity: 0;
+}
+.directory-scene {
+  position: absolute;
+  inset: 0;
+  opacity: .80;
+  pointer-events: none;
+  transition: opacity var(--grid-motion);
+}
+.directory-scene img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--crop, center);
+  transform-origin: var(--crop, center);
+  transition: transform var(--grid-motion);
+}
+.directory-tile:first-child {
+  --crop: 33% 12%;
+}
+.directory-tile:nth-child(3) {
+  --crop: 46% 26%;
+}
+.directory-scene::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgb(8 6 8 / 78%), rgb(8 6 8 / 53%) 30%, rgb(8 6 8 / 8%) 75%);
+}
+.portfolio-directory[data-active] .directory-tile:not(.is-open) .directory-scene { opacity: .44; }
+.is-open .directory-scene {
+  opacity: 1;
+}
+.is-open .directory-scene img {
+  transform: scale(1.1);
+}
+.directory-axis {
+  position: absolute;
+  z-index: 2;
+  background: var(--divider);
+  pointer-events: none;
+}
+.directory-axis-x {
+  inset: var(--cross-y) 0 auto;
+  height: 1px;
+  translate: 0 -50%;
+  scale: var(--line-progress, 1) 1;
+  transition: top var(--grid-motion);
+}
+.directory-axis-y {
+  inset: 0 auto 0 var(--cross-x);
+  width: 1px;
+  translate: -50% 0;
+  scale: 1 var(--line-progress, 1);
+  transition: left var(--grid-motion);
+}
+.directory-seal {
+  position: absolute;
+  inset: var(--cross-y) auto auto var(--cross-x);
+  z-index: 3;
+  transition: top var(--grid-motion), left var(--grid-motion);
+  translate: -50% -50%;
+  opacity: var(--seal-progress, 1);
+  scale: calc(.75 + .25 * var(--seal-progress, 1));
+  display: grid;
+  place-items: center;
+  width: clamp(56px, 7.4vw, 142px);
+  aspect-ratio: 1;
+  border: 1px solid var(--text);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  background: #080809;
+  pointer-events: none;
+}
+.directory-seal img {
+  width: 76%;
+  height: auto;
+}
+@media (max-width: 600px) {
+  .directory-track {
+    --directory-height: clamp(540px, 78svh, 700px);
+  }
+  .portfolio-directory {
+    --expanded-column: 62%;
+    --expanded-row: 69%;
+  }
+  .directory-tile {
+    padding: clamp(10px, 3vw, 16px);
+  }
+  .portfolio-directory[data-active] .directory-tile:not(.is-open) .directory-label {
+    font-size: clamp(15px, 4.4vw, 24px);
+  }
+  .directory-links {
+    gap: 5px;
+  }
+  .directory-links a {
+    min-height: 36px;
+    padding-inline: 8px;
+  }
+  .directory-drawer p {
+    font-size: 14px;
+  }
+  .directory-label {
+    font-size: clamp(22px, 6.2vw, 35px);
+  }
+  .directory-seal {
+    width: 48px;
+  }
+}

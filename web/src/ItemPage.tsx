@@ -1,241 +1,114 @@
-import { useEffect, useMemo, type CSSProperties } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import {
-  findWorkItem,
-  getAdjacentInCategory,
-  getRandomFromOtherCategories,
-  isWorkTab,
-  type WorkTab,
-} from './i18n'
-import { useLang } from './LangContext'
-import { SiteFooter, SiteHeader } from './SiteChrome'
-import { getWorkCover, getWorkImages, isLogoMedia } from './workMedia'
+import { findWorkItem, isWorkTab } from './i18n'
+import { useLang } from './language'
+import { getWorkImages } from './workMedia'
+import { features, credentials } from './data/editorial'
+import { Arrow } from './SiteChrome'
 
-const pieceShapes = ['trap', 'rhomb', 'skew'] as const
-const pieceBgs = ['#3d5a80', '#2a4060', '#5a6f7d', '#4a5d4e'] as const
-
-export default function ItemPage() {
-  const { tab = '', id = '' } = useParams()
-  const { lang } = useLang()
-
-  if (!isWorkTab(tab)) {
-    return <Missing />
-  }
-
-  return <ItemDetail tab={tab} id={id} lang={lang} />
-}
-
-function ItemDetail({ tab, id, lang }: { tab: WorkTab; id: string; lang: 'es' | 'en' }) {
+export function Missing() {
   const { t } = useLang()
-  const found = findWorkItem(lang, tab, id)
-
-  const adjacent = useMemo(
-    () => getAdjacentInCategory(lang, tab, id),
-    [lang, tab, id],
-  )
-
-  const others = useMemo(
-    () => getRandomFromOtherCategories(lang, tab, id, 3),
-    [lang, tab, id],
-  )
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }, [tab, id])
-
-  if (!found) {
-    return <Missing />
-  }
-
-  const { item, category } = found
-  const { prev, next, position, total } = adjacent
-  const photos = getWorkImages(tab, item.id)
-  const cover = photos[0]
-  const gallery = photos.slice(1)
-  const logo = Boolean(cover && isLogoMedia(tab, item.id))
-
   return (
-    <>
-      <SiteHeader />
-      <main className="site detail" id="top">
-        <p className="detail-kicker">
-          <Link to={{ pathname: '/', hash: 'experimentos' }}>{t.workTitle}</Link>
-          <span aria-hidden="true"> · </span>
-          <span>{category}</span>
-          {total > 0 ? (
-            <>
-              <span aria-hidden="true"> · </span>
-              <span>
-                {position}/{total}
-              </span>
-            </>
-          ) : null}
+    <main className="wrap paper" id="main">
+      <h1>{t.notFoundTitle}</h1>
+      <p>{t.notFoundBody}</p>
+      <Link className="text-link" to="/">
+        {t.backHome} <Arrow />
+      </Link>
+    </main>
+  )
+}
+export default function ItemPage() {
+  const { tab = '', id = '' } = useParams(),
+    { lang, t } = useLang(),
+    es = lang === 'es'
+  if (!isWorkTab(tab)) return <Missing />
+  const result = findWorkItem(lang, tab, id)
+  if (!result) return <Missing />
+  const { item, category, index, items } = result,
+    images = getWorkImages(tab, id)
+  const feature = tab === 'projects' ? features.find((x) => x.id === id) : undefined
+  const credential = tab === 'certs' ? credentials[id] : undefined
+  const next = items[index + 1]
+  return (
+    <main id="main" className="wrap paper">
+      <Link className="back" to={tab === 'projects' ? '/projects' : '/e/' + tab}>
+        ← {category}
+      </Link>
+      <div className="paper-head">
+        <p className="eyebrow">
+          <i className="dot" />
+          {feature?.category[lang] ?? item.meta}
         </p>
-        <header className="detail-head">
-          <p className="meta">{item.meta}</p>
-          <h1>{item.title}</h1>
-          <p className="detail-blurb">{item.blurb}</p>
-        </header>
-
-        <div className="detail-mount">
-          <div className={`detail-mount-frame${logo ? ' is-logo' : ''}`}>
-            {cover ? (
-              <img className={`media-photo${logo ? ' is-logo' : ''}`} src={cover} alt="" />
-            ) : (
-              <div className="piece-fill detail-fill">{t.placeholder}</div>
+        <h1>{item.title}</h1>
+        <p className="lede">{item.blurb}</p>
+      </div>
+      {images[0] && (
+        <a
+          className={'cover' + (credential ? ' logo-cover' : '')}
+          href={images[0]}
+          aria-label={es ? 'Ampliar imagen' : 'Enlarge image'}
+        >
+          <img src={images[0]} alt={item.title} />
+        </a>
+      )}
+      <div className="paper-body">
+        <aside className="meta">
+          {item.meta}
+          {credential?.date && <p>{credential.date}</p>}
+        </aside>
+        <div>
+          {feature
+            ? [
+                [es ? 'Problema' : 'Problem', feature.problem],
+                [es ? 'Decisiones técnicas' : 'Technical decisions', feature.approach],
+                [es ? 'Resultado' : 'Outcome', feature.result],
+              ].map(
+                ([label, content]) =>
+                  typeof content === 'object' && (
+                    <section key={String(label)}>
+                      <h2>{String(label)}</h2>
+                      <p>{content[lang]}</p>
+                    </section>
+                  ),
+              )
+            : item.body.map((p) => <p key={p}>{p}</p>)}
+          <div className="link-group">
+            {item.links?.map((link) => (
+              <a className="text-link" key={link.href} href={link.href}>
+                {link.label} <Arrow diagonal />
+              </a>
+            ))}
+            {credential?.verification && (
+              <a className="text-link" href={credential.verification}>
+                {es ? 'Verificar credencial' : 'Verify credential'} <Arrow diagonal />
+              </a>
             )}
           </div>
         </div>
-
-        {gallery.length > 0 ? (
-          <div className="detail-gallery" aria-label={item.title}>
-            {gallery.map((src) => (
-              <figure key={src} className="detail-gallery-item">
-                <img src={src} alt="" />
-              </figure>
-            ))}
-          </div>
-        ) : null}
-
-        <div className="detail-body">
-          {item.body.map((paragraph) => (
-            <p key={paragraph.slice(0, 32)}>{paragraph}</p>
+      </div>
+      {images.length > 1 && (
+        <div className="gallery">
+          {images.slice(1).map((src, i) => (
+            <a key={src} href={src}>
+              <img
+                loading="lazy"
+                src={src}
+                alt={item.title + ' · ' + (es ? 'Imagen ' : 'Image ') + (i + 2)}
+              />
+            </a>
           ))}
         </div>
-
-        {item.links?.length ? (
-          <section className="detail-links" aria-labelledby="detail-links-title">
-            <h2 id="detail-links-title">{t.detailLinks}</h2>
-            <ul>
-              {item.links.map((link) => (
-                <li key={link.label}>
-                  <a href={link.href}>{link.label}</a>
-                </li>
-              ))}
-            </ul>
-          </section>
-        ) : null}
-
-        <nav className="detail-pager" aria-label={`${t.prevItem} / ${t.nextItem}`}>
-          {prev ? (
-            <Link className="pager-btn pager-prev" to={`/e/${tab}/${prev.id}`}>
-              <span className="pager-arrow" aria-hidden="true">
-                ←
-              </span>
-              <span className="pager-copy">
-                <span className="pager-label">{t.prevItem}</span>
-                <span className="pager-title">{prev.title}</span>
-              </span>
-            </Link>
-          ) : (
-            <span className="pager-btn pager-prev is-disabled" aria-disabled="true">
-              <span className="pager-arrow" aria-hidden="true">
-                ←
-              </span>
-              <span className="pager-copy">
-                <span className="pager-label">{t.prevItem}</span>
-              </span>
-            </span>
-          )}
-
-          {next ? (
-            <Link className="pager-btn pager-next" to={`/e/${tab}/${next.id}`}>
-              <span className="pager-copy">
-                <span className="pager-label">{t.nextItem}</span>
-                <span className="pager-title">{next.title}</span>
-              </span>
-              <span className="pager-arrow" aria-hidden="true">
-                →
-              </span>
-            </Link>
-          ) : (
-            <span className="pager-btn pager-next is-disabled" aria-disabled="true">
-              <span className="pager-copy">
-                <span className="pager-label">{t.nextItem}</span>
-              </span>
-              <span className="pager-arrow" aria-hidden="true">
-                →
-              </span>
-            </span>
-          )}
-        </nav>
-
-        {others.length > 0 ? (
-          <section className="detail-more" aria-labelledby="more-title">
-            <div className="wall-label">
-              <h2 id="more-title">{t.moreExperiments}</h2>
-            </div>
-            <div className="hang detail-more-hang">
-              {others.map((ref, i) => {
-                const cover = getWorkCover(ref.tab, ref.item.id)
-                const logo = Boolean(cover && isLogoMedia(ref.tab, ref.item.id))
-                return (
-                  <Link
-                    key={`${ref.tab}-${ref.item.id}`}
-                    to={`/e/${ref.tab}/${ref.item.id}`}
-                    className="piece piece-link"
-                    aria-label={`${t.openItem}: ${ref.item.title}`}
-                  >
-                    <div className={`piece-mount ${pieceShapes[i % pieceShapes.length]}`}>
-                      <div
-                        className={`piece-fill${cover ? ' has-photo' : ''}${logo ? ' is-logo' : ''}`}
-                        style={
-                          cover
-                            ? undefined
-                            : ({
-                                '--piece-bg': pieceBgs[i % pieceBgs.length],
-                              } as CSSProperties)
-                        }
-                      >
-                        {cover ? (
-                          <img
-                            className={`media-photo${logo ? ' is-logo' : ''}`}
-                            src={cover}
-                            alt=""
-                          />
-                        ) : (
-                          t.tabs[ref.tab]
-                        )}
-                      </div>
-                    </div>
-                    <span className="meta">
-                      {t.tabs[ref.tab]} · {ref.item.meta}
-                    </span>
-                    <h3>{ref.item.title}</h3>
-                    <p>{ref.item.blurb}</p>
-                  </Link>
-                )
-              })}
-            </div>
-          </section>
-        ) : null}
-
-        <p className="detail-back">
-          <Link className="btn btn-ghost" to={{ pathname: '/', hash: 'experimentos' }}>
-            {t.backHome}
+      )}
+      <div className="paper-end">
+        <Link className="text-link" to="/">
+          {t.backHome} <Arrow />
+        </Link>
+        {next && (
+          <Link className="text-link" to={'/e/' + tab + '/' + next.id}>
+            {t.nextItem} · {next.title} <Arrow />
           </Link>
-        </p>
-      </main>
-      <SiteFooter />
-    </>
-  )
-}
-
-function Missing() {
-  const { t } = useLang()
-  return (
-    <>
-      <SiteHeader />
-      <main className="site detail" id="top">
-        <h1>{t.notFoundTitle}</h1>
-        <p className="lede">{t.notFoundBody}</p>
-        <p className="detail-back">
-          <Link className="btn btn-primary" to="/">
-            {t.backHome}
-          </Link>
-        </p>
-      </main>
-      <SiteFooter />
-    </>
+        )}
+      </div>
+    </main>
   )
 }

@@ -33,3 +33,15 @@ export function getAwardImages(awardId: string): string[] {
   const cover = getAwardCover(awardId)
   return cover ? [cover] : []
 }
+
+const logoFiles = import.meta.glob<string>('./assets/awards/logos/*.{svg,png,jpg,jpeg,webp}', {
+  eager: true,
+  import: 'default',
+})
+const logos = new Map(Object.entries(logoFiles).map(([file, url]) => [
+  file.slice(file.lastIndexOf('/') + 1, file.lastIndexOf('.')), url,
+]))
+
+export function getAwardLogo(awardId: string) {
+  return logos.get(awardId)
+}

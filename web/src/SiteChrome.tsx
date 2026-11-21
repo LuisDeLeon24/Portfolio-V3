@@ -1,154 +1,124 @@
-import { useEffect, useId, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { CONTACT_EMAIL, SOCIAL_LINKS, tabOrder } from './i18n'
-import { useLang } from './LangContext'
+import { CONTACT_EMAIL } from './i18n'
+import { useLang } from './language'
+import { nav } from './data/editorial'
+import ContactControl from './ContactControl'
+import SocialLinks from './SocialLinks'
 
-function sectionTo(id: string) {
-  return { pathname: '/', hash: id }
-}
-
-export function SiteHeader() {
-  const { lang, setLang, t } = useLang()
-
+export function Arrow({ diagonal = false }: { diagonal?: boolean }) {
   return (
-    <header className="site-header">
-      <div className="site-header-inner">
-        <Link className="logo" to="/">
-          LDL
+    <span aria-hidden="true" className="arrow">
+      {diagonal ? '↗' : '→'}
+    </span>
+  )
+}
+export function SiteHeader() {
+  const { lang, setLang } = useLang()
+  const [open, setOpen] = useState(false)
+  const { pathname } = useLocation()
+  const toggle = useRef<HTMLButtonElement>(null)
+  const header = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    if (!open) return
+    function dismissOutside(event: PointerEvent) {
+      if (event.target instanceof Node && !header.current?.contains(event.target)) setOpen(false)
+    }
+    document.addEventListener('pointerdown', dismissOutside)
+    return () => document.removeEventListener('pointerdown', dismissOutside)
+  }, [open])
+  const es = lang === 'es'
+  return (
+    <header ref={header} className="mast mast-cover"
+      onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false) }}
+      onKeyDown={event => {
+        if (open && event.key === 'Escape') {
+          setOpen(false)
+          toggle.current?.focus()
+        }
+      }}>
+      <a className="skip" href="#main">
+        {es ? 'Saltar al contenido' : 'Skip to content'}
+      </a>
+      <div className="mast-inner">
+        <Link
+          to="/"
+          className="brand"
+          onClick={() => setOpen(false)}
+          aria-label={es ? 'Luis De León · Inicio' : 'Luis De León · Home'}
+        >
+          <img
+            src="/brand/isotipo-blanco.svg"
+            width="46"
+            height="46"
+            alt=""
+          />
         </Link>
-        <div className="nav-cluster">
-          <nav aria-label="Primary">
-            <ul className="nav-links">
-              <li>
-                <Link to={sectionTo('experiencia')}>{t.nav.experience}</Link>
-              </li>
-              <li className="nav-item-experiments">
-                <ExperimentsMenu />
-              </li>
-              <li>
-                <Link to={sectionTo('premios')}>{t.nav.awards}</Link>
-              </li>
-              <li>
-                <Link to={sectionTo('educacion')}>{t.nav.education}</Link>
-              </li>
-              <li>
-                <Link to={sectionTo('contacto')}>{t.nav.contact}</Link>
-              </li>
-            </ul>
-          </nav>
-          <div className="experiments-mobile">
-            <ExperimentsMenu />
-          </div>
-          <div className="lang-toggle" role="group" aria-label="Language">
-            <button type="button" aria-pressed={lang === 'es'} onClick={() => setLang('es')}>
-              ES
+        <ContactControl onOpen={() => setOpen(false)} />
+        <div className="langs" aria-label={es ? 'Idioma' : 'Language'}>
+          {(['es', 'en'] as const).map((l) => (
+            <button
+              type="button"
+              key={l}
+              aria-pressed={lang === l}
+              lang={l}
+              onClick={() => setLang(l)}
+            >
+              {l.toUpperCase()}
             </button>
-            <span className="sep" aria-hidden="true">
-              /
-            </span>
-            <button type="button" aria-pressed={lang === 'en'} onClick={() => setLang('en')}>
-              EN
-            </button>
-          </div>
+          ))}
         </div>
+        <button
+          ref={toggle}
+          id="menu-toggle"
+          className="menu-toggle"
+          type="button"
+          aria-controls="primary-nav"
+          aria-expanded={open}
+          onClick={() => setOpen(!open)}
+        >
+          {open ? (es ? 'Cerrar' : 'Close') : es ? 'Menú' : 'Menu'}
+        </button>
+        <nav id="primary-nav" className={open ? 'main-nav open' : 'main-nav'} aria-label={es ? 'Principal' : 'Main'}>
+          {nav.map(([id, label, english, path]) => (
+            <Link key={id} to={path}
+              aria-current={pathname === path ? 'page' : undefined}
+              onClick={() => setOpen(false)}>
+              {es ? label : english}
+            </Link>
+          ))}
+        </nav>
       </div>
     </header>
   )
 }
 
-function ExperimentsMenu() {
-  const { t } = useLang()
-  const location = useLocation()
-  const [open, setOpen] = useState(false)
-  const rootRef = useRef<HTMLDivElement>(null)
-  const menuId = useId()
-
-  useEffect(() => {
-    setOpen(false)
-  }, [location.pathname])
-
-  useEffect(() => {
-    if (!open) return
-
-    const onPointer = (event: MouseEvent) => {
-      if (!rootRef.current?.contains(event.target as Node)) setOpen(false)
-    }
-    const onKey = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') setOpen(false)
-    }
-
-    document.addEventListener('mousedown', onPointer)
-    document.addEventListener('keydown', onKey)
-    return () => {
-      document.removeEventListener('mousedown', onPointer)
-      document.removeEventListener('keydown', onKey)
-    }
-  }, [open])
-
-  return (
-    <div className={`experiments-combo${open ? ' is-open' : ''}`} ref={rootRef}>
-      <Link className="experiments-label" to={sectionTo('experimentos')} onClick={() => setOpen(false)}>
-        {t.nav.work}
-      </Link>
-      <button
-        type="button"
-        className="experiments-caret"
-        aria-expanded={open}
-        aria-controls={menuId}
-        aria-haspopup="menu"
-        aria-label={t.openCategories}
-        onClick={() => setOpen((value) => !value)}
-      >
-        <span aria-hidden="true">▾</span>
-      </button>
-      {open ? (
-        <ul className="experiments-menu" id={menuId} role="menu">
-          {tabOrder.map((id) => (
-            <li key={id} role="none">
-              <Link role="menuitem" to={`/e/${id}`} onClick={() => setOpen(false)}>
-                {t.tabs[id]}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      ) : null}
-    </div>
-  )
-}
-
 export function SiteFooter() {
-  const { t } = useLang()
-
+  const es = useLang().lang === 'es'
   return (
-    <footer className="site-footer" id="contacto">
-      <div className="footer-panel">
-        <div className="footer-panel-inner">
-          <h2>{t.footerTitle}</h2>
-          <p>{t.footerBody}</p>
-          <div className="footer-actions">
-            <a className="btn btn-primary" href={`mailto:${CONTACT_EMAIL}`}>
-              {t.emailCta}
-            </a>
-            <span className="btn btn-ghost" aria-hidden="true">
-              {t.socialCta}
-            </span>
-          </div>
-          <ul className="social-list">
-            {SOCIAL_LINKS.map((link) => (
-              <li key={link.id}>
-                <a href={link.href} target="_blank" rel="noreferrer">
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
+    <footer id="contacto" className="site-footer">
+      <div className="site-footer__top">
+        <nav className="site-footer__nav" aria-label={es ? 'Navegación del pie de página' : 'Footer navigation'}>
+          <Link to="/">{es ? 'Inicio' : 'Home'}</Link>
+          <Link to="/#info">{es ? 'Experiencia' : 'Experience'}</Link>
+          {nav.map(([id, label, english]) => (
+            <Link key={id} to={'/#' + id}>{es ? label : english}</Link>
+          ))}
+        </nav>
+        <div className="site-footer__contact">
+          <SocialLinks />
+          <h2>{es ? 'Hablemos.' : 'Let’s talk.'}</h2>
+          <p className="site-footer__invitation">
+            {es
+              ? 'Si estás construyendo algo en IA o seguridad, o armando un espacio para hablar de eso, me gustaría conocerlo'
+              : 'If you’re building something in AI or security, or bringing people together to talk about it, I’d love to hear about it.'}
+          </p>
+          <a href={'mailto:' + CONTACT_EMAIL}>{CONTACT_EMAIL} <Arrow diagonal /></a>
+          <p>Guatemala</p>
         </div>
       </div>
-      <p className="colophon">
-        <span className="footer-panel-inner colophon-inner">
-          {t.brand} · {t.focus}
-        </span>
-      </p>
+      <div className="site-footer__signature" role="img" aria-label="Luis De León" />
     </footer>
   )
 }

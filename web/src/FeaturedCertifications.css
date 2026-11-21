@@ -1,0 +1,151 @@
+.cert-showcase {
+  position: relative;
+  z-index: 1;
+}
+.cert-showcase__surface {
+  padding-block: clamp(40px, 5vw, 88px);
+  background: var(--canvas);
+}
+.work-education-track[data-animated] + .cert-showcase {
+  margin-block-start: 100dvh;
+}
+.work-education-track[data-animated] + .cert-showcase .cert-showcase__surface {
+  min-height: 100dvh;
+  translate: 0 var(--cert-rise-offset, -100dvh);
+}
+
+.cert-mosaic {
+  width: min(calc(100% - clamp(16px, 2.4vw, 48px)), 1850px);
+  margin-inline: auto;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px;
+  container-type: inline-size;
+}
+
+.cert-clip-defs { position: absolute; pointer-events: none; }
+
+.cert-tile {
+  --logo-filter: grayscale(1);
+  --blend: multiply;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  gap: 26px;
+  padding: clamp(20px, 3vw, 50px);
+  border-radius: 14px;
+  background: var(--text);
+  color: var(--canvas);
+}
+
+.cert-tile:nth-of-type(2) {
+  background-color: var(--accent);
+  background-image: radial-gradient(ellipse at 91% 11%, #9f4548, transparent 31%),
+    repeating-linear-gradient(0deg, transparent 0 37px, #ffffff0b 37px 38px),
+    repeating-linear-gradient(90deg, transparent 0 37px, #ffffff0b 37px 38px);
+}
+
+.cert-tile:nth-of-type(3) {
+  background: radial-gradient(ellipse at 17% 91%, #4e4846, transparent 39%), #222021;
+}
+
+.cert-tile:nth-of-type(2), .cert-tile:nth-of-type(3) {
+  --blend: screen;
+  --logo-filter: grayscale(1) invert(1);
+  color: var(--text);
+}
+
+.cert-tile:nth-of-type(4) { background-color: #e0dbd1; }
+
+.cert-tile__logo {
+  display: grid;
+  place-items: center;
+  width: clamp(100px, 15vw, 245px);
+  height: clamp(44px, 5.7vw, 100px);
+  mix-blend-mode: var(--blend);
+  font: 600 1.3rem/1 var(--sans);
+}
+
+.cert-tile__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: var(--logo-filter);
+}
+
+/* Strip the flat backgrounds from the supplied issuer artwork on light and dark paper. */
+.cert-tile:is([data-issuer='Cisco'], [data-issuer='MongoDB'], [data-issuer='ITU']) {
+  --logo-filter: grayscale(1) brightness(.74) contrast(5) invert(1);
+}
+.cert-tile:is(:nth-of-type(2), :nth-of-type(3)):is([data-issuer='Cisco'], [data-issuer='MongoDB'], [data-issuer='ITU']) {
+  --logo-filter: grayscale(1) brightness(.74) contrast(5);
+}
+.cert-tile[data-issuer='MongoDB'] { --logo-filter: grayscale(1) contrast(1.35) invert(1); }
+.cert-tile:is(:nth-of-type(2), :nth-of-type(3))[data-issuer='MongoDB'] { --logo-filter: grayscale(1) contrast(1.35); }
+.cert-tile[data-issuer='ITU'] img { transform: scale(1.7); }
+
+.cert-tile h3 {
+  font: 480 clamp(27px, 3.55cqw, 64px)/.98 var(--serif);
+  letter-spacing: -.047em;
+  text-wrap: balance;
+}
+.cert-tile:is(:nth-of-type(2), :nth-of-type(3)) h3 {
+  font: 510 clamp(19px, 2.35cqw, 44px)/1.06 var(--sans);
+  letter-spacing: -.05em;
+}
+.cert-tile .arrow {
+  font: 400 .48em/1 var(--sans);
+  vertical-align: .2em;
+  transition: transform .2s ease;
+}
+.cert-tile:is(:hover, :focus-visible) h3 {
+  text-decoration: underline;
+  text-decoration-thickness: .04em;
+  text-underline-offset: .1em;
+}
+.cert-tile:is(:hover, :focus-visible) .arrow { transform: translate(2px, -2px); }
+
+@media (min-width: 701px) {
+  .cert-mosaic--four {
+    display: block;
+    aspect-ratio: 1.7;
+  }
+  .cert-mosaic--four .cert-tile {
+    position: absolute;
+    inset: 0;
+    padding: 0;
+    border-radius: 0;
+    clip-path: var(--tile-clip);
+  }
+  .cert-mosaic--four :is(.cert-tile__logo, h3) { position: absolute; }
+  .cert-mosaic--four .cert-tile:nth-of-type(1) .cert-tile__logo { top: 7%; left: 3.6%; width: 21%; }
+  .cert-mosaic--four .cert-tile:nth-of-type(1) h3 { bottom: 59%; left: 3.6%; width: 43%; }
+  .cert-mosaic--four .cert-tile:nth-of-type(2) .cert-tile__logo { top: 6%; right: 3.6%; width: 12%; }
+  .cert-mosaic--four .cert-tile:nth-of-type(2) h3 { bottom: 51.5%; right: 3.6%; width: 32%; text-align: right; }
+  .cert-mosaic--four .cert-tile:nth-of-type(3) .cert-tile__logo { bottom: 6%; left: 3.6%; width: 15%; }
+  .cert-mosaic--four .cert-tile:nth-of-type(3) h3 { top: 53%; left: 3.6%; width: 34%; }
+  .cert-mosaic--four .cert-tile:nth-of-type(4) .cert-tile__logo { top: 59%; right: 3.6%; width: 11%; }
+  .cert-mosaic--four .cert-tile:nth-of-type(4) h3 { bottom: 6%; right: 3.6%; width: 49%; text-align: right; }
+}
+
+@media (max-width: 700px) {
+  .cert-showcase .section-head { flex-wrap: wrap; }
+  .cert-mosaic { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .cert-tile {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    min-height: 144px;
+    padding: 26px 22px;
+    clip-path: polygon(0 0, 100% 0, 100% 78%, 93% 100%, 0 100%);
+  }
+  .cert-tile:nth-of-type(even) {
+    flex-direction: row-reverse;
+    clip-path: polygon(7% 0, 100% 0, 100% 100%, 0 100%, 0 22%);
+  }
+  .cert-tile__logo { width: clamp(62px, 22vw, 130px); height: 55px; flex-shrink: 0; }
+  .cert-tile h3 { font-size: clamp(23px, 5.2vw, 32px); }
+  .cert-tile:is(:nth-of-type(2), :nth-of-type(3)) h3 { font-size: clamp(18px, 4.1vw, 25px); }
+}

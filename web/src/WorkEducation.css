@@ -1,0 +1,145 @@
+.work-education-track {
+  --pin-top: var(--header);
+  --entry-distance: 0px;
+  --hold-distance: 0px;
+  position: relative;
+  scroll-margin-top: var(--pin-top);
+}
+
+.work-education-track[data-animated] {
+  --entry-distance: 100svh;
+  --hold-distance: 200svh;
+  --entry-offset: 100%;
+}
+
+.work-education-track::after {
+  content: '';
+  display: block;
+  box-sizing: content-box;
+  height: var(--entry-distance);
+  padding-bottom: var(--hold-distance);
+}
+
+.work-education-track[data-animated] .work-education {
+  position: sticky;
+  top: var(--pin-top);
+}
+
+/* Keep the education deep link in the reading interval, before certifications cover it. */
+.work-education__study-anchor {
+  position: absolute;
+  top: calc((100% + var(--entry-distance) + var(--hold-distance)) / 2);
+  inset-inline-start: 0;
+  pointer-events: none;
+}
+.work-education-track[data-animated] .work-education__study-anchor {
+  top: min(calc((100% + var(--entry-distance) + var(--hold-distance)) / 2),
+           calc(100% - 100svh + var(--pin-top)));
+  scroll-margin-top: var(--pin-top);
+}
+
+.work-education {
+  --edge: var(--gutter);
+  --row-inset: clamp(18px, 3.2svh, 44px);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  min-height: calc(100svh - var(--header));
+  position: relative;
+  overflow: clip;
+  color: var(--text);
+  background: color-mix(in srgb, var(--accent) 32%, var(--canvas));
+}
+
+#info { scroll-margin-top: 0; }
+#info .work-education-track { --pin-top: 0px; }
+#info .work-education { min-height: 100svh; }
+#info .work-education__work { padding-top: calc(var(--header) + var(--row-inset)); }
+
+.work-education__panel {
+  display: grid;
+  grid-area: 1 / 1 / -1 / -1;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+}
+
+.work-education__panel--work {
+  background: var(--canvas);
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  transform: translateX(calc(0% - var(--entry-offset, 0%)));
+}
+
+.work-education__panel--study {
+  background: var(--text);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  transform: translateX(var(--entry-offset, 0%));
+}
+
+.work-education:has(:focus-visible) { --entry-offset: 0%; }
+
+.work-education__work,
+.work-education__study {
+  align-self: center;
+  min-width: 0;
+  padding-block: var(--row-inset);
+}
+
+.work-education__work {
+  grid-area: 1 / 1;
+  padding-inline: var(--edge) 0;
+}
+
+.work-education__study {
+  grid-area: 2 / 2;
+  padding-inline: 0 var(--edge);
+  color: var(--accent);
+  text-align: right;
+}
+
+.work-education__title {
+  margin-bottom: clamp(12px, 2svh, 26px);
+  font: 400 clamp(27px, 2.9vw, 56px)/1 var(--serif);
+  letter-spacing: -.04em;
+}
+.work-education__title em { color: var(--accent); }
+
+.work-education__heading {
+  margin: 0 0 clamp(16px, 2.6svh, 34px);
+  font: 850 clamp(54px, 8.5vw, 164px)/.85 var(--sans);
+  letter-spacing: -.07em;
+  text-transform: uppercase;
+}
+
+.work-education__study .work-education__heading {
+  font: italic 500 clamp(62px, 9.6vw, 184px)/.82 var(--serif);
+  letter-spacing: -.055em;
+  text-transform: none;
+}
+
+.work-education__entries {
+  display: grid;
+  gap: clamp(12px, 2svh, 24px);
+}
+
+.work-education__entries article {
+  padding-top: clamp(8px, 1.1svh, 14px);
+  border-top: 1px solid color-mix(in srgb, currentColor 38%, transparent);
+}
+
+.work-education__entries :is(h3, h4) {
+  font: 600 clamp(19px, 1.8vw, 34px)/1.08 var(--sans);
+  letter-spacing: -.04em;
+  text-wrap: balance;
+}
+
+.work-education__source {
+  margin-top: 6px;
+  font: 400 clamp(12px, .87vw, 15px)/1.5 var(--mono);
+}
+
+@media (max-width: 650px) {
+  .work-education { --edge: clamp(14px, 4vw, 24px); }
+  .work-education__heading { font-size: clamp(32px, 10.4vw, 62px); }
+  .work-education__study .work-education__heading { font-size: clamp(40px, 12.4vw, 74px); }
+  .work-education__entries :is(h3, h4) { font-size: clamp(17px, 4.3vw, 23px); }
+}
