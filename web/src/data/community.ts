@@ -20,6 +20,7 @@ import demoBadge from '../assets/events/The 502 Demo Day3 - 2026.jpeg'
 import atom from '../assets/awards/Atom dev day.jpeg'
 import ufm from '../assets/proyects/Arendi/Winners.jpeg'
 import nasa from '../assets/awards/NASA Space Apps.png'
+import astroSimulation from '../assets/proyects/AstroTracker/Simulation.png'
 
 type CommunityPhoto = { src: string; alt: Localized }
 export type CommunityMoment = {
@@ -81,6 +82,20 @@ export const communityMoments: CommunityMoment[] = [
       photo(intecapAudience, 'Asistentes a la charla de IA en las butacas del auditorio.', 'Attendees seated in the auditorium for the AI talk.'),
       photo(intecapStage, 'Vista del escenario de INTECAP desde el fondo del auditorio.', 'The INTECAP stage seen from the back of the auditorium.'),
     ],
+  },
+  {
+    id: 'panel-ieeextreme', title: text('Camino a IEEEXtreme · IEEE Guatemala', 'The road to IEEEXtreme · IEEE Guatemala'), kind: 'talk',
+    to: '/publications/lo-que-24-horas-te-ensenan',
+    description: text('En el panel virtual del 16 de octubre de 2026 recordé las 24 horas de la Cursor Buildathon en San Salvador y compartí cómo prepararse en equipo para IEEEXtreme.',
+      'At the online panel on October 16, 2026, I looked back on the 24-hour Cursor Buildathon in San Salvador and shared how a team can prepare for IEEEXtreme.'),
+    photos: [photo(cursorVenue, 'La sede de la Cursor Buildathon en San Salvador, el hackatón que recordé en el panel.', 'The Cursor Buildathon venue in San Salvador, where the hackathon I spoke about took place.')],
+  },
+  {
+    id: 'del-meme-al-meteorito', title: text('Del meme al meteorito · IEEE AES', 'From meme to meteorite · IEEE AES'), kind: 'talk',
+    to: '/publications/del-meme-al-meteorito',
+    description: text('En esta charla virtual conté cómo mis compañeros de diversificado y yo construimos Astro Tracker para el reto Meteor Madness del NASA Space Apps Challenge 2025.',
+      'In this online talk I shared how my high school classmates and I built Astro Tracker for the Meteor Madness challenge at NASA Space Apps in 2025.'),
+    photos: [photo(astroSimulation, 'Mapa y selector de asteroides en el simulador Astro Tracker.', 'Map and asteroid selector in the Astro Tracker simulator.')],
   },
   {
     id: 'iceberg-de-la-ia', title: text('El iceberg de la IA', 'The AI iceberg'), kind: 'talk',
