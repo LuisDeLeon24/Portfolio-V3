@@ -86,8 +86,8 @@
     var(--collage-gap) calc(100% - var(--base-inset))
   );
 }
-/* Keep the triangular mask fixed and zoom the photo inside it.
-   Luis stands just left of center; the translate parks that point in the triangle. */
+/* Zoom inside the fixed triangle. Luis stands just left of center;
+   the translate parks that point in the triangle and the scale still covers it. */
 .collage-window .collage-talk img {
   position: absolute;
   inset: 0;
@@ -96,7 +96,7 @@
   max-width: none;
   object-fit: cover;
   object-position: 46% 67%;
-  transform: translate(4%, -7%) scale(2.8);
+  transform: translate(4%, -7%) scale(1.8);
   transform-origin: 46% 67%;
 }
 .collage-coding {
