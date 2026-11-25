@@ -20,7 +20,10 @@ import demoBadge from '../assets/events/The 502 Demo Day3 - 2026.jpeg'
 import atom from '../assets/awards/Atom dev day.jpeg'
 import ufm from '../assets/proyects/Arendi/Winners.jpeg'
 import nasa from '../assets/awards/NASA Space Apps.png'
-import astroSimulation from '../assets/proyects/AstroTracker/Simulation.png'
+import ieeeNasaProgram from '../assets/events/ieee-aess-nasa-space-apps-program.webp'
+import ieeeNasaLuis from '../assets/events/ieee-aess-nasa-space-apps-luis.webp'
+import ieeeHackathonsProgram from '../assets/events/ieee-ieeextreme-hackatons-program.webp'
+import ieeeHackathonsSpeakers from '../assets/events/ieee-ieeextreme-hackatons-speakers.webp'
 
 type CommunityPhoto = { src: string; alt: Localized }
 export type CommunityMoment = {
@@ -28,7 +31,8 @@ export type CommunityMoment = {
   title: Localized
   kind: 'event' | 'talk'
   featured?: boolean
-  description: Localized
+  description?: Localized
+  galleryLayout?: 'posters'
   photos: [CommunityPhoto, ...CommunityPhoto[]]
   to?: string
 }
@@ -75,9 +79,10 @@ export const communityMoments: CommunityMoment[] = [
     ],
   },
   {
-    id: 'ia-intecap', title: text('IA en INTECAP', 'AI at INTECAP'), kind: 'talk',
+    id: 'ia-intecap', title: text('Del No-Code a los Orquestadores para una IA Autónoma', 'From No-Code to Orchestrators for Autonomous AI'), kind: 'talk',
     to: '/escritos/del-prompt-al-flujo-de-trabajo',
-    description: text('En INTECAP hablé del papel de las personas cuando la IA acelera el trabajo.', 'At INTECAP I spoke about the human role when AI speeds up our work.'),
+    description: text('Charla del seminario «NoCode, IA y Ciudadanía Digital», el 16 de julio de 2026 en el Aula Magna de INTECAP Centro TICS.',
+      'Talk at the “NoCode, AI and Digital Citizenship” seminar, on July 16, 2026, in the Aula Magna at INTECAP Centro TICS.'),
     photos: [
       photo(intecap, 'Luis con un micrófono bajo la diapositiva «El cuello de botella humano».', 'Luis with a microphone beneath a slide about human bottlenecks.'),
       photo(intecapAudience, 'Asistentes a la charla de IA en las butacas del auditorio.', 'Attendees seated in the auditorium for the AI talk.'),
@@ -85,17 +90,28 @@ export const communityMoments: CommunityMoment[] = [
     ],
   },
   {
-    id: 'panel-ieeextreme', title: text('Camino a IEEEXtreme · IEEE Guatemala', 'The road to IEEEXtreme · IEEE Guatemala'), kind: 'talk',
-    to: '/escritos/lo-que-24-horas-te-ensenan',
-    description: text('En el panel virtual del 16 de octubre de 2026 recordé las 24 horas de la Cursor Buildathon en San Salvador y compartí cómo prepararse en equipo para IEEEXtreme.',
-      'At the online panel on October 16, 2026, I looked back on the 24-hour Cursor Buildathon in San Salvador and shared how a team can prepare for IEEEXtreme.'),
-    photos: [photo(cursorVenue, 'La sede de la Cursor Buildathon en San Salvador, el hackatón que recordé en el panel.', 'The Cursor Buildathon venue in San Salvador, where the hackathon I spoke about took place.')],
+    id: 'panel-ieeextreme',
+    title: text('Hackatons: La Experiencia como Participantes y como Organizadores', 'Hackathons: The Experience as Participants and Organizers'),
+    kind: 'talk',
+    galleryLayout: 'posters',
+    photos: [
+      photo(ieeeHackathonsProgram, 'Afiche del panel de IEEEXtreme. Viernes 16 de octubre de 2026, a las 18:00 en Guatemala, por Google Meet.',
+        'IEEEXtreme panel poster. Friday, October 16, 2026, at 6 p.m. Guatemala time, on Google Meet.'),
+      photo(ieeeHackathonsSpeakers, 'Afiche de los panelistas de IEEEXtreme: Andrés Ordoñez, Luis De León y Xhunik Miguel.',
+        'IEEEXtreme panelists poster: Andrés Ordoñez, Luis De León, and Xhunik Miguel.'),
+    ],
   },
   {
-    id: 'del-meme-al-meteorito', title: text('Del meme al meteorito · IEEE AES', 'From meme to meteorite · IEEE AES'), kind: 'talk',
-    description: text('En esta charla virtual conté cómo mis compañeros de diversificado y yo construimos Astro Tracker para el reto Meteor Madness del NASA Space Apps Challenge 2025.',
-      'In this online talk I shared how my high school classmates and I built Astro Tracker for the Meteor Madness challenge at NASA Space Apps in 2025.'),
-    photos: [photo(astroSimulation, 'Mapa y selector de asteroides en el simulador Astro Tracker.', 'Map and asteroid selector in the Astro Tracker simulator.')],
+    id: 'del-meme-al-meteorito',
+    title: text('Experiencias participando en NASA Space Apps Challenge', 'Experiences Participating in the NASA Space Apps Challenge'),
+    kind: 'talk',
+    galleryLayout: 'posters',
+    photos: [
+      photo(ieeeNasaProgram, 'Afiche de IEEE AESS sobre NASA Space Apps Challenge. Miércoles 28 de octubre de 2026, a las 18:00 en Guatemala, por Google Meet.',
+        'IEEE AESS NASA Space Apps Challenge poster. Wednesday, October 28, 2026, at 6 p.m. Guatemala time, on Google Meet.'),
+      photo(ieeeNasaLuis, 'Afiche de IEEE AESS que presenta a Luis De León como invitado del panel de NASA Space Apps Challenge.',
+        'IEEE AESS poster introducing Luis De León as a guest on the NASA Space Apps Challenge panel.'),
+    ],
   },
   {
     id: 'iceberg-de-la-ia', title: text('El iceberg de la IA', 'The AI iceberg'), kind: 'talk',
@@ -119,11 +135,6 @@ export const communityMoments: CommunityMoment[] = [
     description: text('Nuestro prototipo de Agent Builder llegó al Top 5 del hackathon.', 'Our Agent Builder prototype made the top five at the hackathon.'),
     photos: [photo(atom, 'El equipo reunido en Atom Dev Day.', 'The team together at Atom Dev Day.')],
     to: '/e/projects/agent-builder',
-  },
-  {
-    id: 'data-as-a-service', title: text('Data as a service'), kind: 'talk', featured: true,
-    description: text('Una charla sobre cómo la calidad de los datos influye en los resultados de un proyecto.', 'A talk about how data quality shapes the outcome of a project.'),
-    photos: [photo('/brand/data-as-a-service.webp', 'Luis en el escenario durante Data as a service.', 'Luis on stage during Data as a service.')],
   },
   {
     id: 'ufm-cs-hackathon', title: text('UFM CS Hackathon'), kind: 'event', featured: true,

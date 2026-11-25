@@ -27,22 +27,22 @@
       "path": "/community",
       "es": {
         "title": "Comunidad, charlas y prensa | Luis De León",
-        "description": "Luis De León organiza encuentros, da charlas y conecta builders en Centroamérica: Open2, OpenAI Codex Ambassadors, FLISOL Guatemala, Shipaton Guatemala e IEEE."
+        "description": "Luis De León organiza encuentros, da charlas y conecta builders en Centroamérica: Open2, OpenAI Codex Ambassadors, FLISOL Guatemala, INTECAP y Shipaton Guatemala."
       },
       "en": {
         "title": "Community, talks and press | Luis De León",
-        "description": "Luis De León organizes meetups, gives talks and connects builders in Central America: Open2, OpenAI Codex Ambassadors, FLISOL Guatemala, Shipaton Guatemala and IEEE."
+        "description": "Luis De León organizes meetups, gives talks and connects builders in Central America: Open2, OpenAI Codex Ambassadors, FLISOL Guatemala, INTECAP and Shipaton Guatemala."
       }
     },
     {
       "path": "/escritos",
       "es": {
         "title": "Escritos | Luis De León",
-        "description": "Escritos de Luis De León: resúmenes de sus charlas sobre IA, open source, hackathons y trabajo en equipo."
+        "description": "Escritos de Luis De León: resúmenes de sus charlas sobre IA, open source y flujos de trabajo con IA."
       },
       "en": {
         "title": "Writing | Luis De León",
-        "description": "Writing by Luis De León: recaps of his talks on AI, open source, hackathons and teamwork."
+        "description": "Writing by Luis De León: recaps of his talks on AI, open source and AI workflows."
       }
     },
     {
@@ -65,17 +65,6 @@
       "en": {
         "title": "Certifications | Luis De León",
         "description": "Certifications earned by Luis De León: FIUSAC, ITU, MongoDB and Cisco."
-      }
-    },
-    {
-      "path": "/escritos/lo-que-24-horas-te-ensenan",
-      "es": {
-        "title": "Lo que 24 horas te enseñan. De participante a organizador, y el camino a IEEEXtreme | Luis De León",
-        "description": "En un panel de IEEE Guatemala conté qué cambió cuando dejé de medir cada hackatón por el trofeo. También compartí una forma de empezar a entrenar para IEEEXtreme con dos amigos."
-      },
-      "en": {
-        "title": "What 24 hours can teach you. From participant to organizer and the road to IEEEXtreme | Luis De León",
-        "description": "On a panel hosted by IEEE Guatemala, I talked about what changed when I stopped judging every hackathon by whether I took home a trophy. I also shared a way to start training for IEEEXtreme with two friends."
       }
     },
     {

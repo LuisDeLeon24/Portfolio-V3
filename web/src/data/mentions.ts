@@ -52,7 +52,7 @@ export const pressMentions: Mention[] = [
   },
 ]
 
-/** Talks and events where Luis spoke or organized. Entries without href are listed as plain text. */
+/** Talks and events where Luis spoke or organized. Only add entries with a public source link. */
 export const speakingAndCommunity: Mention[] = [
   {
     id: 'shipaton-guatemala-open2',
@@ -66,33 +66,22 @@ export const speakingAndCommunity: Mention[] = [
     href: 'https://app.open2.io/fd85y89t',
   },
   {
+    id: 'intecap-nocode-ia-ciudadania-digital',
+    date: '2026-07-16',
+    source: 'INTECAP Centro TICS',
+    title: text('Del No-Code a los Orquestadores para una IA Autónoma', 'From No-Code to Orchestrators for Autonomous AI'),
+    note: text(
+      'Charla en el seminario «NoCode, IA y Ciudadanía Digital», en el Aula Magna. Escribí el resumen en «Del prompt al flujo de trabajo».',
+      'Talk at the “NoCode, IA y Ciudadanía Digital” seminar, in the Aula Magna. I wrote it up as “From a prompt to a workflow.”',
+    ),
+    href: 'https://www.instagram.com/p/DaiuHgFlNAP/',
+  },
+  {
     id: 'flisol-guatemala-2026',
     date: '2026-05-09',
     source: 'FLISOL Guatemala 2026',
     title: text('AI para todos: Cómo el Open Source está cambiando las reglas del juego'),
     note: text('Charla en el Centro Cultural El Talpetate, Ciudad de Guatemala.', 'Talk at Centro Cultural El Talpetate, Guatemala City.'),
     href: 'https://comunidad.sl.gt/flisol/',
-  },
-  // TODO(Luis): confirmar título, fecha y que el flyer te nombra antes de publicar este bloque.
-  // {
-  //   id: 'intecap-nocode-ia-ciudadania-digital',
-  //   date: '2026-07-16',
-  //   source: 'INTECAP Centro TICS',
-  //   title: text('Del No-Code a los Orquestadores para una IA Autónoma'),
-  //   note: text('Seminario «NoCode, IA y Ciudadanía Digital», Aula Magna.', 'Seminar “NoCode, IA y Ciudadanía Digital,” Aula Magna.'),
-  //   href: 'https://www.instagram.com/p/DaiuHgFlNAP/',
-  // },
-  {
-    id: 'ieee-guatemala-ieeextreme',
-    date: '2026-10-16',
-    source: 'IEEE Guatemala',
-    title: text('Camino a IEEEXtreme', 'The road to IEEEXtreme'),
-    note: text('Panel virtual.', 'Online panel.'),
-  },
-  {
-    id: 'ieee-aes-del-meme-al-meteorito',
-    source: 'IEEE AES',
-    title: text('Del meme al meteorito', 'From meme to meteorite'),
-    note: text('Charla virtual sobre Astro Tracker y el NASA Space Apps Challenge 2025.', 'Online talk about Astro Tracker and the 2025 NASA Space Apps Challenge.'),
   },
 ]

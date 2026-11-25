@@ -107,6 +107,13 @@
 #the-502-demo-day .moment-gallery__cover img { object-position: center 36%; }
 .community-collection .moment-gallery img { display: block; margin: 0; aspect-ratio: 1.9; }
 .community-collection .moment-gallery__thumb img { aspect-ratio: 1.75; object-fit: contain; }
+.moment-gallery[data-layout="posters"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.moment-gallery[data-layout="posters"] .moment-gallery__cover { grid-column: auto; }
+.community-collection .moment-gallery[data-layout="posters"] img {
+  aspect-ratio: 4 / 5;
+  object-fit: contain;
+  object-position: center;
+}
 .community-collection .moment-list h3 { font-size: clamp(30px, 3vw, 60px); }
 .community-collection .moment-list article:only-child { grid-column: 1 / -1; grid-template-columns: 1fr 1fr; align-items: center; gap: 4%; }
 @media (max-width: 760px) {

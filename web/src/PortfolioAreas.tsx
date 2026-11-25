@@ -27,7 +27,7 @@ export function MomentList({ items }: { items: CommunityMoment[] }) {
     <div className="moment-list">
       {items.map(moment => (
         <article key={moment.id} id={moment.id}>
-          <div className="moment-gallery">
+          <div className="moment-gallery" data-layout={moment.galleryLayout}>
             {moment.photos.map((photo, index) => (
               <a className={index === 0 ? 'moment-gallery__cover' : 'moment-gallery__thumb'}
                 key={photo.src} href={photo.src}
@@ -38,7 +38,7 @@ export function MomentList({ items }: { items: CommunityMoment[] }) {
           </div>
           <div>
             <h3>{moment.title[lang]}</h3>
-            <p>{moment.description[lang]}</p>
+            {moment.description && <p>{moment.description[lang]}</p>}
             {moment.to && <Link className="text-link" to={moment.to}>
               {es ? 'Ver participación' : 'View my contribution'} <Arrow diagonal />
             </Link>}
