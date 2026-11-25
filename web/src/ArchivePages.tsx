@@ -71,12 +71,7 @@ function MentionList({ items }: { items: Mention[] }) {
     <ul className="mention-list">
       {items.map(item => (
         <li key={item.id} id={item.id}>
-          <p className="archive-meta">
-            {item.source}
-            {item.date && <> · <time dateTime={item.date}>{new Date(item.date + 'T12:00:00').toLocaleDateString(lang === 'es' ? 'es-GT' : 'en-US', { day: 'numeric', month: 'short', year: 'numeric' })}</time></>}
-          </p>
-          <h3>{item.href ? <a href={item.href} target="_blank" rel="noopener noreferrer">{item.title[lang]} <span aria-hidden="true">↗</span></a> : item.title[lang]}</h3>
-          <p>{item.note[lang]}</p>
+          <h3><a href={item.href} target="_blank" rel="noopener noreferrer">{item.title[lang]}</a></h3>
         </li>
       ))}
     </ul>

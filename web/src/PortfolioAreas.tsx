@@ -37,9 +37,11 @@ export function MomentList({ items }: { items: CommunityMoment[] }) {
             ))}
           </div>
           <div>
-            <h3>{moment.title[lang]}</h3>
-            {moment.description && <p>{moment.description[lang]}</p>}
-            {moment.to && <Link className="text-link" to={moment.to}>
+            <h3>{moment.kind === 'talk' && moment.to
+              ? <Link to={moment.to}>{moment.title[lang]}</Link>
+              : moment.title[lang]}</h3>
+            {moment.kind === 'event' && moment.description && <p>{moment.description[lang]}</p>}
+            {moment.kind === 'event' && moment.to && <Link className="text-link" to={moment.to}>
               {es ? 'Ver participación' : 'View my contribution'} <Arrow diagonal />
             </Link>}
           </div>

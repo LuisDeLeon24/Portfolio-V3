@@ -63,7 +63,6 @@ export const communityMoments: CommunityMoment[] = [
   {
     id: 'flisol-guatemala', title: text('FLISOL Guatemala'), kind: 'talk',
     to: '/escritos/ia-para-todos',
-    description: text('Mi charla en el Festival Latinoamericano de Instalación de Software Libre, el 9 de mayo de 2026.', 'My talk at the Latin American Free Software Installation Festival on May 9, 2026.'),
     photos: [
       photo(flisol, 'Luis frente a una proyección, con el público de FLISOL en el aula.', 'Luis presenting to the FLISOL audience in a classroom.'),
       photo(flisolPoster, 'Afiche de FLISOL Guatemala con la participación de Luis De León.', 'FLISOL Guatemala poster announcing Luis De León as a speaker.'),
@@ -81,8 +80,6 @@ export const communityMoments: CommunityMoment[] = [
   {
     id: 'ia-intecap', title: text('Del No-Code a los Orquestadores para una IA Autónoma', 'From No-Code to Orchestrators for Autonomous AI'), kind: 'talk',
     to: '/escritos/del-prompt-al-flujo-de-trabajo',
-    description: text('Charla del seminario «NoCode, IA y Ciudadanía Digital», el 16 de julio de 2026 en el Aula Magna de INTECAP Centro TICS.',
-      'Talk at the “NoCode, AI and Digital Citizenship” seminar, on July 16, 2026, in the Aula Magna at INTECAP Centro TICS.'),
     photos: [
       photo(intecap, 'Luis con un micrófono bajo la diapositiva «El cuello de botella humano».', 'Luis with a microphone beneath a slide about human bottlenecks.'),
       photo(intecapAudience, 'Asistentes a la charla de IA en las butacas del auditorio.', 'Attendees seated in the auditorium for the AI talk.'),
@@ -115,7 +112,6 @@ export const communityMoments: CommunityMoment[] = [
   },
   {
     id: 'iceberg-de-la-ia', title: text('El iceberg de la IA', 'The AI iceberg'), kind: 'talk',
-    description: text('Dos momentos en el escenario durante mi charla «El iceberg de la IA».', 'Two moments on stage during my talk “The AI iceberg.”'),
     photos: [
       photo(iceberg, 'Luis en el atril durante «El iceberg de la IA».', 'Luis at the lectern during “The AI iceberg.”'),
       photo(icebergIntro, 'Luis junto a la diapositiva de presentación con su nombre.', 'Luis next to the introductory slide with his name.'),
