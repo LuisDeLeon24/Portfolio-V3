@@ -57,6 +57,7 @@ export function PublicationsArchive() {
 const formerPublicationDestinations: ReadonlyMap<string, string> = new Map([
   ['data-as-a-service', '/escritos'],
   ['del-meme-al-meteorito', '/escritos'],
+  ['lo-que-24-horas-te-ensenan', '/escritos'],
   ['impacto', '/e/projects/astro-tracker'],
   ['ocr', '/e/projects/unmask-ai'],
   ['fuentes', '/e/projects/agent-builder'],

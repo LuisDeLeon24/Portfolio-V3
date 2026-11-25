@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useLang } from './language'
 import streetPortrait from './assets/collage/street-portrait.webp'
-import talkStage from './assets/collage/data-as-a-service-stage.webp'
+import talkStage from './assets/events/Flisol Talk - 2026.jpeg'
 import codeCloseup from './assets/collage/code-closeup.webp'
 import './CollageHero.css'
 
@@ -25,8 +25,8 @@ export default function CollageHero() {
         className="collage-window"
         role="img"
         aria-label={lang === 'es'
-          ? 'Luis en la calle con gafas de sol, Luis dando la charla «Data as a service» y un primer plano de código JavaScript.'
-          : 'Luis wearing sunglasses outdoors, Luis giving his “Data as a service” talk, and a close-up of JavaScript code.'}
+          ? 'Luis en la calle con gafas de sol, Luis dando una charla en FLISOL Guatemala y un primer plano de código JavaScript.'
+          : 'Luis wearing sunglasses outdoors, Luis giving a talk at FLISOL Guatemala, and a close-up of JavaScript code.'}
       >
         <div className="collage-street">
           <img src={streetPortrait} alt="" decoding="async" />

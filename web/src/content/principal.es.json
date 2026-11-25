@@ -74,8 +74,8 @@
   ],
   "education": [
     {
-      "title": "Ing. en Sistemas",
-      "meta": "Universidad de San Carlos de Guatemala · 2026 — presente",
+      "title": "Ingeniería en Ciencias y Sistemas",
+      "meta": "Universidad de San Carlos de Guatemala · 2026 — presente · 1.er año aprobado",
       "note": "Formación en lógica, diseño de sistemas y desarrollo de software."
     },
     {
@@ -100,6 +100,16 @@
       "id": "x",
       "label": "X",
       "href": "https://x.com/luisdeleondev"
+    },
+    {
+      "id": "instagram",
+      "label": "Instagram",
+      "href": "https://www.instagram.com/luisdeleondev/"
+    },
+    {
+      "id": "devpost",
+      "label": "Devpost",
+      "href": "https://devpost.com/LuisDeLeon24"
     }
   ]
 }

@@ -107,6 +107,13 @@
 #the-502-demo-day .moment-gallery__cover img { object-position: center 36%; }
 .community-collection .moment-gallery img { display: block; margin: 0; aspect-ratio: 1.9; }
 .community-collection .moment-gallery__thumb img { aspect-ratio: 1.75; object-fit: contain; }
+.moment-gallery[data-layout="posters"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.moment-gallery[data-layout="posters"] .moment-gallery__cover { grid-column: auto; }
+.community-collection .moment-gallery[data-layout="posters"] img {
+  aspect-ratio: 4 / 5;
+  object-fit: contain;
+  object-position: center;
+}
 .community-collection .moment-list h3 { font-size: clamp(30px, 3vw, 60px); }
 .community-collection .moment-list article:only-child { grid-column: 1 / -1; grid-template-columns: 1fr 1fr; align-items: center; gap: 4%; }
 @media (max-width: 760px) {
@@ -121,4 +128,14 @@
   .community-collection .moment-list article:only-child { grid-template-columns: 1fr; }
   .community-collection .moment-list article:only-child { gap: 0; }
   .archive-heading h1, .community-cover h1 { font-size: clamp(57px, 15vw, 80px); }
+}
+
+.mention-list { display: grid; gap: clamp(18px, 2vw, 30px); margin: 0; padding: 0; list-style: none; }
+.mention-list li { padding-top: clamp(14px, 1.4vw, 22px); border-top: 1px solid var(--line); }
+.mention-list h3 { margin: .35em 0; font-size: clamp(22px, 2vw, 34px); line-height: 1.15; }
+.mention-list h3 a, .community-collection .moment-list h3 a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+  text-decoration-thickness: 1px;
 }

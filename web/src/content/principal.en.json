@@ -84,8 +84,8 @@
   ],
   "education": [
     {
-      "title": "Systems Engineering",
-      "meta": "Universidad de San Carlos de Guatemala · 2026 — present",
+      "title": "B.S. in Computer Science and Systems Engineering (Ingeniería en Ciencias y Sistemas)",
+      "meta": "Universidad de San Carlos de Guatemala · 2026 — present · 1st year completed",
       "note": "Studies in logic, systems design and software development."
     },
     {
@@ -110,6 +110,16 @@
       "id": "x",
       "label": "X",
       "href": "https://x.com/luisdeleondev"
+    },
+    {
+      "id": "instagram",
+      "label": "Instagram",
+      "href": "https://www.instagram.com/luisdeleondev/"
+    },
+    {
+      "id": "devpost",
+      "label": "Devpost",
+      "href": "https://devpost.com/LuisDeLeon24"
     }
   ]
 }

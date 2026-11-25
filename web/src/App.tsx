@@ -5,6 +5,7 @@ import HomePage from './HomePage'
 import ItemPage from './ItemPage'
 import { LangProvider } from './LangContext'
 import Motion from './Motion'
+import RouteMeta from './RouteMeta'
 import { SiteFooter, SiteHeader } from './SiteChrome'
 import { ProjectsArchive, CommunityArchive } from './ArchivePages'
 import { PublicationsArchive, PublicationPage, LegacyNotesRedirect } from './Publications'
@@ -26,6 +27,7 @@ export default function App() {
     <LangProvider>
       <BrowserRouter>
         <Motion />
+        <RouteMeta />
         <SiteHeader />
         <Routes>
           <Route path="/" element={<HomePage />} />
