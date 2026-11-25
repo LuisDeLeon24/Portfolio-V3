@@ -1,0 +1,55 @@
+.community-logos {
+  position: relative;
+  isolation: isolate;
+  container-type: inline-size;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr 1fr;
+  align-items: stretch;
+  width: 100%;
+  max-width: 42rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid rgb(246 213 205 / 24%);
+  border-radius: 10px;
+  background: linear-gradient(112deg, rgb(78 27 39 / 92%), rgb(39 16 23 / 86%) 54%, rgb(27 12 18 / 93%));
+  box-shadow: inset 0 1px rgb(255 238 224 / 7%), 0 8px 24px rgb(21 5 10 / 14%);
+  backdrop-filter: blur(14px);
+}
+.community-logos > li {
+  position: relative;
+  display: grid;
+  grid-template-rows: clamp(45px, 10.8cqi, 72px) auto;
+  place-items: center;
+  row-gap: clamp(9px, 1.7cqi, 14px);
+  min-width: 0;
+  padding: clamp(16px, 3.6cqi, 27px) 6px;
+}
+.community-logos > li + li::before {
+  position: absolute;
+  content: '';
+  inset-inline-start: 0;
+  top: 50%;
+  height: clamp(27px, 7.5cqi, 50px);
+  width: 1px;
+  background: rgb(245 225 215 / 22%);
+  transform: translateY(-50%) skewX(-18deg);
+}
+.community-logos li > span {
+  align-self: start;
+  color: #f6e8e0;
+  font: 500 clamp(11px, 2.3cqi, 14px)/1.3 var(--sans);
+  text-align: center;
+  text-wrap: balance;
+}
+.community-logos img {
+  display: block;
+  max-width: 90%;
+  height: auto;
+}
+.community-logos__open2 { width: clamp(70px, 20.5cqi, 136px); }
+.community-logos__openai { width: clamp(74px, 23.8cqi, 156px); }
+.community-logos__ieee { width: clamp(66px, 18.5cqi, 118px); }
+.community-logos__openai, .community-logos__ieee {
+  filter: brightness(0) saturate(100%) invert(94%) sepia(8%) saturate(380%) hue-rotate(338deg);
+}

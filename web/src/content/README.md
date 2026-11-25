@@ -1,6 +1,6 @@
 # Contenido editable (JSON)
 
-Datos de las fichas, experiencia, educación y contacto. Las publicaciones se editan en `../data/publications.ts`. Cada entrada tiene un ID estable, formato, contenido en español e inglés y una fuente opcional (`to` para una página del portafolio, `href` para un PDF o un enlace externo). Solo las entradas con `status: 'published'` aparecen en el sitio. Hasta dos pueden llevar `featured: true`. Documentación de producto/diseño: `PRODUCT.md` y `DESIGN.md` en la raíz del repo.
+Datos de las fichas, experiencia, educación y contacto. Los escritos se editan en `../data/publications.ts`. Cada entrada tiene un ID estable, formato, contenido en español e inglés y una fuente opcional (`to` para una página del portafolio, `href` para un PDF o un enlace externo). Solo las entradas con `status: 'published'` aparecen en el sitio. Hasta dos pueden llevar `featured: true`. Documentación de producto/diseño: `PRODUCT.md` y `DESIGN.md` en la raíz del repo.
 
 Hay una versión `.es.json` y `.en.json` por sección. Edita → recarga.
 

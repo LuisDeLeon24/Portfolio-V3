@@ -52,6 +52,9 @@ html:has(.contact-dialog[open]) { overflow: hidden; }
 }
 .contact-dialog textarea { resize: vertical; }
 .contact-dialog :is(input, textarea):focus-visible { outline: 2px solid #cb878a; outline-offset: 2px; }
+.contact-dialog__compose:disabled { opacity: .65; cursor: wait; }
+.contact-dialog__feedback:empty { display: none; }
+.contact-dialog__feedback a { font-size: 13px; text-decoration: underline; }
 .contact-dialog form p { font-size: 12px; color: #d2c2c2; }
 .contact-dialog__compose { justify-self: start; padding: 10px 18px; border-radius: 99px; font-size: 14px; }
 @media (max-width: 570px) {

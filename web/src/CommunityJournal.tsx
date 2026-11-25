@@ -1,29 +1,15 @@
-import { useLayoutEffect, useRef, useState } from 'react'
+import { useLayoutEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import portrait from './assets/collage/community-speaker-portrait.jpeg'
-import { roles } from './data/editorial'
-import { communityMoments } from './data/community'
-import { selectFeatured } from './data/featured'
+import { CommunityLogos } from './CommunityLogos'
 import { useLang } from './language'
 import { gsap, ScrollTrigger, useReducedMotion } from './motionPreferences'
 import { Arrow } from './SiteChrome'
 import './CommunityJournal.css'
 
-const albums = communityMoments.filter(moment => moment.photos.length > 1)
-const featured = selectFeatured(communityMoments, 'community')
-const coverMoments = [...new Set([...albums, ...featured])]
-const prints = [
-  ...coverMoments.map(moment => ({ moment, photo: moment.photos[0] })),
-  ...albums.flatMap(moment => moment.photos.slice(1).map(photo => ({ moment, photo }))),
-]
-const pageSize = 4
-const pageCount = Math.ceil(prints.length / pageSize)
-
 export default function CommunityJournal() {
   const { lang } = useLang()
   const es = lang === 'es'
-  const [page, setPage] = useState(0)
-  const offset = page * pageSize
   const stage = useRef<HTMLElement>(null)
   const board = useRef<HTMLDivElement>(null)
   const reduced = useReducedMotion()
@@ -38,7 +24,7 @@ export default function CommunityJournal() {
         .fromTo(surface, { '--curtain': '0%' }, {
           '--curtain': '51%', duration: .66, ease: 'power3.inOut',
         }, 0)
-        .fromTo('.community-prints', {
+        .fromTo('.community-logos', {
           x: () => -window.innerWidth,
         }, { x: 0, duration: .76, ease: 'expo.out' }, .12)
         .fromTo('.community-portrait', {
@@ -103,43 +89,20 @@ export default function CommunityJournal() {
                 ? 'Organizo encuentros, doy charlas y conecto builders en Centroamérica'
                 : 'I organize meetups, give talks, and connect builders in Central America'}</p>
             </header>
-            <nav id="community-prints" className="community-prints" aria-label={es ? 'Fotos de encuentros' : 'Event photos'}>
-              {prints.slice(offset, offset + pageSize).map(({ moment, photo }) => (
-                <Link key={photo.src} className="community-print" to={'/community#' + moment.id}>
-                  <span className="community-prints__frame">
-                    <img src={photo.src} loading="lazy" decoding="async" alt={photo.alt[lang]} />
-                  </span>
-                  <span className="community-prints__title">{moment.title[lang]}</span>
-                </Link>
-              ))}
-            </nav>
+            <CommunityLogos />
             <div className="community-journal__actions">
               <Link className="community-journal__archive" to="/community"
                 aria-label={es ? 'Ver más de Comunidad' : 'See more from Community'}>
                 {es ? 'Ver más' : 'See more'} <Arrow diagonal />
               </Link>
-              {pageCount > 1 && <div className="community-journal__pager">
-                <button type="button" disabled={page === 0} aria-controls="community-prints"
-                  aria-label={es ? 'Fotos anteriores' : 'Previous photos'} onClick={() => setPage(page - 1)}>←</button>
-                <span aria-live="polite" aria-atomic="true">{page + 1} / {pageCount}</span>
-                <button type="button" disabled={page + 1 === pageCount} aria-controls="community-prints"
-                  aria-label={es ? 'Fotos siguientes' : 'Next photos'} onClick={() => setPage(page + 1)}>→</button>
-              </div>}
             </div>
           </div>
 
           <figure className="community-portrait">
             <img className="community-portrait__photo" src={portrait} loading="lazy" decoding="async"
-              alt={es ? 'Luis De León con gafas y suéter beige, gesticulando con ambas manos.' : 'Luis De León wearing glasses and a beige sweater, gesturing with both hands.'} />
+              alt={es ? 'Luis De León con gafas y suéter, gesticulando con ambas manos.' : 'Luis De León wearing glasses and a sweater, gesturing with both hands.'} />
             <figcaption>
               <span className="community-portrait__name">Luis De León</span>
-              <span className="community-portrait__roles" lang="en">
-                {roles.map(role => (
-                  <span key={role.org}>
-                    {role.org === 'IEEE' ? role.org : role.name}{role.org === 'Open2' && ' · Open2'}
-                  </span>
-                ))}
-              </span>
             </figcaption>
           </figure>
         </div>

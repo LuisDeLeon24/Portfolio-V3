@@ -6,7 +6,8 @@ import 'lenis/dist/lenis.css'
 
 let scroller: Lenis | undefined
 const formerSections: Record<string, string> = {
-  notas: 'publicaciones',
+  notas: 'escritos',
+  publicaciones: 'escritos',
   experimentos: 'proyectos',
   education: 'educacion',
   work: 'proyectos',
@@ -38,7 +39,7 @@ export default function Motion() {
       const el = document.getElementById(formerSections[id] ?? id)
       if (el && scroller) {
         scroller.resize()
-        const offset = el.id === 'info' || el.id === 'premios' || el.id === 'proyectos' || el.id === 'comunidad' || el.id === 'publicaciones' || el.closest('.work-education-track') ? 0 : -78
+        const offset = el.id === 'info' || el.id === 'premios' || el.id === 'proyectos' || el.id === 'comunidad' || el.id === 'escritos' || el.closest('.work-education-track') ? 0 : -78
         scroller.scrollTo(el, { immediate: true, offset })
       }
       else if (el) el.scrollIntoView()

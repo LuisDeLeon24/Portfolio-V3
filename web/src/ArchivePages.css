@@ -3,7 +3,7 @@
   color: var(--text);
   background: #0d0c0d;
 }
-.archive-back, .archive-meta, .catalog-filters, .archive-jump, .community-cover li { font-family: var(--sans); }
+.archive-back, .archive-meta, .catalog-filters, .archive-jump { font-family: var(--sans); }
 .archive-back { display: inline-flex; align-items: center; gap: .6em; color: #c6beb9; font-size: 13px; }
 .archive-page a:focus-visible, .archive-page button:focus-visible { outline-offset: 3px; }
 .archive-back:hover, .archive-jump a:hover { text-decoration: underline; text-underline-offset: .23em; }
@@ -81,10 +81,7 @@
 }
 .community-cover h1 { font-size: clamp(56px, 7.5vw, 140px); }
 .community-cover__copy > p { margin-top: clamp(20px, 2.2vw, 45px); max-width: 34ch; }
-.community-cover ul {
-  display: flex; flex-wrap: wrap; gap: 7px 16px; margin: clamp(22px, 3vw, 56px) 0 0; padding: 0; list-style: none;
-}
-.community-cover li { border-top: 1px solid #c1838a; padding-top: 7px; color: #f0d0c5; font-size: clamp(12px, .88vw, 15px); }
+.community-cover__copy .community-logos { max-width: 30rem; margin-top: clamp(20px, 2.5vw, 42px); }
 .community-cover figure { position: relative; isolation: isolate; overflow: hidden; }
 .community-cover figure img { display: block; width: 100%; aspect-ratio: 1.75; object-fit: cover; object-position: 50% 68%; }
 .community-cover figcaption {
@@ -115,7 +112,6 @@
 @media (max-width: 760px) {
   .archive-heading { align-items: start; flex-direction: column; gap: 18px; }
   .community-cover { grid-template-columns: 1fr; }
-  .community-cover ul { margin-top: 18px; }
   .catalog-case:first-child > a { grid-template-columns: 1fr; }
   .catalog-case:first-child .catalog-case__photo { min-height: 0; }
   .catalog-case:first-child img { aspect-ratio: 1.95; height: auto; }

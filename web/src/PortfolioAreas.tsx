@@ -58,9 +58,9 @@ export function FeaturedPublicationCards() {
           <span className="eyebrow">{publicationFormats[item.format].label[lang]}</span>
           <h3>{item.title[lang]}</h3>
           <p>{item.summary[lang]}</p>
-          <Link className="text-link" to={'/publications/' + item.id}
+          <Link className="text-link" to={'/escritos/' + item.id}
             aria-label={(lang === 'es' ? 'Leer ' : 'Read ') + item.title[lang]}>
-            {lang === 'es' ? 'Leer publicación' : 'Read publication'} <Arrow diagonal />
+            {lang === 'es' ? 'Leer escrito' : 'Read piece'} <Arrow diagonal />
           </Link>
         </article>
       ))}

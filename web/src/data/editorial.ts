@@ -80,11 +80,6 @@ export const features: ProjectFeature[] = [
   },
 ]
 
-export const roles = [
-  { name: 'Head of Builders', org: 'Open2' },
-  { name: 'OpenAI Codex Ambassador', org: 'OpenAI' },
-  { name: 'IEEE Student Member', org: 'IEEE' },
-]
 export type Credential = { issuer: string; date?: string; verification?: string }
 // TODO Luis: añadir fecha de emisión y URL individual de verificación a cada credencial.
 export const credentials: Record<string, Credential> = {
@@ -101,5 +96,5 @@ export const awardEvidence: Partial<Record<string, { url: string; label: Localiz
 export const nav = [
   ['proyectos', 'Proyectos', 'Projects', '/projects'],
   ['comunidad', 'Comunidad', 'Community', '/community'],
-  ['publicaciones', 'Publicaciones', 'Publications', '/publications'],
+  ['escritos', 'Escritos', 'Writing', '/escritos'],
 ] as const

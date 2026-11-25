@@ -1,0 +1,37 @@
+{
+  "name": "ldeleon-contact",
+  "main": "index.mjs",
+  "compatibility_date": "2026-11-01",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [
+    {
+      "pattern": "ldeleon.com/api/contact",
+      "zone_name": "ldeleon.com"
+    },
+    {
+      "pattern": "www.ldeleon.com/api/contact",
+      "zone_name": "ldeleon.com"
+    }
+  ],
+  "send_email": [
+    {
+      "name": "CONTACT_MAIL",
+      "destination_address": "ldeleonb06@gmail.com"
+    }
+  ],
+  "vars": {
+    "CONTACT_FROM": "contacto@ldeleon.com",
+    "CONTACT_TO": "ldeleonb06@gmail.com"
+  },
+  "ratelimits": [
+    {
+      "name": "CONTACT_LIMIT",
+      "namespace_id": "73241",
+      "simple": {
+        "limit": 3,
+        "period": 60
+      }
+    }
+  ]
+}

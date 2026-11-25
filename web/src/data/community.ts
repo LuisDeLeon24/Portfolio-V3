@@ -57,7 +57,7 @@ export const communityMoments: CommunityMoment[] = [
   },
   {
     id: 'flisol-guatemala', title: text('FLISOL Guatemala'), kind: 'talk',
-    to: '/publications/ia-para-todos',
+    to: '/escritos/ia-para-todos',
     description: text('Mi charla en el Festival Latinoamericano de Instalación de Software Libre, el 9 de mayo de 2026.', 'My talk at the Latin American Free Software Installation Festival on May 9, 2026.'),
     photos: [
       photo(flisol, 'Luis frente a una proyección, con el público de FLISOL en el aula.', 'Luis presenting to the FLISOL audience in a classroom.'),
@@ -75,7 +75,7 @@ export const communityMoments: CommunityMoment[] = [
   },
   {
     id: 'ia-intecap', title: text('IA en INTECAP', 'AI at INTECAP'), kind: 'talk',
-    to: '/publications/del-prompt-al-flujo-de-trabajo',
+    to: '/escritos/del-prompt-al-flujo-de-trabajo',
     description: text('En INTECAP hablé del papel de las personas cuando la IA acelera el trabajo.', 'At INTECAP I spoke about the human role when AI speeds up our work.'),
     photos: [
       photo(intecap, 'Luis con un micrófono bajo la diapositiva «El cuello de botella humano».', 'Luis with a microphone beneath a slide about human bottlenecks.'),
@@ -85,14 +85,13 @@ export const communityMoments: CommunityMoment[] = [
   },
   {
     id: 'panel-ieeextreme', title: text('Camino a IEEEXtreme · IEEE Guatemala', 'The road to IEEEXtreme · IEEE Guatemala'), kind: 'talk',
-    to: '/publications/lo-que-24-horas-te-ensenan',
+    to: '/escritos/lo-que-24-horas-te-ensenan',
     description: text('En el panel virtual del 16 de octubre de 2026 recordé las 24 horas de la Cursor Buildathon en San Salvador y compartí cómo prepararse en equipo para IEEEXtreme.',
       'At the online panel on October 16, 2026, I looked back on the 24-hour Cursor Buildathon in San Salvador and shared how a team can prepare for IEEEXtreme.'),
     photos: [photo(cursorVenue, 'La sede de la Cursor Buildathon en San Salvador, el hackatón que recordé en el panel.', 'The Cursor Buildathon venue in San Salvador, where the hackathon I spoke about took place.')],
   },
   {
     id: 'del-meme-al-meteorito', title: text('Del meme al meteorito · IEEE AES', 'From meme to meteorite · IEEE AES'), kind: 'talk',
-    to: '/publications/del-meme-al-meteorito',
     description: text('En esta charla virtual conté cómo mis compañeros de diversificado y yo construimos Astro Tracker para el reto Meteor Madness del NASA Space Apps Challenge 2025.',
       'In this online talk I shared how my high school classmates and I built Astro Tracker for the Meteor Madness challenge at NASA Space Apps in 2025.'),
     photos: [photo(astroSimulation, 'Mapa y selector de asteroides en el simulador Astro Tracker.', 'Map and asteroid selector in the Astro Tracker simulator.')],
@@ -124,7 +123,6 @@ export const communityMoments: CommunityMoment[] = [
     id: 'data-as-a-service', title: text('Data as a service'), kind: 'talk', featured: true,
     description: text('Una charla sobre cómo la calidad de los datos influye en los resultados de un proyecto.', 'A talk about how data quality shapes the outcome of a project.'),
     photos: [photo('/brand/data-as-a-service.webp', 'Luis en el escenario durante Data as a service.', 'Luis on stage during Data as a service.')],
-    to: '/publications/data-as-a-service',
   },
   {
     id: 'ufm-cs-hackathon', title: text('UFM CS Hackathon'), kind: 'event', featured: true,

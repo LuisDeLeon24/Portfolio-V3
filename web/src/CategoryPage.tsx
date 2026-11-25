@@ -9,7 +9,7 @@ export default function CategoryPage() {
     { t } = useLang()
   if (!isWorkTab(tab)) return <Missing />
   const group = t.work[tab]
-  if (tab === 'research' && !group.items.length) return <Navigate replace to="/publications" />
+  if (tab === 'research' && !group.items.length) return <Navigate replace to="/escritos" />
   return (
     <main id="main" className="wrap paper">
       <Link className="back" to="/#proyectos">

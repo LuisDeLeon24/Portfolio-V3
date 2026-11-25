@@ -18,14 +18,14 @@ export function PublicationsArchive() {
       <div className="wrap">
         <Link className="archive-back" to="/#explorar">← {es ? 'Volver al índice' : 'Back to index'}</Link>
         <header className="archive-heading">
-          <h1>{es ? 'Publicaciones' : 'Publications'}<em>.</em></h1>
+          <h1>{es ? 'Escritos' : 'Writing'}<em>.</em></h1>
           <p>{es ? 'Lo que comparto en el escenario y lo que voy documentando al construir. Por ahora, resúmenes de mis charlas.'
             : 'What I share on stage and document as I build. For now, recaps of my talks.'}</p>
         </header>
         <div className="publication-catalog">
           {formats.length > 1 && <div className="publication-formats" role="group" aria-label={es ? 'Filtrar por formato' : 'Filter by format'}>
             <h2>{es ? 'Formato' : 'Format'}</h2>
-            <button type="button" aria-pressed={format === null} onClick={() => setFormat(null)}>{es ? 'Todas' : 'All'} <span>{publications.length}</span></button>
+            <button type="button" aria-pressed={format === null} onClick={() => setFormat(null)}>{es ? 'Todos' : 'All'} <span>{publications.length}</span></button>
             {formats.map(key => {
               const count = publications.filter(item => item.format === key).length
               return <button key={key} type="button" aria-pressed={format === key} onClick={() => setFormat(key)}>
@@ -36,7 +36,7 @@ export function PublicationsArchive() {
           <div className="publication-results">
             {entries.map(item => (
               <article key={item.id}>
-                <Link to={'/publications/' + item.id} className={'publication-row' + (item.image ? ' publication-row--photo' : '')} aria-labelledby={'pub-' + item.id}>
+                <Link to={'/escritos/' + item.id} className={'publication-row' + (item.image ? ' publication-row--photo' : '')} aria-labelledby={'pub-' + item.id}>
                   {item.image && <img src={item.image.src} alt="" />}
                   <div className="publication-row__copy">
                     <p className="archive-meta">{publicationFormats[item.format].label[lang]}</p>
@@ -54,8 +54,9 @@ export function PublicationsArchive() {
   )
 }
 
-// Former public entries now lead to the projects they described.
-const formerPublicationProjects: ReadonlyMap<string, string> = new Map([
+const formerPublicationDestinations: ReadonlyMap<string, string> = new Map([
+  ['data-as-a-service', '/escritos'],
+  ['del-meme-al-meteorito', '/escritos'],
   ['impacto', '/e/projects/astro-tracker'],
   ['ocr', '/e/projects/unmask-ai'],
   ['fuentes', '/e/projects/agent-builder'],
@@ -66,13 +67,13 @@ export function PublicationPage() {
   const { lang } = useLang()
   const item = publications.find(entry => entry.id === id)
   if (!item) {
-    const project = formerPublicationProjects.get(id)
-    return project ? <Navigate replace to={project} /> : <Missing />
+    const destination = formerPublicationDestinations.get(id)
+    return destination ? <Navigate replace to={destination} /> : <Missing />
   }
   return (
     <main id="main" className="archive-page publication-reader">
       <div className="wrap">
-        <Link to="/publications" className="archive-back">← {lang === 'es' ? 'Todas las publicaciones' : 'All publications'}</Link>
+        <Link to="/escritos" className="archive-back">← {lang === 'es' ? 'Todos los escritos' : 'All writing'}</Link>
         <article className="publication-sheet">
           <header>
             <p className="archive-meta">{publicationFormats[item.format].label[lang]}</p>
@@ -95,6 +96,6 @@ export function PublicationPage() {
 export function LegacyNotesRedirect() {
   const { hash } = useLocation()
   const id = hash.slice(1)
-  if (publications.some(item => item.id === id)) return <Navigate replace to={'/publications/' + id} />
-  return <Navigate replace to={formerPublicationProjects.get(id) ?? '/publications'} />
+  if (publications.some(item => item.id === id)) return <Navigate replace to={'/escritos/' + id} />
+  return <Navigate replace to={formerPublicationDestinations.get(id) ?? '/escritos'} />
 }

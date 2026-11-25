@@ -93,16 +93,16 @@ export default function PortfolioDirectory() {
     {
       id: 'community', label: 'Community', scene: community,
       description: es
-        ? 'A veces otra persona hace la pregunta que me faltaba. Como Head of Builders en Open2 y OpenAI Codex Ambassador, me importa que tengamos espacios para probar ideas juntos.'
-        : 'Sometimes someone else asks the question I was missing. As Head of Builders at Open2 and an OpenAI Codex Ambassador, I care about making room for us to try ideas together.',
+        ? 'A veces otra persona hace la pregunta que me faltaba. Me importa que tengamos espacios para probar ideas juntos.'
+        : 'Sometimes someone else asks the question I was missing. I care about making room for us to try ideas together.',
       links: [[es ? 'Ver comunidad' : 'Explore community', '/community'], [es ? 'Ver charlas' : 'View talks', '/community#charlas']],
     },
     {
-      id: 'publications', label: es ? 'Publicaciones' : 'Publications', scene: coding,
+      id: 'publications', label: es ? 'Escritos' : 'Writing', scene: coding,
       description: es
-        ? 'En «Data as a service» hablo de cómo la calidad de los datos influye en un proyecto. Aquí puedes leer el resumen.'
-        : 'In “Data as a service” I talk about how data quality shapes a project. You can read the recap here.',
-      links: [[es ? 'Ver publicaciones' : 'Browse publications', '/publications']],
+        ? 'Aquí reúno los resúmenes de mis charlas para que puedas volver a las ideas que compartí en el escenario.'
+        : 'I collect my talk recaps here so you can revisit the ideas I shared on stage.',
+      links: [[es ? 'Ver escritos' : 'Browse writing', '/escritos']],
     },
   ]
 

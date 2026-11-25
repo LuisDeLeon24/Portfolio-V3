@@ -46,7 +46,7 @@ const entries: Publication[] = [
   },
   {
     id: 'del-meme-al-meteorito',
-    status: 'published',
+    status: 'draft',
     format: 'talk',
     title: text('Del meme al meteorito: mi primer hackatón en el NASA Space Apps',
       'From meme to meteorite: my first hackathon at NASA Space Apps'),
@@ -102,7 +102,7 @@ const entries: Publication[] = [
   },
   {
     id: 'data-as-a-service',
-    status: 'published',
+    status: 'draft',
     format: 'talk',
     title: text('Data as a service', 'Data as a service'),
     summary: text('¿Qué hace que un dato sea útil para tomar una decisión? Un resumen de mi charla sobre la calidad de los datos.',

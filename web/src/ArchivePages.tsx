@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { features, roles } from './data/editorial'
+import { features } from './data/editorial'
 import { communityMoments } from './data/community'
 import { selectFeatured } from './data/featured'
 import { useLang } from './language'
+import { CommunityLogos } from './CommunityLogos'
 import { MomentList } from './PortfolioAreas'
 import { getProjectCover } from './projectMedia'
 import { Arrow } from './SiteChrome'
@@ -78,9 +79,7 @@ export function CommunityArchive() {
             <h1>{es ? 'Comunidad' : 'Community'}<em>.</em></h1>
             <p>{es ? 'Organizo encuentros, doy charlas y conecto builders en Centroamérica.'
               : 'I organize meetups, give talks, and connect builders in Central America.'}</p>
-            <ul aria-label={es ? 'Mis roles' : 'My roles'}>
-              {roles.map(role => <li key={role.org} lang="en">{role.org === 'IEEE' ? 'IEEE' : role.name}{role.org === 'Open2' ? ' · Open2' : ''}</li>)}
-            </ul>
+            <CommunityLogos />
           </div>
           {talk && <figure>
             <img src={talk.photos[0].src} alt={talk.photos[0].alt[lang]} />

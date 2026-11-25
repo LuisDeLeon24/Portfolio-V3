@@ -77,17 +77,17 @@ export default function FeaturedPublications() {
   }, [reduced])
 
   return (
-    <section ref={track} id="publicaciones" className="notes-track" aria-labelledby="publications-title">
+    <section ref={track} id="escritos" className="notes-track" aria-labelledby="publications-title">
       <div ref={surface} className="notes-section">
         <div className="notes-photo" aria-hidden="true" />
         <div className="notes-signature-plane" aria-hidden="true">
           <span ref={signature} className="notes-signature" />
         </div>
         <div className="wrap notes-feature">
-          <h2 id="publications-title">{es ? 'Publicaciones' : 'Publications'}<em>.</em></h2>
+          <h2 id="publications-title">{es ? 'Escritos' : 'Writing'}<em>.</em></h2>
           <FeaturedPublicationCards />
           <div className="notes-feature__index">
-            <Link to="/publications">{es ? 'Ver publicaciones' : 'View publications'} <Arrow diagonal /></Link>
+            <Link to="/escritos">{es ? 'Ver escritos' : 'View writing'} <Arrow diagonal /></Link>
           </div>
         </div>
       </div>
