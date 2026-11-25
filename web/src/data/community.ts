@@ -88,7 +88,8 @@ export const communityMoments: CommunityMoment[] = [
   },
   {
     id: 'panel-ieeextreme',
-    title: text('Hackatons: La Experiencia como Participantes y como Organizadores', 'Hackathons: The Experience as Participants and Organizers'),
+    title: text('Hackatons: La Experiencia como Participantes y como Organizadores - IEEEXtreme',
+      'Hackathons: The Experience as Participants and Organizers - IEEEXtreme'),
     kind: 'talk',
     galleryLayout: 'posters',
     photos: [
@@ -100,7 +101,8 @@ export const communityMoments: CommunityMoment[] = [
   },
   {
     id: 'del-meme-al-meteorito',
-    title: text('Experiencias participando en NASA Space Apps Challenge', 'Experiences Participating in the NASA Space Apps Challenge'),
+    title: text('Experiencias participando en NASA Space Apps Challenge - IEEE AES',
+      'Experiences Participating in the NASA Space Apps Challenge - IEEE AES'),
     kind: 'talk',
     galleryLayout: 'posters',
     photos: [
