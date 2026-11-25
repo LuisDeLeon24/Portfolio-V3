@@ -17,8 +17,8 @@ export function CommunityLogos() {
         <span>Codex Ambassador</span>
       </li>
       <li>
-        <img className="community-logos__ieee" src={ieee} alt="" width="640" height="364" loading="lazy" />
-        <span>IEEE</span>
+        <img className="community-logos__ieee" src={ieee} alt="IEEE" width="640" height="364" loading="lazy" />
+        <span>Student Member</span>
       </li>
     </ul>
   )

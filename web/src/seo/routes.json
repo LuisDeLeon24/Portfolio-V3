@@ -1,0 +1,346 @@
+{
+  "site": "https://ldeleon.com",
+  "routes": [
+    {
+      "path": "/",
+      "es": {
+        "title": "Luis De León (Luis Eduardo De León Barrientos) | Software Developer",
+        "description": "Luis De León (Luis Eduardo De León Barrientos), software developer en Guatemala. Head of Builders en Open2, OpenAI Codex Ambassador e IEEE Student Member."
+      },
+      "en": {
+        "title": "Luis De León (Luis Eduardo De León Barrientos) | Software Developer",
+        "description": "Luis De León (Luis Eduardo De León Barrientos), software developer in Guatemala. Head of Builders at Open2, OpenAI Codex Ambassador and IEEE Student Member."
+      }
+    },
+    {
+      "path": "/projects",
+      "es": {
+        "title": "Proyectos | Luis De León",
+        "description": "Proyectos de Luis De León: ideas llevadas a prototipo, desde un telescopio de realidad aumentada hasta un simulador de impactos de asteroides con datos de la NASA."
+      },
+      "en": {
+        "title": "Projects | Luis De León",
+        "description": "Projects by Luis De León: ideas turned into prototypes, from an augmented reality telescope to an asteroid impact simulator built with NASA data."
+      }
+    },
+    {
+      "path": "/community",
+      "es": {
+        "title": "Comunidad, charlas y prensa | Luis De León",
+        "description": "Luis De León organiza encuentros, da charlas y conecta builders en Centroamérica: Open2, OpenAI Codex Ambassadors, FLISOL Guatemala, Shipaton Guatemala e IEEE."
+      },
+      "en": {
+        "title": "Community, talks and press | Luis De León",
+        "description": "Luis De León organizes meetups, gives talks and connects builders in Central America: Open2, OpenAI Codex Ambassadors, FLISOL Guatemala, Shipaton Guatemala and IEEE."
+      }
+    },
+    {
+      "path": "/escritos",
+      "es": {
+        "title": "Escritos | Luis De León",
+        "description": "Escritos de Luis De León: resúmenes de sus charlas sobre IA, open source, hackathons y trabajo en equipo."
+      },
+      "en": {
+        "title": "Writing | Luis De León",
+        "description": "Writing by Luis De León: recaps of his talks on AI, open source, hackathons and teamwork."
+      }
+    },
+    {
+      "path": "/premios",
+      "es": {
+        "title": "Premios y reconocimientos | Luis De León",
+        "description": "Premios de Luis De León, entre ellos el 2.º lugar en los Premios ILAN a la Innovación Universitaria 2026 con Sentinel y el 1.er lugar en el UFM Computer Science Hackathon con Aprendi."
+      },
+      "en": {
+        "title": "Awards & recognition | Luis De León",
+        "description": "Awards won by Luis De León, including 2nd place at the 2026 ILAN University Innovation Awards with Sentinel and 1st place at the UFM Computer Science Hackathon with Aprendi."
+      }
+    },
+    {
+      "path": "/e/certs",
+      "es": {
+        "title": "Certificaciones | Luis De León",
+        "description": "Certificaciones de Luis De León: FIUSAC, ITU, MongoDB y Cisco."
+      },
+      "en": {
+        "title": "Certifications | Luis De León",
+        "description": "Certifications earned by Luis De León: FIUSAC, ITU, MongoDB and Cisco."
+      }
+    },
+    {
+      "path": "/escritos/lo-que-24-horas-te-ensenan",
+      "es": {
+        "title": "Lo que 24 horas te enseñan. De participante a organizador, y el camino a IEEEXtreme | Luis De León",
+        "description": "En un panel de IEEE Guatemala conté qué cambió cuando dejé de medir cada hackatón por el trofeo. También compartí una forma de empezar a entrenar para IEEEXtreme con dos amigos."
+      },
+      "en": {
+        "title": "What 24 hours can teach you. From participant to organizer and the road to IEEEXtreme | Luis De León",
+        "description": "On a panel hosted by IEEE Guatemala, I talked about what changed when I stopped judging every hackathon by whether I took home a trophy. I also shared a way to start training for IEEEXtreme with two friends."
+      }
+    },
+    {
+      "path": "/escritos/del-prompt-al-flujo-de-trabajo",
+      "es": {
+        "title": "Del prompt al flujo de trabajo | Luis De León",
+        "description": "Si la IA nos hace más rápidos, ¿por qué no tenemos más tiempo? En INTECAP seguí el recorrido de una tarea para ver dónde seguimos haciendo el trabajo a mano."
+      },
+      "en": {
+        "title": "From a prompt to a workflow | Luis De León",
+        "description": "If AI makes us faster, why don’t we have more time? At INTECAP, I followed a task from start to finish to see where we still do the work by hand."
+      }
+    },
+    {
+      "path": "/escritos/ia-para-todos",
+      "es": {
+        "title": "IA para todos: cómo el código abierto está cambiando las reglas del juego | Luis De León",
+        "description": "En FLISOL Guatemala pregunté dónde corre la IA que usamos a diario y qué podemos decidir cuando el modelo está en nuestra propia computadora."
+      },
+      "en": {
+        "title": "AI for everyone: how open source is changing the rules | Luis De León",
+        "description": "At FLISOL Guatemala I asked where the AI we use every day actually runs, and what we get to decide when the model runs on our own computer."
+      }
+    },
+    {
+      "path": "/premios/ilan-university-innovation-awards-2026",
+      "es": {
+        "title": "2.º lugar - ILAN University Innovation Awards 2026 | Luis De León",
+        "description": "Sentinel usa visión por computadora para detectar riesgos en entornos industriales."
+      },
+      "en": {
+        "title": "2nd place - ILAN University Innovation Awards 2026 | Luis De León",
+        "description": "Sentinel uses computer vision to detect safety risks in industrial environments."
+      }
+    },
+    {
+      "path": "/premios/cursor-tec-guatemala",
+      "es": {
+        "title": "2.º lugar - Cursor × Tec Hackathon Guatemala | Luis De León",
+        "description": "En cuatro horas convertimos un teléfono en un telescopio de realidad aumentada que sigue la EEI y el Hubble."
+      },
+      "en": {
+        "title": "2nd place - Cursor × Tec Hackathon Guatemala | Luis De León",
+        "description": "In four hours, we turned a phone into an AR telescope that tracks the ISS and Hubble."
+      }
+    },
+    {
+      "path": "/premios/cursor-buildathon-travel",
+      "es": {
+        "title": "Travel Grant - Cursor Buildathon San Salvador | Luis De León",
+        "description": "Beca de viaje para representar a Guatemala en un buildathon AI-first de 24 h."
+      },
+      "en": {
+        "title": "Travel Grant - Cursor Buildathon San Salvador | Luis De León",
+        "description": "Travel grant to represent Guatemala at a 24 h AI-first buildathon."
+      }
+    },
+    {
+      "path": "/premios/innovatech-2026",
+      "es": {
+        "title": "Semifinalista - INNOVATECH 2026 | Luis De León",
+        "description": "Q-Pay (Qubity): créditos P2P; waitlist de 100+ en menos de una semana."
+      },
+      "en": {
+        "title": "Hackathon SemiFinalist - INNOVATECH 2026 | Luis De León",
+        "description": "Q-Pay (Qubity): P2P lending; 100+ waitlist in under a week."
+      }
+    },
+    {
+      "path": "/premios/ufm-cs-hackathon",
+      "es": {
+        "title": "Primer lugar - UFM Computer Science Hackatón | Luis De León",
+        "description": "Con Aprendi, cada estudiante sigue una ruta que cambia según su desempeño en tiempo real."
+      },
+      "en": {
+        "title": "1st Place - UFM Computer Science Hackatón | Luis De León",
+        "description": "Aprendi adapts each student’s learning path to their performance in real time."
+      }
+    },
+    {
+      "path": "/premios/atom-dev-day",
+      "es": {
+        "title": "Finalista (Top 5) - Atom Dev Day Hackathon | Luis De León",
+        "description": "Top 5 en ~8–12 h con Agent Builder: agentes de ventas con LLM + RAG."
+      },
+      "en": {
+        "title": "Hackathon Finalist (Top 5) - Atom Dev Day | Luis De León",
+        "description": "Top 5 in ~8–12 h with Agent Builder: sales agents with LLM + RAG."
+      }
+    },
+    {
+      "path": "/premios/nasa-space-apps",
+      "es": {
+        "title": "Mención honorífica Guatemala - Global Connection Award | Luis De León",
+        "description": "Mención Global Connection por Guatemala; entregable: Astro Tracker (MVP 48 h)."
+      },
+      "en": {
+        "title": "Guatemala Honorific Mention - Global Connection Award | Luis De León",
+        "description": "Global Connection mention for Guatemala; deliverable: Astro Tracker (48 h MVP)."
+      }
+    },
+    {
+      "path": "/premios/leadership-kinal",
+      "es": {
+        "title": "Leadership Award | Luis De León",
+        "description": "Beca completa a un programa intensivo de liderazgo por excelencia académica."
+      },
+      "en": {
+        "title": "Leadership Award | Luis De León",
+        "description": "Full scholarship to an intensive leadership program for academic excellence."
+      }
+    },
+    {
+      "path": "/e/projects/sextant",
+      "es": {
+        "title": "Sextant | Luis De León",
+        "description": "Exploración AR/VR del cielo: apunta el teléfono y ve datos de las estrellas en tu campo de visión."
+      },
+      "en": {
+        "title": "Sextant | Luis De León",
+        "description": "Look up and get star data in your field of view: AR/VR sky exploration."
+      }
+    },
+    {
+      "path": "/e/projects/q-pay",
+      "es": {
+        "title": "Q-Pay | Luis De León",
+        "description": "Créditos P2P que bajan la fricción al firmar pagarés."
+      },
+      "en": {
+        "title": "Q-Pay | Luis De León",
+        "description": "P2P lending that cuts friction when signing promissory notes."
+      }
+    },
+    {
+      "path": "/e/projects/shoot-ai",
+      "es": {
+        "title": "Shoot AI | Luis De León",
+        "description": "Asesoría de imagen con IA para photoshoots: prep, outfits y guía Live Shoot en cámara."
+      },
+      "en": {
+        "title": "Shoot AI | Luis De León",
+        "description": "AI image advisory for photoshoots: prep, outfits, and a Live Shoot camera guide."
+      }
+    },
+    {
+      "path": "/e/projects/q-threats",
+      "es": {
+        "title": "Q-Threats | Luis De León",
+        "description": "Revisa decretos e iniciativas de ley y mapea relaciones entre entidades del Estado."
+      },
+      "en": {
+        "title": "Q-Threats | Luis De León",
+        "description": "Review legal decrees and bills, and map relationships between state entities."
+      }
+    },
+    {
+      "path": "/e/projects/aprendi",
+      "es": {
+        "title": "Aprendi | Luis De León",
+        "description": "Aprendizaje adaptativo: rutas personalizadas y labs Linux según el desempeño en tiempo real."
+      },
+      "en": {
+        "title": "Aprendi | Luis De León",
+        "description": "Adaptive learning: personalized paths and Linux labs based on live performance."
+      }
+    },
+    {
+      "path": "/e/projects/agent-builder",
+      "es": {
+        "title": "Agent Builder | Luis De León",
+        "description": "Plataforma para crear y desplegar agentes de IA con LLMs, RAG y datos en tiempo real."
+      },
+      "en": {
+        "title": "Agent Builder | Luis De León",
+        "description": "Build and deploy AI agents with LLMs, RAG, and live data."
+      }
+    },
+    {
+      "path": "/e/projects/astro-tracker",
+      "es": {
+        "title": "Astro Tracker | Luis De León",
+        "description": "Simulador de impactos de asteroides con datos de la NASA que estima el daño físico y económico."
+      },
+      "en": {
+        "title": "Astro Tracker | Luis De León",
+        "description": "Simulate asteroid impacts with NASA data and estimate physical and economic damage."
+      }
+    },
+    {
+      "path": "/e/projects/videntia",
+      "es": {
+        "title": "Videntia | Luis De León",
+        "description": "Análisis visual con IA: descripciones humanas de imágenes para accesibilidad e investigación."
+      },
+      "en": {
+        "title": "Videntia | Luis De León",
+        "description": "AI visual analysis: human-readable image descriptions for accessibility and research."
+      }
+    },
+    {
+      "path": "/e/projects/unmask-ai",
+      "es": {
+        "title": "Unmask AI | Luis De León",
+        "description": "Extracción y análisis de datos visuales con OCR, LLMs y búsqueda profunda automatizada."
+      },
+      "en": {
+        "title": "Unmask AI | Luis De León",
+        "description": "Extract and analyze visual data with OCR, LLMs, and automated deep search."
+      }
+    },
+    {
+      "path": "/e/certs/fiusac-research-paper-writing",
+      "es": {
+        "title": "Research Paper Writing for Computer Science | Luis De León",
+        "description": "Cómo estructurar y escribir papers de CS con rigor académico."
+      },
+      "en": {
+        "title": "Research Paper Writing for Computer Science | Luis De León",
+        "description": "How to structure and write CS papers with academic rigor."
+      }
+    },
+    {
+      "path": "/e/certs/itu-regulatory-innovation",
+      "es": {
+        "title": "Regulatory Innovation Mechanisms | Luis De León",
+        "description": "Innovación regulatoria en el ecosistema digital (ITU): contexto de política junto al trabajo técnico."
+      },
+      "en": {
+        "title": "Regulatory Innovation Mechanisms | Luis De León",
+        "description": "Regulatory innovation in the digital ecosystem (ITU): policy context next to technical work."
+      }
+    },
+    {
+      "path": "/e/certs/mongodb-ai-vector-search",
+      "es": {
+        "title": "Building AI-Powered Search with MongoDB Vector Search | Luis De León",
+        "description": "Búsqueda semántica con embeddings: base para RAG y productos con IA."
+      },
+      "en": {
+        "title": "Building AI-Powered Search with MongoDB Vector Search | Luis De León",
+        "description": "Semantic search with embeddings: a base for RAG and AI products."
+      }
+    },
+    {
+      "path": "/e/certs/cisco-ccna-intro",
+      "es": {
+        "title": "CCNA: Introduction to Networks | Luis De León",
+        "description": "Redes desde cero: OSI/TCP-IP, IP y configuración básica de dispositivos."
+      },
+      "en": {
+        "title": "CCNA: Introduction to Networks | Luis De León",
+        "description": "Networking from scratch: OSI/TCP-IP, IP, and basic device setup."
+      }
+    },
+    {
+      "path": "/e/certs/cisco-it-essentials",
+      "es": {
+        "title": "IT Essentials: PC Hardware and Software | Luis De León",
+        "description": "Hardware, software y soporte de sistemas: base práctica de infra."
+      },
+      "en": {
+        "title": "IT Essentials: PC Hardware and Software | Luis De León",
+        "description": "Hardware, software, and system support: practical infra foundations."
+      }
+    }
+  ]
+}

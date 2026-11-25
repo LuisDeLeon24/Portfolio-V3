@@ -46,8 +46,9 @@ export const communityMoments: CommunityMoment[] = [
     ],
   },
   {
-    id: 'shipaton', title: text('Shipatón'), kind: 'event',
-    description: text('Una jornada de trabajo en equipo, de la pizarra a la laptop.', 'A day of working together, from the whiteboard to the laptop.'),
+    id: 'shipaton', title: text('Shipaton Guatemala x Open2'), kind: 'event',
+    description: text('El 26 de septiembre de 2026 co-organicé con Oscar Morales (Open2) la edición de Guatemala de Shipaton, la hackathon mobile global de RevenueCat.',
+      'On September 26, 2026, I co-organized the Guatemala edition of Shipaton, RevenueCat’s global mobile hackathon, with Oscar Morales (Open2).'),
     photos: [
       photo(shipaton, 'Luis junto a un equipo que trabaja con sus laptops.', 'Luis beside a team working on their laptops.'),
       photo(shipatonGroup, 'Participantes del Shipatón reunidos frente a una pizarra.', 'Shipatón participants gathered at a whiteboard.'),

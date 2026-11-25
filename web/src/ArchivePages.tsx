@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { features } from './data/editorial'
 import { communityMoments } from './data/community'
+import { pressMentions, speakingAndCommunity, type Mention } from './data/mentions'
 import { selectFeatured } from './data/featured'
 import { useLang } from './language'
 import { CommunityLogos } from './CommunityLogos'
@@ -64,6 +65,24 @@ export function ProjectsArchive() {
   )
 }
 
+function MentionList({ items }: { items: Mention[] }) {
+  const { lang } = useLang()
+  return (
+    <ul className="mention-list">
+      {items.map(item => (
+        <li key={item.id} id={item.id}>
+          <p className="archive-meta">
+            {item.source}
+            {item.date && <> · <time dateTime={item.date}>{new Date(item.date + 'T12:00:00').toLocaleDateString(lang === 'es' ? 'es-GT' : 'en-US', { day: 'numeric', month: 'short', year: 'numeric' })}</time></>}
+          </p>
+          <h3>{item.href ? <a href={item.href} target="_blank" rel="noopener noreferrer">{item.title[lang]} <span aria-hidden="true">↗</span></a> : item.title[lang]}</h3>
+          <p>{item.note[lang]}</p>
+        </li>
+      ))}
+    </ul>
+  )
+}
+
 export function CommunityArchive() {
   const { lang } = useLang()
   const es = lang === 'es'
@@ -89,6 +108,7 @@ export function CommunityArchive() {
         <nav className="archive-jump" aria-label={es ? 'En esta página' : 'On this page'}>
           <Link to="/community#eventos">{es ? 'Eventos' : 'Events'} <span>{events.length}</span></Link>
           <Link to="/community#charlas">{es ? 'Charlas' : 'Talks'} <span>{talks.length}</span></Link>
+          <Link to="/community#prensa">{es ? 'Prensa y menciones' : 'Press & mentions'} <span>{pressMentions.length}</span></Link>
         </nav>
         <section id="eventos" className="community-collection">
           <h2>{es ? 'Eventos' : 'Events'}</h2>
@@ -97,6 +117,14 @@ export function CommunityArchive() {
         <section id="charlas" className="community-collection">
           <h2>{es ? 'Charlas' : 'Talks'}</h2>
           <MomentList items={talks} />
+        </section>
+        <section id="agenda" className="community-collection">
+          <h2>{es ? 'Charlas y comunidad' : 'Speaking & community'}</h2>
+          <MentionList items={speakingAndCommunity} />
+        </section>
+        <section id="prensa" className="community-collection">
+          <h2>{es ? 'Prensa y menciones' : 'Press & mentions'}</h2>
+          <MentionList items={pressMentions} />
         </section>
       </div>
     </main>
