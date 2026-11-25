@@ -33,14 +33,16 @@ export function ProjectsArchive() {
           <p>{es ? 'Ideas que llevé a un prototipo, desde un telescopio de realidad aumentada hasta un simulador de impactos con datos de la NASA.'
             : 'Ideas I turned into prototypes, from an augmented reality telescope to an impact simulator built with NASA data.'}</p>
         </header>
-        <div className="catalog-filters" role="group" aria-label={es ? 'Filtrar proyectos' : 'Filter projects'}>
-          <button type="button" aria-pressed={!featuredOnly} onClick={() => setFeaturedOnly(false)}>
-            {es ? 'Todos' : 'All'} <span>{all.length}</span>
-          </button>
-          <button type="button" aria-pressed={featuredOnly} onClick={() => setFeaturedOnly(true)}>
-            {es ? 'Destacados' : 'Featured'} <span>{featured.length}</span>
-          </button>
-        </div>
+        {featured.length < all.length && (
+          <div className="catalog-filters" role="group" aria-label={es ? 'Filtrar proyectos' : 'Filter projects'}>
+            <button type="button" aria-pressed={!featuredOnly} onClick={() => setFeaturedOnly(false)}>
+              {es ? 'Todos' : 'All'} <span>{all.length}</span>
+            </button>
+            <button type="button" aria-pressed={featuredOnly} onClick={() => setFeaturedOnly(true)}>
+              {es ? 'Destacados' : 'Featured'} <span>{featured.length}</span>
+            </button>
+          </div>
+        )}
         <div className="project-catalog">
           {items.map((item, index) => {
             const cover = item.id === 'sextant' ? telescope : getProjectCover(item.id)

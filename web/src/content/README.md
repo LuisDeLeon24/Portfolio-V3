@@ -44,15 +44,11 @@ Carpetas en `web/src/assets/proyects/` (mapeo en `projectMedia.ts`):
 
 | `id` en JSON | Carpeta |
 | --- | --- |
-| `q-threats` | `Q-Treaths/` |
-| `shoot-ai` | `Shoot AI/` |
 | `q-pay` | `Q-pay/` |
 | `sextant` | `Sextant/` |
 | `aprendi` | `Arendi/` |
-| `agent-builder` | `AgentBuilder/` |
 | `astro-tracker` | `AstroTracker/` |
 | `videntia` | `Videntia/` |
-| `unmask-ai` | `Unmask/` |
 
 Preferir un archivo con `Landing` / `Main` (o `Videntia 1`) en el nombre para la portada.
 

@@ -132,7 +132,7 @@ export const communityMoments: CommunityMoment[] = [
     id: 'atom-dev-day', title: text('Atom Dev Day'), kind: 'event', featured: true,
     description: text('Nuestro prototipo de Agent Builder llegó al Top 5 del hackathon.', 'Our Agent Builder prototype made the top five at the hackathon.'),
     photos: [photo(atom, 'El equipo reunido en Atom Dev Day.', 'The team together at Atom Dev Day.')],
-    to: '/e/projects/agent-builder',
+    to: '/premios/atom-dev-day',
   },
   {
     id: 'ufm-cs-hackathon', title: text('UFM CS Hackathon'), kind: 'event', featured: true,

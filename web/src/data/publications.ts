@@ -92,7 +92,6 @@ const entries: Publication[] = [
       text('Guarda una imagen en dos resoluciones y procesa ambas. Con el original a la vista, marca las palabras omitidas, los acentos y las cifras que cambiaron. Así puedes identificar qué parte del error ya estaba en la extracción.',
         'Save one image at two resolutions and process both. With the original in front of you, mark missing words, accents, and digits that changed. This lets you identify which errors were already present in the extraction.'),
     ],
-    source: { to: '/e/projects/unmask-ai', label: text('Explorar Unmask AI', 'Explore Unmask AI') },
   },
   {
     id: 'fuentes',
@@ -107,7 +106,6 @@ const entries: Publication[] = [
       text('Lee cada respuesta por afirmaciones. Al lado de cada una, copia el pasaje del documento que la respalda, si lo hay. El espacio que quede vacío indica qué conviene comprobar antes de usar la respuesta.',
         'Read each answer one claim at a time. Next to each claim, copy the passage that supports it, if there is one. An empty space shows what needs checking before you use the answer.'),
     ],
-    source: { to: '/e/projects/agent-builder', label: text('Explorar Agent Builder', 'Explore Agent Builder') },
   },
 ]
 

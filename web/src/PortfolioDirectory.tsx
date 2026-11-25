@@ -5,7 +5,7 @@ import { ScrollTrigger, useReducedMotion } from './motionPreferences'
 import experience from './assets/collage/experience-laptop.webp'
 import community from './assets/collage/community-workshop.webp'
 import coding from './assets/collage/coding.webp'
-import voidHarvest from './assets/collage/voidharvest-laptop.webp'
+import qPay from './assets/proyects/Q-pay/q-pay-laptop.webp'
 import './PortfolioDirectory.css'
 
 type DirectoryCard = {
@@ -84,7 +84,7 @@ export default function PortfolioDirectory() {
         [es ? 'Certificaciones' : 'Certifications', '/#certificaciones'], [es ? 'Premios' : 'Awards', '/#premios']],
     },
     {
-      id: 'projects', label: 'Projects', scene: voidHarvest,
+      id: 'projects', label: 'Projects', scene: qPay,
       description: es
         ? 'Me apasionan la inteligencia artificial y la seguridad. Cuando algo me intriga, mi forma favorita de entenderlo es construir una primera versión y ver qué pasa al probarla.'
         : 'I love AI and security. When something catches my curiosity, my favorite way to understand it is to build a first version and see what happens when I try it.',
