@@ -78,7 +78,7 @@
   transition: filter .45s ease, transform .65s ease;
 }
 
-.project-panel[data-project='sextant'] { --focal-point: 19% center; }
+.project-panel[data-project='sextant'] { --focal-point: 88% center; }
 .project-panel[data-project='q-pay'] { --focal-point: 65% center; }
 .project-panel[data-project='aprendi'] { --focal-point: 50% 40%; }
 .project-panel[data-project='astro-tracker'] { --focal-point: 55% center; }

@@ -4,15 +4,13 @@ import { selectFeatured } from './data/featured'
 import { useLang } from './language'
 import { getProjectCover } from './projectMedia'
 import { Arrow } from './SiteChrome'
-import telescope from './assets/proyects/Sextant/Rename.png'
 import aprendiPortrait from './assets/proyects/Arendi/Me.jpeg'
-import orbits from './assets/proyects/AstroTracker/Orbits.png'
+import simulation from './assets/proyects/AstroTracker/Simulation.webp'
 import './ProjectReel.css'
 
 const panelImages: Record<string, string> = {
-  sextant: telescope,
   aprendi: aprendiPortrait,
-  'astro-tracker': orbits,
+  'astro-tracker': simulation,
 }
 
 export default function ProjectReel() {

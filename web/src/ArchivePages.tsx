@@ -9,7 +9,6 @@ import { CommunityLogos } from './CommunityLogos'
 import { MomentList } from './PortfolioAreas'
 import { getProjectCover } from './projectMedia'
 import { Arrow } from './SiteChrome'
-import telescope from './assets/proyects/Sextant/Rename.png'
 import './ArchivePages.css'
 
 function BackToDirectory() {
@@ -45,7 +44,7 @@ export function ProjectsArchive() {
         )}
         <div className="project-catalog">
           {items.map((item, index) => {
-            const cover = item.id === 'sextant' ? telescope : getProjectCover(item.id)
+            const cover = getProjectCover(item.id)
             return (
               <article key={item.id} className="catalog-case">
                 <Link to={'/e/projects/' + item.id} aria-label={item.title}>
