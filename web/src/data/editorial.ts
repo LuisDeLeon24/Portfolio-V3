@@ -46,38 +46,6 @@ export const features: ProjectFeature[] = [
       'The three-person team placed first at the 2026 UFM hackathon.',
     ),
   },
-  {
-    id: 'agent-builder',
-    category: copy('Sistemas de IA', 'AI systems'),
-    problem: copy(
-      '¿Cómo darle a un agente acceso a información que cambia?',
-      'How can an agent access information that changes?',
-    ),
-    approach: copy(
-      'El constructor combina modelos de lenguaje, recuperación de documentos (RAG) y fuentes de datos en vivo.',
-      'The builder combines language models, retrieval-augmented generation (RAG) and live data sources.',
-    ),
-    result: copy(
-      'El prototipo llegó al Top 5 de Atom Dev Day 2026.',
-      'The prototype reached the Top 5 at Atom Dev Day 2026.',
-    ),
-  },
-  {
-    id: 'unmask-ai',
-    category: copy('Visión y lenguaje', 'Vision and language'),
-    problem: copy(
-      '¿Cómo pasar del texto en una imagen a una búsqueda que pueda investigarse?',
-      'How can text inside an image become a starting point for research?',
-    ),
-    approach: copy(
-      'Un flujo de OCR extrae el texto. Un modelo de lenguaje usa lo extraído para iniciar búsquedas.',
-      'An OCR pipeline extracts the text. A language model uses the extracted material to initiate searches.',
-    ),
-    result: copy(
-      'El MVP individual se construyó en unos tres días y tiene una demo web.',
-      'The solo MVP took about three days to build and has a web demo.',
-    ),
-  },
 ]
 
 export type Credential = { issuer: string; date?: string; verification?: string }

@@ -6,14 +6,12 @@ import { getProjectCover } from './projectMedia'
 import { Arrow } from './SiteChrome'
 import telescope from './assets/proyects/Sextant/Rename.png'
 import aprendiPortrait from './assets/proyects/Arendi/Me.jpeg'
-import agentTeam from './assets/proyects/AgentBuilder/Team.jpeg'
 import orbits from './assets/proyects/AstroTracker/Orbits.png'
 import './ProjectReel.css'
 
 const panelImages: Record<string, string> = {
   sextant: telescope,
   aprendi: aprendiPortrait,
-  'agent-builder': agentTeam,
   'astro-tracker': orbits,
 }
 

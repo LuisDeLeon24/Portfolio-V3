@@ -200,28 +200,6 @@
       }
     },
     {
-      "path": "/e/projects/shoot-ai",
-      "es": {
-        "title": "Shoot AI | Luis De León",
-        "description": "Asesoría de imagen con IA para photoshoots: prep, outfits y guía Live Shoot en cámara."
-      },
-      "en": {
-        "title": "Shoot AI | Luis De León",
-        "description": "AI image advisory for photoshoots: prep, outfits, and a Live Shoot camera guide."
-      }
-    },
-    {
-      "path": "/e/projects/q-threats",
-      "es": {
-        "title": "Q-Threats | Luis De León",
-        "description": "Revisa decretos e iniciativas de ley y mapea relaciones entre entidades del Estado."
-      },
-      "en": {
-        "title": "Q-Threats | Luis De León",
-        "description": "Review legal decrees and bills, and map relationships between state entities."
-      }
-    },
-    {
       "path": "/e/projects/aprendi",
       "es": {
         "title": "Aprendi | Luis De León",
@@ -230,17 +208,6 @@
       "en": {
         "title": "Aprendi | Luis De León",
         "description": "Adaptive learning: personalized paths and Linux labs based on live performance."
-      }
-    },
-    {
-      "path": "/e/projects/agent-builder",
-      "es": {
-        "title": "Agent Builder | Luis De León",
-        "description": "Plataforma para crear y desplegar agentes de IA con LLMs, RAG y datos en tiempo real."
-      },
-      "en": {
-        "title": "Agent Builder | Luis De León",
-        "description": "Build and deploy AI agents with LLMs, RAG, and live data."
       }
     },
     {
@@ -263,17 +230,6 @@
       "en": {
         "title": "Videntia | Luis De León",
         "description": "AI visual analysis: human-readable image descriptions for accessibility and research."
-      }
-    },
-    {
-      "path": "/e/projects/unmask-ai",
-      "es": {
-        "title": "Unmask AI | Luis De León",
-        "description": "Extracción y análisis de datos visuales con OCR, LLMs y búsqueda profunda automatizada."
-      },
-      "en": {
-        "title": "Unmask AI | Luis De León",
-        "description": "Extract and analyze visual data with OCR, LLMs, and automated deep search."
       }
     },
     {

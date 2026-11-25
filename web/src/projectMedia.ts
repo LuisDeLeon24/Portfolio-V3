@@ -1,17 +1,13 @@
 /** Maps project ids → folders under `assets/proyects/`. */
 const FOLDER_BY_ID: Record<string, string> = {
-  'q-threats': 'Q-Treaths',
-  'shoot-ai': 'Shoot AI',
   'q-pay': 'Q-pay',
   sextant: 'Sextant',
   aprendi: 'Arendi',
-  'agent-builder': 'AgentBuilder',
   'astro-tracker': 'AstroTracker',
   videntia: 'Videntia',
-  'unmask-ai': 'Unmask',
 }
 
-const modules = import.meta.glob('./assets/proyects/**/*.{png,jpg,jpeg,webp,PNG,JPG,JPEG,WEBP}', {
+const modules = import.meta.glob('./assets/proyects/{Q-pay,Sextant,Arendi,AstroTracker,Videntia}/**/*.{png,jpg,jpeg,webp,PNG,JPG,JPEG,WEBP}', {
   eager: true,
   import: 'default',
 }) as Record<string, string>
@@ -19,7 +15,6 @@ const modules = import.meta.glob('./assets/proyects/**/*.{png,jpg,jpeg,webp,PNG,
 function rankPath(path: string): number {
   const name = path.toLowerCase()
   if (name.includes('landing') || name.includes('/main.')) return 0
-  if (name.includes('agentbuilder') || name.includes('/ui.')) return 1
   if (name.includes('simulation') || name.includes('/lab.')) return 2
 
   const videntia = name.match(/videntia\s*(\d+)/)

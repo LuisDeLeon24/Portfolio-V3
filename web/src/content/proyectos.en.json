@@ -31,30 +31,6 @@
       ]
     },
     {
-      "id": "shoot-ai",
-      "title": "Shoot AI",
-      "blurb": "AI image advisory for photoshoots: prep, outfits, and a Live Shoot camera guide.",
-      "meta": "Hackathon · Cursor Buildathon San Salvador · 2026",
-      "featureSubtitle": "AI image advisory",
-      "featureArt": 1,
-      "body": [
-        "Built at the Cursor Buildathon San Salvador (24 h), representing Guatemala.",
-        "An AI image-advisory agency for social shoots: proportions, outfits, and Live Shoot — on-camera coaching with reinforcement learning and catalog scraping."
-      ]
-    },
-    {
-      "id": "q-threats",
-      "title": "Q-Threats",
-      "blurb": "Review legal decrees and bills, and map relationships between state entities.",
-      "meta": "Hackathon · Hack@Latam · 2026",
-      "featureSubtitle": "Transparency & corruption",
-      "featureArt": 0,
-      "body": [
-        "Selected among 1,200+ applicants from Latin America for Hack@Latam.",
-        "A platform to validate decrees and congressional bills in Guatemala, plus mapping relationships and agreements between government entities — transparency and corruption track."
-      ]
-    },
-    {
       "id": "aprendi",
       "title": "Aprendi",
       "blurb": "Adaptive learning: personalized paths and Linux labs based on live performance.",
@@ -75,26 +51,6 @@
         {
           "label": "GitHub",
           "href": "https://github.com/LuisDeLeon24/aprendii.git"
-        }
-      ]
-    },
-    {
-      "id": "agent-builder",
-      "title": "Agent Builder",
-      "blurb": "Build and deploy AI agents with LLMs, RAG, and live data.",
-      "meta": "Hackathon · Atom Dev Day · 2026",
-      "featureSubtitle": "Top 5 · ~8 h sprint",
-      "featured": true,
-      "awarded": true,
-      "featureArt": 1,
-      "body": [
-        "Top 5 finalist at Atom Dev Day 2026: ~8-hour sprint, team of 3.",
-        "A platform to assemble agents (e.g. sales) with LLM + RAG and real-time data integration."
-      ],
-      "links": [
-        {
-          "label": "GitHub",
-          "href": "https://github.com/JohanMiguel/AI-Agent-Builder.git"
         }
       ]
     },
@@ -132,28 +88,8 @@
       "body": [
         "School project featured at Expokinal 2025. Team of 6; ~1-week build.",
         "Turns images into readable descriptions using computer vision and LLMs."
-      ]
-    },
-    {
-      "id": "unmask-ai",
-      "title": "Unmask AI",
-      "blurb": "Extract and analyze visual data with OCR, LLMs, and automated deep search.",
-      "meta": "Hackathon · 2025",
-      "featureSubtitle": "OCR × LLM",
-      "featureArt": 0,
-      "body": [
-        "~3-day solo MVP: OCR + LLMs to read visuals and kick off automated deep search on what was extracted."
       ],
-      "links": [
-        {
-          "label": "Demo",
-          "href": "https://unmask-ai-frontend.vercel.app/"
-        },
-        {
-          "label": "GitHub",
-          "href": "https://github.com/LuisDeLeon24/UnmaskAI---Frontend.git"
-        }
-      ]
+      "featured": true
     }
   ]
 }
